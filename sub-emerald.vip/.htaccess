@@ -1,0 +1,19 @@
+RewriteEngine On
+
+# ----------------------------------------------------------------------
+# SYSTEM ROUTING
+# ----------------------------------------------------------------------
+RewriteCond %{REQUEST_URI} !^/emerald_assets/.*\.php$
+RewriteCond %{REQUEST_URI} !^/emerald_assets/.*\.html$
+RewriteCond %{REQUEST_URI} !^/emerald_assets/.*\.htm$
+
+RewriteRule ^view/(.*)$ view.php?f=$1 [L,QSA]
+RewriteRule ^files/view/(.*)$ view.php?f=$1 [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^notepad$ notepad.php [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?route=$1 [L,QSA]

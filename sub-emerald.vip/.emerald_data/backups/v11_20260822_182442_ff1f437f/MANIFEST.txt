@@ -1,0 +1,34 @@
+# Emerald Central Hub V10→V11 backup manifest
+# Generated: 2026-08-22T18:24:42+08:00
+# Source root: /www/wwwroot/sub-emerald.vip
+
+# Backed-up items:
+  - system_users/
+  - system_containers/
+  - cloaking_data/
+  - assets_manager/
+  - firewall_ip/
+  - public_notepad/
+  - emerald_assets/
+  - untuk-accesskey/
+  - modules/
+  - core/
+  - views/
+  - assets/
+  - notepad/
+  - index.php
+  - 403.php
+  - view.php
+  - vieww.php
+  - net.php
+  - update.php
+  - .emerald_data/
+
+# Data files detected before upgrade:
+  - users: system_users/users.json | ok | entries=3 | encValues=1
+  - login_logs: system_users/login_logs.json | ok | entries=100 | encValues=1
+  - activity_logs: system_users/activity_logs.json | ok | entries=100 | encValues=1
+  - notes: system_containers/notes.json | ok | entries=31 | encValues=1
+  - cloaking: cloaking_data/cloaking.json | ok | entries=5 | encValues=1
+  - file_meta: assets_manager/file_meta.json | ok | entries=409 | encValues=1
+  - firewall: firewall_ip/firewall.json | ok | entries=13 | encValues=1

